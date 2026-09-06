@@ -1,0 +1,50 @@
+name: Backtest a Stock (send PDF to Telegram)
+
+on:
+  workflow_dispatch:
+    inputs:
+      symbol:
+        description: 'Stock symbol (e.g. AAPL, RELIANCE.NS)'
+        required: true
+        type: string
+      duration:
+        description: 'Months of history'
+        required: true
+        default: '12'
+        type: choice
+        options:
+          - '6'
+          - '12'
+          - '24'
+          - '48'
+      holding:
+        description: 'Holding period in trading days'
+        required: true
+        default: '10'
+        type: choice
+        options:
+          - '5'
+          - '10'
+          - '20'
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backtest and send PDF to Telegram
+        env:
+          TD_API_KEY: ${{ secrets.TD_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 run_backtest_and_send.py "${{ inputs.symbol }}" "${{ inputs.duration }}" "${{ inputs.holding }}"
