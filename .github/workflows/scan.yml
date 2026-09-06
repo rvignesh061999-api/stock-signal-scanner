@@ -1,0 +1,40 @@
+name: Scheduled Stock Scan
+
+on:
+  schedule:
+    # Runs every hour, at minute 0. GitHub Actions cron is UTC.
+    - cron: '0 * * * *'
+  workflow_dispatch: {}  # allows manual "Run workflow" trigger too
+
+permissions:
+  contents: write  # needed to commit docs/data.json back to the repo
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scan and send alerts
+        env:
+          TD_API_KEY: ${{ secrets.TD_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scan_and_alert.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json alerted_keys.json
+          git diff --staged --quiet || git commit -m "Update scan results [skip ci]"
+          git push
