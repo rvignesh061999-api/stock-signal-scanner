@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink-bg: #1B2430;
+  --hairline: #37455A;
+  --text-primary: #EDEAE3;
+  --text-muted: #8B95A8;
+  --gold: #D4A64A;
+  --rust: #C1584A;
+  --slate-blue: #7C93B8;
+  --grey: #5A6478;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ink-bg);
+  color: var(--text-primary);
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.5;
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 48px 40px 28px;
+  border-bottom: 1px solid var(--hairline);
+}
+.masthead-inner h1 { font-size: 2.4rem; font-weight: 600; margin: 0 0 8px; }
+.tagline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 46ch;
+  margin: 0;
+}
+.masthead-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+main { max-width: 960px; margin: 0 auto; padding: 32px 40px 60px; }
+.market-block { margin-bottom: 44px; }
+.market-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--slate-blue);
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 4px;
+}
+.signal-table { width: 100%; border-collapse: collapse; }
+.signal-table thead th {
+  text-align: left;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--hairline);
+}
+.signal-table td {
+  padding: 14px 8px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+.symbol-cell { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 0.95rem; }
+.num { font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; color: var(--text-muted); }
+.source-cell { white-space: nowrap; }
+.note-cell {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  max-width: 320px;
+  line-height: 1.6;
+}
+.signal-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.row-buy .signal-badge { background: rgba(212,166,74,0.15); color: var(--gold); }
+.row-short .signal-badge { background: rgba(193,88,74,0.15); color: var(--rust); }
+.row-avoid .signal-badge { background: rgba(124,147,184,0.12); color: var(--slate-blue); }
+.row-error .signal-badge { background: rgba(90,100,120,0.15); color: var(--grey); }
+.empty-state { padding: 60px 20px; text-align: center; color: var(--text-muted); }
+.empty-sub { font-size: 0.85rem; font-family: 'IBM Plex Mono', monospace; }
+.info-panel {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--hairline);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.info-panel a { color: var(--gold); }
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 22px 40px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+footer p { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--text-muted); max-width: 70ch; }
+@media (max-width: 600px) {
+  .masthead { padding: 32px 20px 20px; }
+  .masthead-meta { align-items: flex-start; }
+  main { padding: 24px 20px 40px; }
+  .note-cell { max-width: 160px; }
+  .info-panel { padding: 16px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1>Signal Scanner</h1>
+    <p class="tagline">Candle patterns confirmed by support/resistance &amp; volume — decision support, not a forecast.</p>
+  </div>
+  <div class="masthead-meta">
+    <span id="updated-at">Loading…</span>
+  </div>
+</header>
+
+<section class="info-panel">
+  Runs automatically every hour via GitHub Actions. To backtest a stock and get a PDF report on Telegram,
+  go to the repo's <strong>Actions</strong> tab → <strong>Backtest a Stock</strong> → <strong>Run workflow</strong>.
+</section>
+
+<main id="results-container">
+  <div class="empty-state"><p>Loading latest scan…</p></div>
+</main>
+
+<footer>
+  <p>Educational tool only — not financial advice. Signals are probabilistic. Always confirm with your own analysis and use a stop-loss.</p>
+</footer>
+
+<script>
+async function loadData() {
+  try {
+    const res = await fetch('data.json?_=' + Date.now());  // cache-bust
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    document.getElementById('results-container').innerHTML =
+      '<div class="empty-state"><p>No scan data yet — the first scheduled run hasn\'t completed.</p></div>';
+  }
+}
+
+function render(data) {
+  const updatedEl = document.getElementById('updated-at');
+  if (data.updated_at) {
+    const [date, time] = data.updated_at.split('T');
+    updatedEl.textContent = `Last scan: ${date} ${time.slice(0,8)}`;
+  }
+
+  const results = data.results || [];
+  const container = document.getElementById('results-container');
+  if (results.length === 0) {
+    container.innerHTML = '<div class="empty-state"><p>No results in the latest scan.</p></div>';
+    return;
+  }
+
+  const markets = {};
+  results.forEach(r => {
+    const m = r.market || 'Other';
+    if (!markets[m]) markets[m] = [];
+    markets[m].push(r);
+  });
+
+  const marketLabels = { US: 'United States', IN: 'India' };
+  let html = '';
+  Object.entries(markets).forEach(([market, rows]) => {
+    html += `<section class="market-block">
+      <div class="market-label">${marketLabels[market] || market}</div>
+      <table class="signal-table">
+        <thead><tr><th>Symbol</th><th>Signal</th><th>Price</th><th>Detail</th><th>Source</th></tr></thead>
+        <tbody>`;
+    rows.forEach(r => {
+      const rowClass = r.signal === 'BUY' ? 'row-buy' : r.signal === 'SHORT' ? 'row-short' : r.signal === 'ERROR' ? 'row-error' : 'row-avoid';
+      const detail = r.signal === 'ERROR'
+        ? (r.error || '')
+        : `${r.candle || ''} · ${r.near_level || 'none'} · Vol ${r.vol_ratio ?? '-'}x` +
+          (r.signal === 'BUY' || r.signal === 'SHORT' ? `<br>SL ${r.sl_price} / TGT ${r.tgt_price}` : '');
+      html += `<tr class="${rowClass}">
+        <td class="symbol-cell">${r.symbol}</td>
+        <td><span class="signal-badge">${r.signal}</span></td>
+        <td class="num">${r.price ?? '-'}</td>
+        <td class="note-cell">${detail}</td>
+        <td class="num source-cell">${r.source || '-'}</td>
+      </tr>`;
+    });
+    html += `</tbody></table></section>`;
+  });
+  container.innerHTML = html;
+}
+
+loadData();
+</script>
+
+</body>
+</html>
