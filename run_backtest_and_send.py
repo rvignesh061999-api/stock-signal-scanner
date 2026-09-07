@@ -5,9 +5,11 @@ Runs a backtest and sends PDF report(s) to Telegram.
 Two modes:
 - Single symbol: python3 run_backtest_and_send.py SYMBOL [INTERVAL] [DURATION_MONTHS] [HOLDING]
   Sends one PDF for that symbol.
-- Full watchlist (no symbol given): backtests every stock in config.WATCHLIST
-  in ONE run, and sends ONE consolidated PDF — overall summary plus a
-  per-symbol breakdown table (win rate, signal count, etc. for each stock).
+- Full watchlist (no symbol given): backtests every stock — uses
+  config.WATCHLIST for daily interval, or config.INTRADAY_WATCHLIST
+  (a pre-filtered, smaller list) for 1h/15m intervals — in ONE run,
+  and sends ONE consolidated PDF: overall summary plus a per-symbol
+  breakdown table (win rate, signal count, etc. for each stock).
 
 INTERVAL: "1d" (daily, default), "1h" (hourly, ~2yr history), or "15m"
 (~60 days history). DURATION_MONTHS only applies to "1d" mode — intraday
@@ -28,7 +30,7 @@ Examples:
 
 import sys
 
-from config import WATCHLIST
+from config import WATCHLIST, INTRADAY_WATCHLIST
 from backtest import run_backtest
 from report_pdf import build_backtest_pdf
 from telegram_alert import send_telegram_document, send_telegram_message
@@ -83,8 +85,12 @@ def main():
     # Full-watchlist mode: ONE backtest run across every stock, ONE
     # consolidated PDF (overall summary + per-symbol breakdown table),
     # sent as a single Telegram document.
+    # Intraday intervals use the filtered INTRADAY_WATCHLIST (stocks
+    # that cleared breakeven on a prior hourly backtest) — daily uses
+    # the full WATCHLIST. See config.py for why these differ.
+    watchlist_source = WATCHLIST if interval == "1d" else INTRADAY_WATCHLIST
     all_symbols = []
-    for market_list in WATCHLIST.values():
+    for market_list in watchlist_source.values():
         all_symbols.extend(market_list)
 
     label = f"{duration}mo history" if interval == "1d" else f"max available history ({interval})"
