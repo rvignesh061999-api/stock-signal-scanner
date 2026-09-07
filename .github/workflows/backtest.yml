@@ -4,13 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       symbol:
-        description: 'Stock symbol (e.g. AAPL, RELIANCE.NS)'
-        required: true
+        description: 'Stock symbol (e.g. AAPL, RELIANCE.NS) — leave BLANK to backtest the FULL watchlist instead'
+        required: false
         type: string
-      duration:
-        description: 'Months of history'
+      interval:
+        description: 'Candle interval'
         required: true
-        default: '12'
+        default: '1d'
+        type: choice
+        options:
+          - '1d'
+          - '1h'
+          - '15m'
+      duration:
+        description: 'Months of history (1d interval only — ignored for 1h/15m, which use max available history)'
+        required: true
+        default: '24'
         type: choice
         options:
           - '6'
@@ -18,7 +27,7 @@ on:
           - '24'
           - '48'
       holding:
-        description: 'Holding period in trading days'
+        description: 'Holding period in bars (days for 1d, hours for 1h, 15-min periods for 15m)'
         required: true
         default: '10'
         type: choice
@@ -42,9 +51,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run backtest and send PDF to Telegram
+      - name: Run backtest and send PDF(s) to Telegram
         env:
           TD_API_KEY: ${{ secrets.TD_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python3 run_backtest_and_send.py "${{ inputs.symbol }}" "${{ inputs.duration }}" "${{ inputs.holding }}"
+        run: python3 run_backtest_and_send.py "${{ inputs.symbol }}" "${{ inputs.interval }}" "${{ inputs.duration }}" "${{ inputs.holding }}"
