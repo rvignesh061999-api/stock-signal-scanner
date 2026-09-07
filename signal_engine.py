@@ -1,16 +1,58 @@
 """
 signal_engine.py
-Computes a signal from daily OHLCV candle data using ONLY candle patterns,
+Computes a signal from OHLCV candle data using ONLY candle patterns,
 support/resistance proximity, and volume confirmation — no RSI/EMA/MACD.
 
 This is intentional: multi-indicator scoring (RSI+EMA+MACD+volume+candle)
 was tried and found to produce noisy, conflicting signals in practice.
 Pure candle + level + volume is simpler and easier to trust/verify by eye.
 
+Thresholds are INTERVAL-AWARE. A 1-hour candle and a 1-day candle don't
+move the same amount in the same timeframe, so using one flat set of
+numbers for both was found (via backtest) to over-fire on hourly data —
+nearly every bar was "confirmed" — while the 3%/1.5% target/stop-loss
+(sized for a multi-day swing) rarely resolved within a 10-hour window.
+Each interval gets its own profile, scaled to that timeframe's typical
+volatility. These are a first calibration, not a final answer — re-run
+the backtest after any change here to confirm it actually helped.
+
 This is decision-support only — not a guarantee of profitable trades.
 """
 
 from dataclasses import dataclass, field, asdict
+
+
+# ---- Interval-aware profiles -------------------------------------------
+# sl_pct / tgt_pct: stop-loss / target as % of entry price, scaled down
+#   for faster intervals since a "3% swing" that's reasonable over days
+#   is a much bigger ask within a handful of hours or 15-min bars.
+# sr_window: how many bars back to look for support/resistance. Kept
+#   proportionally longer in bar-count for faster intervals so the
+#   *time* window it covers is still meaningful (e.g. 40 hourly bars
+#   ≈ 1 trading week, not 40 days).
+# vol_lookback / vol_factor: volume confirmation lookback and required
+#   multiple of the average. Tightened for intraday since single-bar
+#   volume is noisier and a loose factor confirmed almost everything.
+# level_tolerance: how close price must be to support/resistance to
+#   count as "near" it. Tightened for intraday for the same reason.
+INTERVAL_PROFILES = {
+    "1d": {
+        "sl_pct": 1.5, "tgt_pct": 3.0,
+        "sr_window": 20, "vol_lookback": 20, "vol_factor": 1.3,
+        "level_tolerance": 0.015,
+    },
+    "1h": {
+        "sl_pct": 0.6, "tgt_pct": 1.2,
+        "sr_window": 40, "vol_lookback": 40, "vol_factor": 1.6,
+        "level_tolerance": 0.008,
+    },
+    "15m": {
+        "sl_pct": 0.3, "tgt_pct": 0.6,
+        "sr_window": 60, "vol_lookback": 60, "vol_factor": 1.8,
+        "level_tolerance": 0.005,
+    },
+}
+DEFAULT_INTERVAL = "1d"
 
 
 def detect_candle_pattern(rows):
@@ -115,32 +157,40 @@ class SignalResult:
 
 
 def compute_signal(symbol: str, rows: list, source: str, capital: float = 10000,
-                    sl_pct: float = 1.5, tgt_pct: float = 3.0) -> SignalResult:
+                    interval: str = DEFAULT_INTERVAL) -> SignalResult:
     """
-    rows: newest-first OHLCV list, at least 25 rows recommended.
+    rows: newest-first OHLCV list. At least `sr_window` rows recommended
+    for that interval's profile (see INTERVAL_PROFILES).
+    interval: "1d", "1h", or "15m" — selects the volatility-appropriate
+    thresholds for stop-loss/target, support/resistance window, and
+    volume/level confirmation. Falls back to "1d" profile if unknown.
+
     Pure candle-pattern approach: a candle only becomes an actionable
     BUY/SELL signal if it's also near a support/resistance level OR
     backed by above-average volume. Otherwise it's AVOID (noise).
     """
+    P = INTERVAL_PROFILES.get(interval, INTERVAL_PROFILES[DEFAULT_INTERVAL])
+
     reasons = []
     closes = [r["close"] for r in rows]
     current_price = closes[0]
     prev_close = closes[1] if len(closes) > 1 else current_price
     price_change_pct = (current_price - prev_close) / prev_close * 100 if prev_close else 0
 
-    avg_vol = sum(r["volume"] for r in rows[1:21]) / max(1, len(rows[1:21])) if len(rows) > 1 else 0
+    vol_lookback = P["vol_lookback"]
+    avg_vol = sum(r["volume"] for r in rows[1:vol_lookback + 1]) / max(1, len(rows[1:vol_lookback + 1])) if len(rows) > 1 else 0
     vol_ratio = rows[0]["volume"] / avg_vol if avg_vol else 0
 
     candle_name, candle_signal, candle_strength = detect_candle_pattern(rows)
 
-    support, resistance = find_support_resistance(rows)
+    support, resistance = find_support_resistance(rows, window=P["sr_window"])
     near_level = "none"
-    if is_near_level(current_price, support):
+    if is_near_level(current_price, support, tolerance=P["level_tolerance"]):
         near_level = "support"
-    elif is_near_level(current_price, resistance):
+    elif is_near_level(current_price, resistance, tolerance=P["level_tolerance"]):
         near_level = "resistance"
 
-    vol_ok = volume_confirms(rows)
+    vol_ok = volume_confirms(rows, lookback=vol_lookback, factor=P["vol_factor"])
 
     # Only turn a raw candle reading into an actionable signal if it's
     # confirmed by a level or volume — otherwise it's just noise.
@@ -158,13 +208,14 @@ def compute_signal(symbol: str, rows: list, source: str, capital: float = 10000,
     else:
         reasons.append(f"Not near a key level (support {support}, resistance {resistance})")
     if vol_ok:
-        reasons.append(f"Volume confirmed: {vol_ratio:.2f}x average")
+        reasons.append(f"Volume confirmed: {vol_ratio:.2f}x average (needs {P['vol_factor']}x for {interval})")
     else:
         reasons.append(f"Volume not confirmed: {vol_ratio:.2f}x average — lower conviction")
     if signal == "AVOID" and candle_signal in ("BUY", "SELL"):
         reasons.insert(0, f"Candle reading ({candle_signal}) not confirmed by level or volume — treated as noise")
 
-    # SL / Target
+    # SL / Target, scaled to this interval's typical volatility
+    sl_pct, tgt_pct = P["sl_pct"], P["tgt_pct"]
     if signal == "SHORT":
         sl_price = current_price * (1 + sl_pct / 100)
         tgt_price = current_price * (1 - tgt_pct / 100)

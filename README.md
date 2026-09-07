@@ -81,6 +81,23 @@ trading — it generates signals from completed candles (daily, hourly,
 or 15-min) and alerts you via Telegram. There is inherent lag between
 a signal firing, the alert reaching you, and you acting on it.
 
+## Signal thresholds are interval-aware
+
+A first full-watchlist hourly backtest (37,619 signals across 18 stocks)
+showed two problems: signals fired on nearly every single bar, and the
+daily-calibrated 3% target / 1.5% stop-loss rarely resolved within a
+10-hour holding window (44% "no hit"). Both point to the same root
+cause — thresholds sized for multi-day swings don't fit hourly/15-min
+volatility.
+
+`signal_engine.py` now uses a separate threshold profile per interval
+(`INTERVAL_PROFILES`): tighter volume/level confirmation and smaller,
+proportionally-scaled targets for `1h` and `15m`. This is a first
+calibration based on reasoning about relative volatility, not a fully
+tuned model — **always re-run the backtest workflow after any threshold
+change** to confirm it actually improved the win rate before trusting
+live signals at that interval.
+
 ## Files
 
 ```

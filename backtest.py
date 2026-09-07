@@ -36,7 +36,7 @@ from signal_engine import compute_signal
 from config import WATCHLIST
 
 
-def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30,
+def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = None,
                      duration_months: int = 12, interval: str = "1d"):
     """
     Fetches historical data, walks forward bar by bar, generates a
@@ -47,9 +47,21 @@ def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30,
     (intraday — duration_months is ignored, history is capped by the
     data source).
 
+    min_history: minimum bars needed before generating the first signal.
+    Defaults to the interval's support/resistance window (see
+    INTERVAL_PROFILES in signal_engine.py) so there's always enough
+    lookback for a meaningful support/resistance calculation — this
+    matters more for 1h/15m, which use wider windows (40/60 bars) than
+    daily (20 bars).
+
     Returns a list of trade records: {date, signal, entry, target, sl,
     outcome, exit_price, days_to_exit}
     """
+    if min_history is None:
+        from signal_engine import INTERVAL_PROFILES, DEFAULT_INTERVAL
+        profile = INTERVAL_PROFILES.get(interval, INTERVAL_PROFILES[DEFAULT_INTERVAL])
+        min_history = max(profile["sr_window"], profile["vol_lookback"]) + 5
+
     if interval == "1d":
         rows, source = fetch_daily_candles(symbol, duration_months=duration_months)
     elif interval in ("1h", "15m"):
@@ -70,7 +82,7 @@ def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30,
         if len(window) < min_history:
             continue
 
-        result = compute_signal(symbol, window, source).to_dict()
+        result = compute_signal(symbol, window, source, interval=interval).to_dict()
         signal = result["signal"]
 
         if signal not in ("BUY", "SHORT"):
