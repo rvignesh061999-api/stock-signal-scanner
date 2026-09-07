@@ -4,8 +4,10 @@ Runs a backtest and sends PDF report(s) to Telegram.
 
 Two modes:
 - Single symbol: python3 run_backtest_and_send.py SYMBOL [INTERVAL] [DURATION_MONTHS] [HOLDING]
-- Full watchlist (no symbol given): backtests every stock in config.WATCHLIST,
-  one PDF per stock, all sent to Telegram, plus a final summary message.
+  Sends one PDF for that symbol.
+- Full watchlist (no symbol given): backtests every stock in config.WATCHLIST
+  in ONE run, and sends ONE consolidated PDF — overall summary plus a
+  per-symbol breakdown table (win rate, signal count, etc. for each stock).
 
 INTERVAL: "1d" (daily, default), "1h" (hourly, ~2yr history), or "15m"
 (~60 days history). DURATION_MONTHS only applies to "1d" mode — intraday
@@ -18,14 +20,13 @@ after a signal before checking if it hit target or stop-loss.
 Triggered manually via .github/workflows/backtest.yml, or run locally.
 
 Examples:
-  python3 run_backtest_and_send.py                          # full watchlist, daily, 24mo, 10-bar hold
+  python3 run_backtest_and_send.py                          # full watchlist, daily, 24mo, 10-bar hold, ONE pdf
   python3 run_backtest_and_send.py RELIANCE.NS               # single symbol, daily, 24mo, 10-bar hold
   python3 run_backtest_and_send.py RELIANCE.NS 1h             # single symbol, hourly, max history, 10-bar hold
-  python3 run_backtest_and_send.py "" 1h 0 10                  # full watchlist, hourly, 10-bar hold
+  python3 run_backtest_and_send.py "" 1h 0 10                  # full watchlist, hourly, 10-bar hold, ONE pdf
 """
 
 import sys
-import time
 
 from config import WATCHLIST
 from backtest import run_backtest
@@ -79,7 +80,9 @@ def main():
         backtest_one_symbol_and_send(symbol, interval, duration, holding)
         return
 
-    # Full-watchlist mode: every stock, one PDF each, all sent to Telegram
+    # Full-watchlist mode: ONE backtest run across every stock, ONE
+    # consolidated PDF (overall summary + per-symbol breakdown table),
+    # sent as a single Telegram document.
     all_symbols = []
     for market_list in WATCHLIST.values():
         all_symbols.extend(market_list)
@@ -87,22 +90,37 @@ def main():
     label = f"{duration}mo history" if interval == "1d" else f"max available history ({interval})"
     print(f"[backtest] Running full watchlist: {len(all_symbols)} symbols, {interval}, {label}, {holding}-bar hold")
     send_telegram_message(
-        f"Starting full watchlist backtest: {len(all_symbols)} stocks, "
-        f"{interval} candles, {label}, {holding}-bar hold. A PDF will follow for each stock."
+        f"Running full watchlist backtest: {len(all_symbols)} stocks, "
+        f"{interval} candles, {label}, {holding}-bar hold. One consolidated PDF will follow shortly."
     )
 
-    summary_rows = []
-    for sym in all_symbols:
-        overall = backtest_one_symbol_and_send(sym, interval, duration, holding)
-        summary_rows.append((sym, overall))
-        time.sleep(1)  # brief pause between symbols to be gentle on data sources and Telegram
+    result = run_backtest(symbols=all_symbols, holding_days=holding,
+                           duration_months=duration, interval=interval)
 
-    # Final consolidated summary message
-    lines = [f"Backtest complete ({interval}) — summary:"]
-    for sym, overall in summary_rows:
-        wr = f"{overall['win_rate_pct']}%" if overall.get("win_rate_pct") is not None else "N/A"
-        lines.append(f"{sym}: {overall['total_signals']} signals, win rate {wr}")
-    send_telegram_message("\n".join(lines))
+    overall = result["summary"]["overall"]
+    print(f"[backtest] Full watchlist: {overall['total_signals']} total signals, win rate {overall.get('win_rate_pct')}%")
+
+    if overall["total_signals"] == 0:
+        send_telegram_message("Full watchlist backtest complete — no signals generated across any stock.")
+        print("[backtest] No signals generated, skipping PDF/Telegram send.")
+        return
+
+    pdf_path = f"backtest_full_watchlist_{interval}.pdf"
+    build_backtest_pdf(result, output_path=pdf_path)
+
+    win_rate_str = f"{overall['win_rate_pct']}%" if overall.get("win_rate_pct") is not None else "N/A"
+    caption = (
+        f"Full Watchlist Backtest ({interval})\n"
+        f"{len(all_symbols)} stocks, {label}, {holding}-bar hold\n"
+        f"Total signals: {overall['total_signals']} | Overall win rate: {win_rate_str}"
+    )
+    sent = send_telegram_document(pdf_path, caption=caption)
+    print(f"[backtest] Sent consolidated PDF to Telegram: {sent}")
+
+    if result["errors"]:
+        print(f"[backtest] Errors: {result['errors']}")
+        send_telegram_message("Some symbols had data issues:\n" + "\n".join(result["errors"]))
+
     print("[backtest] Full watchlist backtest complete.")
 
 
