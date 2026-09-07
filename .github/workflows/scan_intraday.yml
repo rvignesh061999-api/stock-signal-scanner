@@ -1,0 +1,43 @@
+name: Intraday Stock Scan (filtered watchlist)
+
+on:
+  schedule:
+    # NSE market hours are 9:15 AM - 3:30 PM IST = 3:45 AM - 10:00 AM UTC.
+    # Runs at the top of each hour within that window. GitHub Actions cron
+    # can drift a few minutes and isn't guaranteed exact — fine for hourly
+    # candles, not suitable for anything needing precise timing.
+    - cron: '45 3,4,5,6,7,8,9 * * 1-5'
+  workflow_dispatch: {}  # allows manual "Run workflow" trigger too
+
+permissions:
+  contents: write  # needed to commit docs/intraday_data.json and the signal log
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run intraday scan and send alerts
+        env:
+          TD_API_KEY: ${{ secrets.TD_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scan_intraday.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/intraday_data.json intraday_alerted_keys.json intraday_signal_log.json
+          git diff --staged --quiet || git commit -m "Update intraday scan results [skip ci]"
+          git push
