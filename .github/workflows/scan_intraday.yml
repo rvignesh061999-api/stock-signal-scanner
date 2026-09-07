@@ -2,11 +2,16 @@ name: Intraday Stock Scan (filtered watchlist)
 
 on:
   schedule:
-    # NSE market hours are 9:15 AM - 3:30 PM IST = 3:45 AM - 10:00 AM UTC.
-    # Runs at the top of each hour within that window. GitHub Actions cron
-    # can drift a few minutes and isn't guaranteed exact — fine for hourly
-    # candles, not suitable for anything needing precise timing.
-    - cron: '45 3,4,5,6,7,8,9 * * 1-5'
+    # GitHub's scheduler is NOT precise — observed delays of hours during
+    # testing, a known platform limitation (not something we can fix in
+    # code). Running every 15 min across a WIDE window (well before open
+    # to well after close) instead of once per hour on the dot greatly
+    # improves the odds that at least one attempt lands close to each
+    # actual trading hour. The script itself checks real IST time and
+    # skips scanning if it's genuinely outside 9:15 AM-3:30 PM IST — so
+    # extra attempts outside market hours just resolve pending signals
+    # and exit quickly, they don't waste a live scan on stale data.
+    - cron: '*/15 3-11 * * 1-5'
   workflow_dispatch: {}  # allows manual "Run workflow" trigger too
 
 permissions:

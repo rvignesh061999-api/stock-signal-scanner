@@ -20,7 +20,7 @@ NSE market hours (9:15-15:30 IST). All 8 filtered stocks are Indian.
 import json
 import os
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 from config import INTRADAY_WATCHLIST, DEFAULT_CAPITAL
 from data_fetch import fetch_intraday_candles
@@ -31,6 +31,21 @@ DATA_FILE = "docs/intraday_data.json"
 ALERTED_FILE = "intraday_alerted_keys.json"
 LOG_FILE = "intraday_signal_log.json"
 INTERVAL = "1h"
+IST = timezone(timedelta(hours=5, minutes=30))
+
+
+def is_market_open_ist():
+    """
+    True if it's currently NSE market hours (9:15 AM - 3:30 PM IST,
+    Mon-Fri). GitHub's cron scheduler can fire late or early — this is
+    a real safety check so a delayed run doesn't scan/alert using
+    stale after-hours data and call it a live intraday signal.
+    """
+    now = datetime.now(IST)
+    if now.weekday() > 4:  # 5=Sat, 6=Sun
+        return False
+    minutes = now.hour * 60 + now.minute
+    return 9 * 60 + 15 <= minutes <= 15 * 60 + 30
 
 
 def scan_symbol(symbol: str, capital: float = DEFAULT_CAPITAL):
@@ -210,7 +225,15 @@ def resolve_pending_signals():
 def main():
     print(f"[intraday-scan] Starting at {datetime.now().isoformat()}")
 
+    # Resolving pending signals is safe to do anytime (it's just checking
+    # what already happened), so this runs regardless of market hours.
     resolve_pending_signals()
+
+    if not is_market_open_ist():
+        now_ist = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
+        print(f"[intraday-scan] {now_ist} is outside NSE market hours (9:15 AM-3:30 PM IST, Mon-Fri). "
+              f"Skipping new scan — this run only resolved pending signals, no new data was scanned.")
+        return
 
     results = scan_watchlist()
 
@@ -235,12 +258,13 @@ def main():
     if new_signals:
         buys = [r for r in new_signals if r["signal"] == "BUY"]
         shorts = [r for r in new_signals if r["signal"] == "SHORT"]
-        parts = []
+        header = "⏱️⏱️⏱️ INTRADAY SIGNAL (1h candles — filtered 8-stock list) ⏱️⏱️⏱️"
+        parts = [header]
         if buys:
-            parts.append("🟢 BUY (intraday, 1h)")
+            parts.append("🟢 BUY")
             parts.extend(format_signal_message(r) for r in buys)
         if shorts:
-            parts.append("🔴 SHORT (intraday, 1h)")
+            parts.append("🔴 SHORT")
             parts.extend(format_signal_message(r) for r in shorts)
         message = "\n\n".join(parts)
         sent = send_telegram_message(message)
