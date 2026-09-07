@@ -1,40 +1,62 @@
 """
 backtest.py
 Runs the current signal engine (candle + support/resistance + volume)
-against historical daily data for every symbol in the watchlist, and
-reports how often BUY/SHORT signals actually hit their target before
-their stop-loss.
+against historical data for every symbol in the watchlist, and reports
+how often BUY/SHORT signals actually hit their target before their
+stop-loss.
+
+Supports two modes:
+- Daily mode (interval="1d", default): duration_months selects how far
+  back to fetch (6/12/24/48 months), holding_days is trading days to
+  hold before giving up.
+- Intraday mode (interval="1h" or "15m"): duration_months is ignored —
+  history is capped by what Yahoo/Twelve Data actually provide (~2yr
+  for 1h bars, ~60 days for 15m bars). holding_days becomes "how many
+  bars" to hold, not calendar days — e.g. holding_days=10 with 1h bars
+  means 10 hours forward, not 10 days.
 
 This does NOT change any logic — it only measures how the CURRENT
 rules perform, so we know whether they're worth trusting or need
 tuning before relying on them for real decisions.
 
 Usage:
-  python3 backtest.py                        # backtest full watchlist, 12mo history
+  python3 backtest.py                        # daily mode, full watchlist, 12mo history
   python3 backtest.py --symbol AAPL          # backtest a single symbol
-  python3 backtest.py --holding 10           # days to hold before giving up (default 10)
-  python3 backtest.py --duration 24          # months of history: 6, 12, 24, or 48 (default 12)
+  python3 backtest.py --holding 10           # bars/days to hold before giving up (default 10)
+  python3 backtest.py --duration 24          # months of history (daily mode only): 6, 12, 24, or 48
+  python3 backtest.py --interval 1h          # intraday mode: "1d" (default), "1h", or "15m"
 """
 
 import argparse
 import json
 from datetime import datetime
 
-from data_fetch import fetch_daily_candles
+from data_fetch import fetch_daily_candles, fetch_intraday_candles
 from signal_engine import compute_signal
 from config import WATCHLIST
 
 
-def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30, duration_months: int = 12):
+def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30,
+                     duration_months: int = 12, interval: str = "1d"):
     """
-    Fetches historical data (duration_months back), walks forward day by
-    day, generates a signal using only data available "as of" that day,
-    and checks whether price hits target or stop-loss within `holding_days`.
+    Fetches historical data, walks forward bar by bar, generates a
+    signal using only data available "as of" that point, and checks
+    whether price hits target or stop-loss within `holding_days` bars.
+
+    interval: "1d" (daily, uses duration_months), "1h", or "15m"
+    (intraday — duration_months is ignored, history is capped by the
+    data source).
 
     Returns a list of trade records: {date, signal, entry, target, sl,
     outcome, exit_price, days_to_exit}
     """
-    rows, source = fetch_daily_candles(symbol, duration_months=duration_months)
+    if interval == "1d":
+        rows, source = fetch_daily_candles(symbol, duration_months=duration_months)
+    elif interval in ("1h", "15m"):
+        rows, source = fetch_intraday_candles(symbol, interval=interval)
+    else:
+        return None, f"Unsupported interval: {interval}"
+
     if not rows or len(rows) < min_history + holding_days:
         return None, f"Not enough data for {symbol} (got {len(rows) if rows else 0} rows)"
 
@@ -43,7 +65,7 @@ def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30, 
     trades = []
 
     for t in range(min_history, len(chrono) - holding_days):
-        # "as of" day t: only data up to and including day t is visible
+        # "as of" bar t: only data up to and including bar t is visible
         window = list(reversed(chrono[:t + 1]))  # newest-first slice, as compute_signal expects
         if len(window) < min_history:
             continue
@@ -59,7 +81,7 @@ def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30, 
         sl = result["sl_price"]
         entry_date = chrono[t]["date"]
 
-        # Walk forward up to holding_days to see what gets hit first
+        # Walk forward up to holding_days bars to see what gets hit first
         outcome = "NO_HIT"
         exit_price = None
         days_to_exit = None
@@ -76,7 +98,7 @@ def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = 30, 
                 hit_target = future_low <= target
                 hit_sl = future_high >= sl
 
-            # If both could hit same day, we conservatively assume SL hit first (worse case)
+            # If both could hit same bar, we conservatively assume SL hit first (worse case)
             if hit_sl:
                 outcome = "LOSS"
                 exit_price = sl
@@ -131,7 +153,7 @@ def _summarize_group(trades: list):
     }
 
 
-def run_backtest(symbols=None, holding_days=10, duration_months=12):
+def run_backtest(symbols=None, holding_days=10, duration_months=12, interval="1d"):
     if symbols is None:
         symbols = []
         for market_list in WATCHLIST.values():
@@ -140,7 +162,8 @@ def run_backtest(symbols=None, holding_days=10, duration_months=12):
     all_trades = []
     errors = []
     for sym in symbols:
-        trades, err = backtest_symbol(sym, holding_days=holding_days, duration_months=duration_months)
+        trades, err = backtest_symbol(sym, holding_days=holding_days,
+                                       duration_months=duration_months, interval=interval)
         if err:
             errors.append(err)
             continue
@@ -150,7 +173,8 @@ def run_backtest(symbols=None, holding_days=10, duration_months=12):
     return {
         "run_at": datetime.now().isoformat(),
         "holding_days": holding_days,
-        "duration_months": duration_months,
+        "duration_months": duration_months if interval == "1d" else None,
+        "interval": interval,
         "symbols_tested": symbols,
         "errors": errors,
         "summary": summary,
@@ -161,12 +185,14 @@ def run_backtest(symbols=None, holding_days=10, duration_months=12):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--symbol", help="Backtest a single symbol instead of the full watchlist")
-    parser.add_argument("--holding", type=int, default=10, help="Days to hold before giving up (default 10)")
-    parser.add_argument("--duration", type=int, default=12, help="Months of history: 6, 12, 24, or 48 (default 12)")
+    parser.add_argument("--holding", type=int, default=10, help="Bars/days to hold before giving up (default 10)")
+    parser.add_argument("--duration", type=int, default=12, help="Months of history, daily mode only: 6, 12, 24, or 48 (default 12)")
+    parser.add_argument("--interval", default="1d", choices=["1d", "1h", "15m"], help="Candle interval (default 1d)")
     args = parser.parse_args()
 
     symbols = [args.symbol] if args.symbol else None
-    result = run_backtest(symbols=symbols, holding_days=args.holding, duration_months=args.duration)
+    result = run_backtest(symbols=symbols, holding_days=args.holding,
+                           duration_months=args.duration, interval=args.interval)
 
     print(json.dumps(result["summary"], indent=2))
     print(f"\nErrors: {result['errors']}")

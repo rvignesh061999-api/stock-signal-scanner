@@ -31,10 +31,18 @@ def build_backtest_pdf(result: dict, output_path: str = "backtest_report.pdf"):
     # ---- Header ----
     story.append(Paragraph("Signal Scanner — Backtest Report", title_style))
     run_at = result.get("run_at", datetime.now().isoformat())
+    interval = result.get("interval", "1d")
+    interval_labels = {"1d": "daily candles", "1h": "hourly candles", "15m": "15-minute candles"}
+    history_label = (
+        f"{result.get('duration_months', '?')} months"
+        if interval == "1d"
+        else f"max available history ({interval_labels.get(interval, interval)})"
+    )
     story.append(Paragraph(
         f"Generated: {run_at.split('T')[0]} {run_at.split('T')[1][:8] if 'T' in run_at else ''} "
-        f"&nbsp;|&nbsp; History window: {result.get('duration_months', '?')} months "
-        f"&nbsp;|&nbsp; Holding period: {result.get('holding_days', '?')} trading days",
+        f"&nbsp;|&nbsp; Interval: {interval_labels.get(interval, interval)} "
+        f"&nbsp;|&nbsp; History: {history_label} "
+        f"&nbsp;|&nbsp; Holding period: {result.get('holding_days', '?')} bars",
         meta_style
     ))
     story.append(Spacer(1, 4))

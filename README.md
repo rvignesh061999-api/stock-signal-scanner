@@ -51,11 +51,35 @@ also click **Run workflow** to trigger it immediately for a first test.
 
 ### 5. Test the backtest workflow
 Go to **Actions → Backtest a Stock → Run workflow**. Fill in:
-- Symbol: e.g. `RELIANCE.NS`
-- Duration: 12
-- Holding: 10
+- Symbol: e.g. `RELIANCE.NS` (or leave **blank** to backtest your entire watchlist at once, one PDF per stock)
+- Interval: `1d` (daily), `1h` (hourly), or `15m` (15-minute)
+- Duration: only used for `1d` — ignored for `1h`/`15m`, which always use the maximum history available
+- Holding: how many bars to wait before giving up on a signal (days for `1d`, hours for `1h`, 15-min periods for `15m`)
 
-Click **Run workflow**, wait ~1 minute, then check Telegram for the PDF.
+Click **Run workflow**, wait ~1-2 minutes (longer for full-watchlist mode), then check Telegram for the PDF(s).
+
+## Daily vs. intraday — data availability trade-off
+
+Yahoo Finance and Twelve Data cap how far back intraday data goes — this
+is a platform limit, not something configurable:
+
+| Interval | Max history available |
+|---|---|
+| Daily (`1d`) | Years (we use 6/12/24/48 month presets) |
+| Hourly (`1h`) | ~2 years |
+| 15-minute (`15m`) | ~60 days |
+
+This means: a thorough backtest needs daily or hourly data (enough
+history for a meaningful sample size). True 15-min intraday only has
+~60 days to validate against — not much of a track record. **Always
+check the backtest win rate for a given interval before trusting live
+signals at that pace.** With the current 3% target / 1.5% stop-loss
+(2:1 reward-risk), a win rate above ~33% is needed just to break even.
+
+This tool is not built for sub-minute execution or live tick-by-tick
+trading — it generates signals from completed candles (daily, hourly,
+or 15-min) and alerts you via Telegram. There is inherent lag between
+a signal firing, the alert reaching you, and you acting on it.
 
 ## Files
 
