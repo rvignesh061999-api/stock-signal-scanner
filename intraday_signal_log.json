@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "logged_at": "2026-09-07T10:27:01.638737",
+    "symbol": "PCJEWELLER.NS",
+    "signal": "BUY",
+    "price": 13.97,
+    "sl_price": 13.89,
+    "tgt_price": 14.14,
+    "candle": "Bullish Candle",
+    "near_level": "resistance",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null
+  },
+  {
+    "logged_at": "2026-09-07T10:27:01.638747",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 15.6,
+    "sl_price": 15.69,
+    "tgt_price": 15.41,
+    "candle": "Strong Bearish Candle",
+    "near_level": "resistance",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null
+  },
+  {
+    "logged_at": "2026-09-07T10:27:01.638749",
+    "symbol": "INFY.NS",
+    "signal": "BUY",
+    "price": 1087.5,
+    "sl_price": 1080.97,
+    "tgt_price": 1100.55,
+    "candle": "Strong Bullish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null
+  }
+]
