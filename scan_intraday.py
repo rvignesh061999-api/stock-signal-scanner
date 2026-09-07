@@ -37,7 +37,9 @@ def scan_symbol(symbol: str, capital: float = DEFAULT_CAPITAL):
     rows, source = fetch_intraday_candles(symbol, interval=INTERVAL)
     if not rows:
         return {"symbol": symbol, "signal": "ERROR", "error": "No data from any source"}
-    return compute_signal(symbol, rows, source, capital, interval=INTERVAL).to_dict()
+    result = compute_signal(symbol, rows, source, capital, interval=INTERVAL).to_dict()
+    result["bar_date"] = rows[0]["date"]  # exact candle this signal fired on, needed to resolve it later
+    return result
 
 
 def scan_watchlist():
@@ -73,6 +75,9 @@ def save_json_set(path, keys):
         json.dump(list(keys), f)
 
 
+HOLDING_BARS = 10  # matches the backtest holding period we validated with
+
+
 def append_to_log(new_signals):
     """
     Appends every new actionable signal to a running log, timestamped,
@@ -91,6 +96,7 @@ def append_to_log(new_signals):
     for sig in new_signals:
         log.append({
             "logged_at": datetime.now().isoformat(),
+            "signal_bar_date": sig.get("bar_date"),  # exact candle timestamp, used to locate it in future data
             "symbol": sig["symbol"],
             "signal": sig["signal"],
             "price": sig["price"],
@@ -100,18 +106,112 @@ def append_to_log(new_signals):
             "near_level": sig["near_level"],
             "volume_confirmed": sig["volume_confirmed"],
             "source": sig["source"],
-            # These stay null until a future check-in script evaluates
+            # These stay null until resolve_pending_signals() determines
             # what actually happened after this signal fired.
             "outcome": None,
             "outcome_checked_at": None,
+            "exit_price": None,
+            "bars_to_exit": None,
         })
 
     with open(LOG_FILE, "w") as f:
         json.dump(log, f, indent=2)
 
 
+def resolve_pending_signals():
+    """
+    For every log entry still marked outcome=None, fetches fresh
+    intraday candles for that symbol and checks whether price has hit
+    the target or stop-loss in the bars AFTER the signal fired — same
+    win/loss logic as backtest.py, just applied to live data instead
+    of history.
+
+    A signal is only marked NO_HIT once HOLDING_BARS have genuinely
+    elapsed since it fired without either level being touched — if not
+    enough time has passed yet, it's left pending for the next run to
+    check again.
+    """
+    if not os.path.exists(LOG_FILE):
+        return
+    with open(LOG_FILE) as f:
+        log = json.load(f)
+
+    pending = [e for e in log if e.get("outcome") is None]
+    if not pending:
+        print("[resolve] No pending signals to check.")
+        return
+
+    # Group by symbol so we only fetch each symbol's data once
+    by_symbol = {}
+    for entry in pending:
+        by_symbol.setdefault(entry["symbol"], []).append(entry)
+
+    resolved_count = 0
+    for symbol, entries in by_symbol.items():
+        rows, source = fetch_intraday_candles(symbol, interval=INTERVAL)
+        if not rows:
+            print(f"[resolve] {symbol}: could not fetch data to check pending signals, skipping.")
+            continue
+        chrono = list(reversed(rows))  # oldest first
+        date_to_index = {r["date"]: i for i, r in enumerate(chrono)}
+
+        for entry in entries:
+            bar_date = entry.get("signal_bar_date")
+            if bar_date not in date_to_index:
+                # The signal's original bar has rolled out of the fetch
+                # window (data source only keeps ~60 days for 15m, ~2yr
+                # for 1h) — can't resolve it anymore either way.
+                continue
+
+            idx = date_to_index[bar_date]
+            outcome = None
+            exit_price = None
+            bars_to_exit = None
+
+            for d in range(1, HOLDING_BARS + 1):
+                if idx + d >= len(chrono):
+                    break
+                future_high = chrono[idx + d]["high"]
+                future_low = chrono[idx + d]["low"]
+
+                if entry["signal"] == "BUY":
+                    hit_target = future_high >= entry["tgt_price"]
+                    hit_sl = future_low <= entry["sl_price"]
+                else:  # SHORT
+                    hit_target = future_low <= entry["tgt_price"]
+                    hit_sl = future_high >= entry["sl_price"]
+
+                if hit_sl:
+                    outcome, exit_price, bars_to_exit = "LOSS", entry["sl_price"], d
+                    break
+                if hit_target:
+                    outcome, exit_price, bars_to_exit = "WIN", entry["tgt_price"], d
+                    break
+
+            bars_available = len(chrono) - idx - 1
+            if outcome is not None:
+                entry["outcome"] = outcome
+                entry["exit_price"] = exit_price
+                entry["bars_to_exit"] = bars_to_exit
+                entry["outcome_checked_at"] = datetime.now().isoformat()
+                resolved_count += 1
+            elif bars_available >= HOLDING_BARS:
+                # Enough real time has passed with no hit either way
+                entry["outcome"] = "NO_HIT"
+                entry["outcome_checked_at"] = datetime.now().isoformat()
+                resolved_count += 1
+            # else: not enough time has elapsed yet, leave pending
+
+    with open(LOG_FILE, "w") as f:
+        json.dump(log, f, indent=2)
+    print(f"[resolve] Resolved {resolved_count} of {len(pending)} pending signals this run.")
+
+
 def main():
     print(f"[intraday-scan] Starting at {datetime.now().isoformat()}")
+
+    resolve_pending_signals()
+
     results = scan_watchlist()
 
     os.makedirs("docs", exist_ok=True)
