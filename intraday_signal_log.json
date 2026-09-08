@@ -91,5 +91,39 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-08T07:53:59.731943",
+    "signal_bar_date": "2026-09-08 07:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "SHORT",
+    "price": 45.42,
+    "sl_price": 45.69,
+    "tgt_price": 44.87,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-08T07:53:59.731951",
+    "signal_bar_date": "2026-09-08 07:45:00",
+    "symbol": "RTNPOWER.NS",
+    "signal": "BUY",
+    "price": 7.26,
+    "sl_price": 7.22,
+    "tgt_price": 7.35,
+    "candle": "Strong Bullish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
