@@ -53,10 +53,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-08T12:41:07.421666",
+    "exit_price": 21.61,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-08T07:23:59.473248",
