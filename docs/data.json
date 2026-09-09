@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T20:22:14.801465",
+  "updated_at": "2026-09-09T22:54:00.083818",
   "results": [
     {
       "symbol": "AAPL",
@@ -13,13 +13,13 @@
       "support": 300.57,
       "resistance": 330.81,
       "volume_confirmed": true,
-      "vol_ratio": 1.65,
+      "vol_ratio": 1.66,
       "sl_price": 310.61,
       "tgt_price": 324.8,
       "reasons": [
         "Candle: Doji (Weak)",
         "Not near a key level (support 300.57, resistance 330.81)",
-        "Volume confirmed: 1.65x average (needs 1.3x for 1d)"
+        "Volume confirmed: 1.66x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
