@@ -176,5 +176,39 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T07:01:14.004122",
+    "signal_bar_date": "2026-09-09 06:45:00",
+    "symbol": "YESBANK.NS",
+    "signal": "BUY",
+    "price": 22.49,
+    "sl_price": 22.36,
+    "tgt_price": 22.76,
+    "candle": "Bullish Engulfing",
+    "near_level": "resistance",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T07:01:14.004129",
+    "signal_bar_date": "2026-09-09 06:45:00",
+    "symbol": "INFY.NS",
+    "signal": "SHORT",
+    "price": 1035.1,
+    "sl_price": 1041.31,
+    "tgt_price": 1022.68,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
