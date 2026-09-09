@@ -240,10 +240,10 @@
     "near_level": "resistance",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:15:42.524258",
+    "exit_price": 15.52,
+    "bars_to_exit": 2
   },
   {
     "logged_at": "2026-09-09T07:30:59.194652",
@@ -526,6 +526,23 @@
     "sl_price": 1038.49,
     "tgt_price": 1019.91,
     "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T09:15:46.221588",
+    "signal_bar_date": "2026-09-09 08:45:00",
+    "symbol": "INFY.NS",
+    "signal": "SHORT",
+    "price": 1030.7,
+    "sl_price": 1036.88,
+    "tgt_price": 1018.33,
+    "candle": "Strong Bearish Candle",
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
