@@ -37,7 +37,7 @@ from config import WATCHLIST
 
 
 def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = None,
-                     duration_months: int = 12, interval: str = "1d"):
+                     duration_months: int = 12, interval: str = "1d", profile_override: dict = None):
     """
     Fetches historical data, walks forward bar by bar, generates a
     signal using only data available "as of" that point, and checks
@@ -82,7 +82,7 @@ def backtest_symbol(symbol: str, holding_days: int = 10, min_history: int = None
         if len(window) < min_history:
             continue
 
-        result = compute_signal(symbol, window, source, interval=interval).to_dict()
+        result = compute_signal(symbol, window, source, interval=interval, profile_override=profile_override).to_dict()
         signal = result["signal"]
 
         if signal not in ("BUY", "SHORT"):

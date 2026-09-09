@@ -30,8 +30,27 @@ from telegram_alert import send_telegram_message, format_signal_message
 DATA_FILE = "docs/intraday_data.json"
 ALERTED_FILE = "intraday_alerted_keys.json"
 LOG_FILE = "intraday_signal_log.json"
+PROFILES_FILE = "per_stock_profiles.json"
 INTERVAL = "1h"
 IST = timezone(timedelta(hours=5, minutes=30))
+
+
+def load_per_stock_profiles():
+    """
+    Loads calibrated per-stock thresholds if calibrate_thresholds.py has
+    been run. Returns {} if the file doesn't exist yet — in that case
+    every stock just uses the flat interval default, same as before.
+    """
+    if os.path.exists(PROFILES_FILE):
+        try:
+            with open(PROFILES_FILE) as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+
+PER_STOCK_PROFILES = load_per_stock_profiles()
 
 
 def is_market_open_ist():
@@ -52,7 +71,9 @@ def scan_symbol(symbol: str, capital: float = DEFAULT_CAPITAL):
     rows, source = fetch_intraday_candles(symbol, interval=INTERVAL)
     if not rows:
         return {"symbol": symbol, "signal": "ERROR", "error": "No data from any source"}
-    result = compute_signal(symbol, rows, source, capital, interval=INTERVAL).to_dict()
+    profile_override = PER_STOCK_PROFILES.get(symbol)
+    result = compute_signal(symbol, rows, source, capital, interval=INTERVAL,
+                             profile_override=profile_override).to_dict()
     result["bar_date"] = rows[0]["date"]  # exact candle this signal fired on, needed to resolve it later
     return result
 

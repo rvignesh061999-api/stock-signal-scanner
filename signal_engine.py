@@ -157,19 +157,26 @@ class SignalResult:
 
 
 def compute_signal(symbol: str, rows: list, source: str, capital: float = 10000,
-                    interval: str = DEFAULT_INTERVAL) -> SignalResult:
+                    interval: str = DEFAULT_INTERVAL, profile_override: dict = None) -> SignalResult:
     """
     rows: newest-first OHLCV list. At least `sr_window` rows recommended
     for that interval's profile (see INTERVAL_PROFILES).
     interval: "1d", "1h", or "15m" — selects the volatility-appropriate
-    thresholds for stop-loss/target, support/resistance window, and
-    volume/level confirmation. Falls back to "1d" profile if unknown.
+    default thresholds. Falls back to "1d" profile if unknown.
+    profile_override: optional dict to override any of the interval
+    profile's keys (sl_pct, tgt_pct, sr_window, vol_lookback, vol_factor,
+    level_tolerance) for THIS symbol specifically — used for per-stock
+    calibrated thresholds instead of the flat interval default. Only
+    the provided keys are overridden; anything missing falls back to
+    the interval profile.
 
     Pure candle-pattern approach: a candle only becomes an actionable
     BUY/SELL signal if it's also near a support/resistance level OR
     backed by above-average volume. Otherwise it's AVOID (noise).
     """
-    P = INTERVAL_PROFILES.get(interval, INTERVAL_PROFILES[DEFAULT_INTERVAL])
+    P = dict(INTERVAL_PROFILES.get(interval, INTERVAL_PROFILES[DEFAULT_INTERVAL]))
+    if profile_override:
+        P.update(profile_override)
 
     reasons = []
     closes = [r["close"] for r in rows]

@@ -1,0 +1,37 @@
+name: Calibrate Per-Stock Thresholds
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # needed to commit per_stock_profiles.json
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run calibration (may take several minutes — many combinations per stock)
+        env:
+          TD_API_KEY: ${{ secrets.TD_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 calibrate_thresholds.py
+
+      - name: Commit calibrated profiles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add per_stock_profiles.json
+          git diff --staged --quiet || git commit -m "Update per-stock calibrated thresholds"
+          git push
