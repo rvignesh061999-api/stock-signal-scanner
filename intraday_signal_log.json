@@ -70,10 +70,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T06:36:54.548522",
+    "exit_price": 5.39,
+    "bars_to_exit": 4
   },
   {
     "logged_at": "2026-09-08T07:23:59.473250",
@@ -87,10 +87,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T06:36:54.265740",
+    "exit_price": 1078.39,
+    "bars_to_exit": 4
   },
   {
     "logged_at": "2026-09-08T07:53:59.731943",
@@ -104,10 +104,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T06:36:54.738538",
+    "exit_price": 45.69,
+    "bars_to_exit": 3
   },
   {
     "logged_at": "2026-09-08T07:53:59.731951",
@@ -118,6 +118,40 @@
     "sl_price": 7.22,
     "tgt_price": 7.35,
     "candle": "Strong Bullish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-09T06:36:54.925034",
+    "exit_price": 7.35,
+    "bars_to_exit": 3
+  },
+  {
+    "logged_at": "2026-09-09T06:36:59.576956",
+    "signal_bar_date": "2026-09-09 05:45:00",
+    "symbol": "RTNPOWER.NS",
+    "signal": "SHORT",
+    "price": 7.26,
+    "sl_price": 7.3,
+    "tgt_price": 7.17,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T06:36:59.576968",
+    "signal_bar_date": "2026-09-09 05:45:00",
+    "symbol": "INFY.NS",
+    "signal": "SHORT",
+    "price": 1037.2,
+    "sl_price": 1043.42,
+    "tgt_price": 1024.75,
+    "candle": "Bearish Candle",
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
