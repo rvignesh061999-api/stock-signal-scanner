@@ -223,10 +223,10 @@
     "near_level": "resistance",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:45:47.061196",
+    "exit_price": 22.42,
+    "bars_to_exit": 2
   },
   {
     "logged_at": "2026-09-09T07:15:46.969914",
@@ -376,10 +376,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:45:46.943285",
+    "exit_price": 1029.39,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-09T08:01:13.096463",
@@ -427,10 +427,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:45:46.943294",
+    "exit_price": 1029.49,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-09T08:31:07.842418",
@@ -444,10 +444,10 @@
     "near_level": "resistance",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:45:47.061211",
+    "exit_price": 22.41,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-09T08:31:07.842432",
@@ -562,6 +562,57 @@
     "candle": "Bearish Candle",
     "near_level": "support",
     "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T09:45:50.723702",
+    "signal_bar_date": "2026-09-09 08:45:00",
+    "symbol": "RPOWER.NS",
+    "signal": "BUY",
+    "price": 22.01,
+    "sl_price": 21.88,
+    "tgt_price": 22.27,
+    "candle": "Bullish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T09:45:50.723714",
+    "signal_bar_date": "2026-09-09 08:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "SHORT",
+    "price": 45.44,
+    "sl_price": 45.71,
+    "tgt_price": 44.89,
+    "candle": "Bearish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T09:45:50.723717",
+    "signal_bar_date": "2026-09-09 08:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 15.52,
+    "sl_price": 15.61,
+    "tgt_price": 15.33,
+    "candle": "Bearish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
     "source": "yahoo",
     "outcome": null,
     "outcome_checked_at": null,
