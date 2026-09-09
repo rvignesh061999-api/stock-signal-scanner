@@ -2,7 +2,7 @@
 candle_history_report.py
 Builds a candle-pattern history table for each stock in the intraday
 watchlist, over ~2 years of hourly bars: Stock, Date, Time (IST, 24hr),
-High/Low, Direction (UP/DOWN/FLAT), Candle Pattern, Volume.
+Open, High, Low, Close, Direction (UP/DOWN/FLAT), Candle Pattern, Volume.
 
 Produces BOTH a PDF and a plain-text (.txt) version of the same table
 per stock, both sent to Telegram.
@@ -63,8 +63,8 @@ def _to_ist(date_str: str):
 def build_symbol_rows(symbol: str):
     """
     Fetches 2yr hourly data and returns a list of row tuples:
-    (date, time, high, low, direction, pattern_name, volume) in
-    chronological order. Date/time are IST, 24-hour format.
+    (date, time, open, high, low, close, direction, pattern_name, volume)
+    in chronological order. Date/time are IST, 24-hour format.
     """
     rows, source = fetch_intraday_candles(symbol, interval=INTERVAL)
     if not rows:
@@ -89,7 +89,7 @@ def build_symbol_rows(symbol: str):
 
         table_rows.append((
             date_part, time_part,
-            f"{bar['high']} / {bar['low']}",
+            bar["open"], bar["high"], bar["low"], bar["close"],
             direction,
             pattern_name,
             f"{bar['volume']:,}",
@@ -110,10 +110,10 @@ def build_pdf_for_symbol(symbol: str, table_rows: list, output_path: str):
         Spacer(1, 10),
     ]
 
-    header = ["Date", "Time (IST)", "High / Low", "Direction", "Candle Pattern", "Volume"]
+    header = ["Date", "Time (IST)", "Open", "High", "Low", "Close", "Direction", "Candle Pattern", "Volume"]
     data = [header] + [list(r) for r in table_rows]
 
-    table = Table(data, colWidths=[1.0 * inch, 0.9 * inch, 1.4 * inch, 0.8 * inch, 2.0 * inch, 1.1 * inch], repeatRows=1)
+    table = Table(data, colWidths=[0.85 * inch, 0.8 * inch, 0.65 * inch, 0.65 * inch, 0.65 * inch, 0.65 * inch, 0.7 * inch, 1.85 * inch, 1.0 * inch], repeatRows=1)
     style_commands = [
         ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#1B2430")),
         ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
@@ -126,12 +126,12 @@ def build_pdf_for_symbol(symbol: str, table_rows: list, output_path: str):
         ("TOPPADDING", (0, 0), (-1, -1), 3),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
     ]
-    # Color the Direction column text green/red for quick scanning
+    # Color the Direction column text green/red for quick scanning (column index 6)
     for row_idx, row in enumerate(table_rows, start=1):
-        if row[3] == "UP":
-            style_commands.append(("TEXTCOLOR", (3, row_idx), (3, row_idx), colors.HexColor("#1a7a3c")))
-        elif row[3] == "DOWN":
-            style_commands.append(("TEXTCOLOR", (3, row_idx), (3, row_idx), colors.HexColor("#b3261e")))
+        if row[6] == "UP":
+            style_commands.append(("TEXTCOLOR", (6, row_idx), (6, row_idx), colors.HexColor("#1a7a3c")))
+        elif row[6] == "DOWN":
+            style_commands.append(("TEXTCOLOR", (6, row_idx), (6, row_idx), colors.HexColor("#b3261e")))
     table.setStyle(TableStyle(style_commands))
     story.append(table)
 
@@ -140,9 +140,9 @@ def build_pdf_for_symbol(symbol: str, table_rows: list, output_path: str):
 
 
 def build_txt_for_symbol(symbol: str, table_rows: list, output_path: str):
-    """Plain-text version of the same table, fixed-width columns, tab-separated fallback friendly."""
-    header = ["Date", "Time (IST)", "High / Low", "Direction", "Candle Pattern", "Volume"]
-    col_widths = [12, 12, 16, 10, 22, 12]
+    """Plain-text version of the same table, fixed-width columns."""
+    header = ["Date", "Time (IST)", "Open", "High", "Low", "Close", "Direction", "Candle Pattern", "Volume"]
+    col_widths = [12, 12, 9, 9, 9, 9, 10, 22, 12]
 
     def fmt_row(cols):
         return "".join(str(c).ljust(w) for c, w in zip(cols, col_widths))
