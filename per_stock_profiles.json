@@ -1,1 +1,50 @@
-{}
+{
+  "PCJEWELLER.NS": {
+    "tgt_pct": 2.0,
+    "sl_pct": 1.0,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.008
+  },
+  "YESBANK.NS": {
+    "tgt_pct": 1.2,
+    "sl_pct": 0.6,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.005
+  },
+  "RPOWER.NS": {
+    "tgt_pct": 1.5,
+    "sl_pct": 0.75,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.005
+  },
+  "SUZLON.NS": {
+    "tgt_pct": 1.5,
+    "sl_pct": 0.75,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.005
+  },
+  "SEPC.NS": {
+    "tgt_pct": 2.0,
+    "sl_pct": 1.0,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.005
+  },
+  "IDEA.NS": {
+    "tgt_pct": 1.0,
+    "sl_pct": 0.5,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.008
+  },
+  "RTNPOWER.NS": {
+    "tgt_pct": 2.0,
+    "sl_pct": 1.0,
+    "vol_factor": 2.0,
+    "level_tolerance": 0.005
+  },
+  "INFY.NS": {
+    "tgt_pct": 1.2,
+    "sl_pct": 0.6,
+    "vol_factor": 1.6,
+    "level_tolerance": 0.005
+  }
+}
