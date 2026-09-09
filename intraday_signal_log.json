@@ -359,10 +359,10 @@
     "near_level": "resistance",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:01:10.291049",
+    "exit_price": 15.68,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-09T07:56:44.074306",
@@ -410,10 +410,10 @@
     "near_level": "resistance",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-09T09:01:10.291057",
+    "exit_price": 15.65,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-09T08:01:13.096476",
@@ -508,6 +508,23 @@
     "price": 1032.6,
     "sl_price": 1038.8,
     "tgt_price": 1020.21,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-09T09:01:13.968413",
+    "signal_bar_date": "2026-09-09 08:45:00",
+    "symbol": "INFY.NS",
+    "signal": "SHORT",
+    "price": 1032.3,
+    "sl_price": 1038.49,
+    "tgt_price": 1019.91,
     "candle": "Bearish Candle",
     "near_level": "support",
     "volume_confirmed": false,
