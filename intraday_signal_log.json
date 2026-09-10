@@ -669,5 +669,39 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T04:30:59.707214",
+    "signal_bar_date": "2026-09-10 03:45:00",
+    "symbol": "SEPC.NS",
+    "signal": "SHORT",
+    "price": 5.34,
+    "sl_price": 5.39,
+    "tgt_price": 5.23,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T04:30:59.707225",
+    "signal_bar_date": "2026-09-10 03:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 15.41,
+    "sl_price": 15.49,
+    "tgt_price": 15.26,
+    "candle": "Strong Bearish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
