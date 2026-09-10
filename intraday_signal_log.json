@@ -155,10 +155,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-10T04:15:41.902900",
+    "exit_price": 1043.42,
+    "bars_to_exit": 5
   },
   {
     "logged_at": "2026-09-09T06:45:46.405008",
@@ -172,10 +172,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-10T04:15:41.902908",
+    "exit_price": 1042.52,
+    "bars_to_exit": 5
   },
   {
     "logged_at": "2026-09-09T07:01:14.004122",
@@ -206,10 +206,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-10T04:15:41.902912",
+    "exit_price": 1041.31,
+    "bars_to_exit": 4
   },
   {
     "logged_at": "2026-09-09T07:15:46.969902",
@@ -325,10 +325,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-10T04:15:41.902915",
+    "exit_price": 1040.91,
+    "bars_to_exit": 4
   },
   {
     "logged_at": "2026-09-09T07:56:44.074292",
@@ -628,6 +628,40 @@
     "sl_price": 15.52,
     "tgt_price": 15.29,
     "candle": "Strong Bearish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T04:15:45.835662",
+    "signal_bar_date": "2026-09-10 03:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 15.4,
+    "sl_price": 15.48,
+    "tgt_price": 15.25,
+    "candle": "Strong Bearish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T04:15:45.835673",
+    "signal_bar_date": "2026-09-10 03:45:00",
+    "symbol": "INFY.NS",
+    "signal": "BUY",
+    "price": 1043.6,
+    "sl_price": 1037.34,
+    "tgt_price": 1056.12,
+    "candle": "Bullish Candle",
     "near_level": "none",
     "volume_confirmed": true,
     "source": "yahoo",
