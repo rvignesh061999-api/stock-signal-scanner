@@ -971,10 +971,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-10T10:01:16.041580",
+    "exit_price": 5.27,
+    "bars_to_exit": 4
   },
   {
     "logged_at": "2026-09-10T06:15:43.967887",
