@@ -1111,5 +1111,39 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T07:56:39.750799",
+    "signal_bar_date": "2026-09-10 07:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "SHORT",
+    "price": 44.79,
+    "sl_price": 45.13,
+    "tgt_price": 44.12,
+    "candle": "Strong Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T07:56:39.750810",
+    "signal_bar_date": "2026-09-10 07:45:00",
+    "symbol": "SEPC.NS",
+    "signal": "SHORT",
+    "price": 5.32,
+    "sl_price": 5.37,
+    "tgt_price": 5.21,
+    "candle": "Strong Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
