@@ -1179,5 +1179,39 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T08:15:45.614737",
+    "signal_bar_date": "2026-09-10 07:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "SHORT",
+    "price": 44.76,
+    "sl_price": 45.1,
+    "tgt_price": 44.09,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T08:15:45.614750",
+    "signal_bar_date": "2026-09-10 07:45:00",
+    "symbol": "INFY.NS",
+    "signal": "SHORT",
+    "price": 1031.8,
+    "sl_price": 1037.99,
+    "tgt_price": 1019.42,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
