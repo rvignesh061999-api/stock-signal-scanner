@@ -937,10 +937,10 @@
     "near_level": "none",
     "volume_confirmed": true,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-10T07:01:18.115027",
+    "exit_price": 14.96,
+    "bars_to_exit": 2
   },
   {
     "logged_at": "2026-09-10T06:01:14.004591",
@@ -1036,6 +1036,23 @@
     "sl_price": 45.22,
     "tgt_price": 44.21,
     "candle": "Bearish Engulfing",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T07:01:22.970965",
+    "signal_bar_date": "2026-09-10 06:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "BUY",
+    "price": 44.95,
+    "sl_price": 44.61,
+    "tgt_price": 45.62,
+    "candle": "Bullish Candle",
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
