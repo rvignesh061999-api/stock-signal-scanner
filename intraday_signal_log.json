@@ -1298,5 +1298,22 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-10T09:15:45.457679",
+    "signal_bar_date": "2026-09-10 08:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "SHORT",
+    "price": 44.42,
+    "sl_price": 44.75,
+    "tgt_price": 43.75,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
