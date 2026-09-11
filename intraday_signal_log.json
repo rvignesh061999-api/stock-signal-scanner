@@ -1890,10 +1890,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-11T07:15:46.214822",
+    "exit_price": 22.71,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T06:01:19.778039",
@@ -1947,10 +1947,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-11T07:15:46.214833",
+    "exit_price": 22.75,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T06:15:45.946749",
@@ -1985,10 +1985,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-11T07:15:46.214836",
+    "exit_price": 22.73,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T06:31:07.741516",
@@ -2058,6 +2058,25 @@
     "candle": "Bearish Candle",
     "near_level": "support",
     "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-11T07:15:49.430396",
+    "signal_bar_date": "2026-09-11 06:45:00",
+    "symbol": "YESBANK.NS",
+    "signal": "BUY",
+    "price": 22.83,
+    "sl_price": 22.69,
+    "tgt_price": 23.1,
+    "candle": "Bullish Engulfing",
+    "near_level": "resistance",
+    "volume_confirmed": true,
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
