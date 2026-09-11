@@ -2141,5 +2141,24 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-11T07:45:44.855394",
+    "signal_bar_date": "2026-09-11 06:45:00",
+    "symbol": "YESBANK.NS",
+    "signal": "BUY",
+    "price": 23.03,
+    "sl_price": 22.89,
+    "tgt_price": 23.31,
+    "candle": "Bullish Engulfing",
+    "near_level": "resistance",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
