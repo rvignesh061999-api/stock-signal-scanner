@@ -1932,5 +1932,43 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-11T06:15:45.946736",
+    "signal_bar_date": "2026-09-11 05:45:00",
+    "symbol": "YESBANK.NS",
+    "signal": "SHORT",
+    "price": 22.61,
+    "sl_price": 22.75,
+    "tgt_price": 22.34,
+    "candle": "Bearish Candle",
+    "near_level": "resistance",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-11T06:15:45.946749",
+    "signal_bar_date": "2026-09-11 05:45:00",
+    "symbol": "RPOWER.NS",
+    "signal": "SHORT",
+    "price": 21.5,
+    "sl_price": 21.66,
+    "tgt_price": 21.18,
+    "candle": "Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
