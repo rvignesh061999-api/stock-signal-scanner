@@ -53,11 +53,22 @@ def format_signal_message(sig: dict) -> str:
     lines = [
         f"{icon} <b>{sig['symbol']}</b> — {sig['signal']}",
         f"Price: {sig['price']} ({sig['price_change_pct']:+.2f}%)",
-        f"Candle: {sig['candle']} ({sig['candle_strength']})",
-        f"Near level: {sig['near_level']} | Volume confirmed: {sig['volume_confirmed']}",
-        f"SL: {sig['sl_price']} | Target: {sig['tgt_price']}",
-        f"Source: {sig['source']}",
     ]
+
+    if sig.get("exit_rule") == "next_bar_close":
+        # Direction-prediction style signal (e.g. PCJEWELLER strategy) —
+        # no price target/SL, exits at the next bar's close instead.
+        confidence = sig.get("confidence", "unspecified")
+        lines.append(f"Predicted direction: {sig.get('predicted_direction', '?')} (confidence: {confidence})")
+        lines.append("Exit: at next hourly bar's close")
+        if sig.get("reasons"):
+            lines.append("Reason: " + sig["reasons"][-1])
+    else:
+        lines.append(f"Candle: {sig['candle']} ({sig['candle_strength']})")
+        lines.append(f"Near level: {sig['near_level']} | Volume confirmed: {sig['volume_confirmed']}")
+        lines.append(f"SL: {sig['sl_price']} | Target: {sig['tgt_price']}")
+
+    lines.append(f"Source: {sig['source']}")
     return "\n".join(lines)
 
 

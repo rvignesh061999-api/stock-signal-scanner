@@ -25,6 +25,7 @@ from datetime import datetime, timezone, timedelta
 from config import INTRADAY_WATCHLIST, DEFAULT_CAPITAL
 from data_fetch import fetch_intraday_candles
 from signal_engine import compute_signal
+from pcjeweller_strategy import compute_pcjeweller_signal
 from telegram_alert import send_telegram_message, format_signal_message
 
 DATA_FILE = "docs/intraday_data.json"
@@ -71,9 +72,29 @@ def scan_symbol(symbol: str, capital: float = DEFAULT_CAPITAL):
     rows, source = fetch_intraday_candles(symbol, interval=INTERVAL)
     if not rows:
         return {"symbol": symbol, "signal": "ERROR", "error": "No data from any source"}
-    profile_override = PER_STOCK_PROFILES.get(symbol)
-    result = compute_signal(symbol, rows, source, capital, interval=INTERVAL,
-                             profile_override=profile_override).to_dict()
+
+    if symbol == "PCJEWELLER.NS":
+        # Dedicated, statistically-validated strategy for this stock only
+        # (see pcjeweller_strategy.py) — replaces the generic candle+
+        # support/resistance+volume logic used for the other 7 stocks.
+        result = compute_pcjeweller_signal(rows, source, capital)
+        # Fields the rest of the pipeline (logging, dashboard, Telegram
+        # formatting) expects but this simpler result doesn't set —
+        # filled with sensible defaults so nothing downstream breaks.
+        result.setdefault("price_change_pct", 0)
+        result.setdefault("candle", "-")
+        result.setdefault("candle_strength", "-")
+        result.setdefault("near_level", "-")
+        result.setdefault("volume_confirmed", False)
+        result.setdefault("vol_ratio", 0)
+        result.setdefault("sl_price", None)
+        result.setdefault("tgt_price", None)
+    else:
+        profile_override = PER_STOCK_PROFILES.get(symbol)
+        result = compute_signal(symbol, rows, source, capital, interval=INTERVAL,
+                                 profile_override=profile_override).to_dict()
+        result["exit_rule"] = None  # standard price-target/SL resolution, see resolve_pending_signals
+
     result["bar_date"] = rows[0]["date"]  # exact candle this signal fired on, needed to resolve it later
     return result
 
@@ -142,6 +163,9 @@ def append_to_log(new_signals):
             "near_level": sig["near_level"],
             "volume_confirmed": sig["volume_confirmed"],
             "source": sig["source"],
+            "exit_rule": sig.get("exit_rule"),  # None = standard price-target/SL resolution;
+                                                  # "next_bar_close" = PCJEWELLER-style direction resolution
+            "predicted_direction": sig.get("predicted_direction"),  # only set for next_bar_close signals
             # These stay null until resolve_pending_signals() determines
             # what actually happened after this signal fired.
             "outcome": None,
@@ -200,6 +224,33 @@ def resolve_pending_signals():
                 continue
 
             idx = date_to_index[bar_date]
+
+            if entry.get("exit_rule") == "next_bar_close":
+                # PCJEWELLER-style resolution: this predicts NEXT BAR
+                # DIRECTION, not a price target. Resolves after exactly
+                # 1 bar — WIN if the next bar's actual direction matched
+                # the prediction, LOSS if not. Nothing to wait for beyond
+                # that single bar, unlike the 10-bar price-target check below.
+                if idx + 1 >= len(chrono):
+                    continue  # next bar hasn't happened yet, still pending
+                next_bar = chrono[idx + 1]
+                if next_bar["close"] > next_bar["open"]:
+                    actual_direction = "UP"
+                elif next_bar["close"] < next_bar["open"]:
+                    actual_direction = "DOWN"
+                else:
+                    actual_direction = "FLAT"
+
+                predicted = entry.get("predicted_direction")
+                outcome = "WIN" if actual_direction == predicted else "LOSS"
+                entry["outcome"] = outcome
+                entry["exit_price"] = next_bar["close"]
+                entry["bars_to_exit"] = 1
+                entry["outcome_checked_at"] = datetime.now().isoformat()
+                resolved_count += 1
+                continue
+
+            # Standard price-target/stop-loss resolution (all other stocks)
             outcome = None
             exit_price = None
             bars_to_exit = None
