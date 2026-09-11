@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T07:52:48.289724",
+  "updated_at": "2026-09-11T08:01:15.560690",
   "interval": "1h",
   "results": [
     {
@@ -29,22 +29,22 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "BUY",
-      "price": 23.05,
-      "price_change_pct": 0.09,
+      "price": 23.15,
+      "price_change_pct": 0.52,
       "candle": "Bullish Candle",
       "candle_signal": "BUY",
       "candle_strength": "Weak",
       "near_level": "resistance",
       "support": 22.09,
-      "resistance": 23.11,
+      "resistance": 23.19,
       "volume_confirmed": false,
-      "vol_ratio": 0.37,
-      "sl_price": 22.91,
-      "tgt_price": 23.33,
+      "vol_ratio": 1.69,
+      "sl_price": 23.01,
+      "tgt_price": 23.43,
       "reasons": [
         "Candle: Bullish Candle (Weak)",
-        "Price near resistance (support 22.09, resistance 23.11)",
-        "Volume not confirmed: 0.37x average \u2014 lower conviction"
+        "Price near resistance (support 22.09, resistance 23.19)",
+        "Volume not confirmed: 1.69x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -63,13 +63,13 @@
       "support": 21.42,
       "resistance": 22.88,
       "volume_confirmed": false,
-      "vol_ratio": 0.03,
+      "vol_ratio": 0.07,
       "sl_price": 21.64,
       "tgt_price": 21.16,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Price near support (support 21.42, resistance 22.88)",
-        "Volume not confirmed: 0.03x average \u2014 lower conviction"
+        "Volume not confirmed: 0.07x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -79,23 +79,23 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 43.93,
-      "price_change_pct": -0.09,
-      "candle": "Bearish Candle",
-      "candle_signal": "SELL",
+      "price": 44.03,
+      "price_change_pct": 0.14,
+      "candle": "Bullish Candle",
+      "candle_signal": "BUY",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 43.25,
       "resistance": 46.36,
       "volume_confirmed": false,
-      "vol_ratio": 0.11,
-      "sl_price": 43.6,
-      "tgt_price": 44.59,
+      "vol_ratio": 0.19,
+      "sl_price": 43.7,
+      "tgt_price": 44.69,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bearish Candle (Weak)",
+        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 43.25, resistance 46.36)",
-        "Volume not confirmed: 0.11x average \u2014 lower conviction"
+        "Volume not confirmed: 0.19x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -114,14 +114,14 @@
       "support": 5.18,
       "resistance": 5.45,
       "volume_confirmed": false,
-      "vol_ratio": 0.03,
+      "vol_ratio": 0.16,
       "sl_price": 5.2,
       "tgt_price": 5.36,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Strong Bearish Candle (Moderate)",
         "Not near a key level (support 5.18, resistance 5.45)",
-        "Volume not confirmed: 0.03x average \u2014 lower conviction"
+        "Volume not confirmed: 0.16x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -131,8 +131,8 @@
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 15.01,
-      "price_change_pct": 0.0,
+      "price": 15.09,
+      "price_change_pct": 0.53,
       "candle": "Bullish Engulfing",
       "candle_signal": "BUY",
       "candle_strength": "Strong",
@@ -140,14 +140,14 @@
       "support": 14.44,
       "resistance": 15.79,
       "volume_confirmed": false,
-      "vol_ratio": 0.04,
-      "sl_price": 14.93,
-      "tgt_price": 15.16,
+      "vol_ratio": 0.12,
+      "sl_price": 15.01,
+      "tgt_price": 15.24,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Engulfing (Strong)",
         "Not near a key level (support 14.44, resistance 15.79)",
-        "Volume not confirmed: 0.04x average \u2014 lower conviction"
+        "Volume not confirmed: 0.12x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -166,13 +166,13 @@
       "support": 7.13,
       "resistance": 7.46,
       "volume_confirmed": false,
-      "vol_ratio": 0.03,
+      "vol_ratio": 0.07,
       "sl_price": 7.12,
       "tgt_price": 7.25,
       "reasons": [
         "Candle: Doji (Weak)",
         "Price near support (support 7.13, resistance 7.46)",
-        "Volume not confirmed: 0.03x average \u2014 lower conviction"
+        "Volume not confirmed: 0.07x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -182,23 +182,23 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1041.1,
-      "price_change_pct": -0.02,
-      "candle": "Bearish Candle",
+      "price": 1039.9,
+      "price_change_pct": -0.13,
+      "candle": "Evening Star",
       "candle_signal": "SELL",
-      "candle_strength": "Weak",
+      "candle_strength": "Strong",
       "near_level": "none",
       "support": 1026.7,
       "resistance": 1136.1,
       "volume_confirmed": false,
-      "vol_ratio": 0.04,
-      "sl_price": 1034.85,
-      "tgt_price": 1053.59,
+      "vol_ratio": 0.11,
+      "sl_price": 1033.66,
+      "tgt_price": 1052.38,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bearish Candle (Weak)",
+        "Candle: Evening Star (Strong)",
         "Not near a key level (support 1026.7, resistance 1136.1)",
-        "Volume not confirmed: 0.04x average \u2014 lower conviction"
+        "Volume not confirmed: 0.11x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
