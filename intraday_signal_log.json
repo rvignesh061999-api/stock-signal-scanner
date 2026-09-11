@@ -1833,10 +1833,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-11T06:45:41.543335",
+    "exit_price": 22.51,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T05:45:46.561435",
