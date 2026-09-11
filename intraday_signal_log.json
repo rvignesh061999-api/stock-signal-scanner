@@ -2350,5 +2350,24 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-11T09:31:04.813020",
+    "signal_bar_date": "2026-09-11 08:45:00",
+    "symbol": "YESBANK.NS",
+    "signal": "SHORT",
+    "price": 23.6,
+    "sl_price": 23.74,
+    "tgt_price": 23.32,
+    "candle": "Bearish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
