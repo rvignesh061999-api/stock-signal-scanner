@@ -2175,10 +2175,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-11T09:01:48.290010",
+    "exit_price": 13.75,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T07:52:49.096863",
@@ -2194,10 +2194,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-11T09:01:49.682905",
+    "exit_price": 23.33,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T07:52:49.096867",
@@ -2232,10 +2232,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-11T09:01:49.682912",
+    "exit_price": 23.43,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T08:15:46.802518",
@@ -2251,10 +2251,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-11T09:01:48.290016",
+    "exit_price": 13.75,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T08:15:46.802537",
@@ -2289,10 +2289,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-11T09:01:48.290019",
+    "exit_price": 13.75,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T08:31:04.275051",
@@ -2308,10 +2308,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-11T09:01:49.682917",
+    "exit_price": 23.57,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-11T08:45:47.426689",
