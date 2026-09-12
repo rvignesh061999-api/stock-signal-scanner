@@ -26,6 +26,10 @@ resolves after exactly 1 bar, as WIN if the next bar's direction
 matched the prediction, LOSS if not.
 """
 
+from datetime import datetime, timedelta
+
+IST_OFFSET = timedelta(hours=5, minutes=30)
+
 NO_GAP_THRESHOLD_PCT = 0.1  # gap smaller than this counts as "no gap" — not specified numerically
                              # in the source analysis, chosen as a reasonable small threshold;
                              # revisit if forward results look off because of this choice
@@ -62,9 +66,25 @@ def _gap_pct(new_open, prev_close):
     return abs(new_open - prev_close) / prev_close * 100
 
 
+def _ist_time(bar_date_str):
+    """
+    Converts a stored 'YYYY-MM-DD HH:MM:SS' UTC timestamp (how data_fetch.py
+    stores bars internally) to its IST 'HH:MM:SS' equivalent.
+
+    BUG FIX: this previously checked the raw UTC string directly against
+    "09:15:00", which actually matched 9:15 AM UTC (2:45 PM IST) — not the
+    real market-open slot the source analysis meant. All time-of-day rules
+    must go through this conversion, not check the raw stored string.
+    """
+    try:
+        dt_utc = datetime.strptime(bar_date_str, "%Y-%m-%d %H:%M:%S")
+        return (dt_utc + IST_OFFSET).strftime("%H:%M:%S")
+    except (ValueError, TypeError):
+        return ""
+
+
 def _is_0915_slot(bar_date_str):
-    """bar_date_str is 'YYYY-MM-DD HH:MM:SS' in whatever timezone the data was fetched in."""
-    return bar_date_str.endswith("09:15:00") if len(bar_date_str) >= 8 else False
+    return _ist_time(bar_date_str) == "09:15:00"
 
 
 def compute_pcjeweller_signal(rows: list, source: str, capital: float = 10000):

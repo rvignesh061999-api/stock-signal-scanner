@@ -26,6 +26,7 @@ from config import INTRADAY_WATCHLIST, DEFAULT_CAPITAL
 from data_fetch import fetch_intraday_candles
 from signal_engine import compute_signal
 from pcjeweller_strategy import compute_pcjeweller_signal
+from rpower_strategy import compute_rpower_signal
 from telegram_alert import send_telegram_message, format_signal_message
 
 DATA_FILE = "docs/intraday_data.json"
@@ -68,19 +69,28 @@ def is_market_open_ist():
     return 9 * 60 + 15 <= minutes <= 15 * 60 + 30
 
 
+# Per-stock dedicated strategies — each replaces the generic candle+
+# support/resistance+volume logic for its specific symbol, based on
+# statistical analysis of that stock's own history. Any symbol not in
+# this dict uses the generic strategy with its calibrated profile
+# (see PER_STOCK_PROFILES) instead.
+DEDICATED_STRATEGIES = {
+    "PCJEWELLER.NS": compute_pcjeweller_signal,
+    "RPOWER.NS": compute_rpower_signal,
+}
+
+
 def scan_symbol(symbol: str, capital: float = DEFAULT_CAPITAL):
     rows, source = fetch_intraday_candles(symbol, interval=INTERVAL)
     if not rows:
         return {"symbol": symbol, "signal": "ERROR", "error": "No data from any source"}
 
-    if symbol == "PCJEWELLER.NS":
-        # Dedicated, statistically-validated strategy for this stock only
-        # (see pcjeweller_strategy.py) — replaces the generic candle+
-        # support/resistance+volume logic used for the other 7 stocks.
-        result = compute_pcjeweller_signal(rows, source, capital)
+    if symbol in DEDICATED_STRATEGIES:
+        result = DEDICATED_STRATEGIES[symbol](rows, source, capital)
         # Fields the rest of the pipeline (logging, dashboard, Telegram
-        # formatting) expects but this simpler result doesn't set —
-        # filled with sensible defaults so nothing downstream breaks.
+        # formatting) expects but these simpler dedicated-strategy
+        # results don't set — filled with sensible defaults so nothing
+        # downstream breaks.
         result.setdefault("price_change_pct", 0)
         result.setdefault("candle", "-")
         result.setdefault("candle_strength", "-")
