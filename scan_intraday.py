@@ -27,6 +27,8 @@ from data_fetch import fetch_intraday_candles
 from signal_engine import compute_signal
 from pcjeweller_strategy import compute_pcjeweller_signal
 from rpower_strategy import compute_rpower_signal
+from infy_strategy import compute_infy_signal
+from idea_strategy import compute_idea_signal
 from telegram_alert import send_telegram_message, format_signal_message
 
 DATA_FILE = "docs/intraday_data.json"
@@ -77,6 +79,8 @@ def is_market_open_ist():
 DEDICATED_STRATEGIES = {
     "PCJEWELLER.NS": compute_pcjeweller_signal,
     "RPOWER.NS": compute_rpower_signal,
+    "INFY.NS": compute_infy_signal,
+    "IDEA.NS": compute_idea_signal,
 }
 
 
@@ -256,6 +260,33 @@ def resolve_pending_signals():
                 entry["outcome"] = outcome
                 entry["exit_price"] = next_bar["close"]
                 entry["bars_to_exit"] = 1
+                entry["outcome_checked_at"] = datetime.now().isoformat()
+                resolved_count += 1
+                continue
+
+            if entry.get("exit_rule") == "same_bar_close":
+                # IDEA-style resolution: predicts the LOGGED bar's OWN
+                # direction (e.g. "this bar, which just opened with a
+                # gap up, will itself close down") — not the bar after
+                # it. Only resolvable once we can see a LATER bar exists
+                # (idx+1 present), which confirms the logged bar (idx)
+                # is fully closed and its own OHLC values are final, not
+                # still live-updating.
+                if idx + 1 >= len(chrono):
+                    continue  # this bar hasn't fully closed yet, still pending
+                this_bar = chrono[idx]
+                if this_bar["close"] > this_bar["open"]:
+                    actual_direction = "UP"
+                elif this_bar["close"] < this_bar["open"]:
+                    actual_direction = "DOWN"
+                else:
+                    actual_direction = "FLAT"
+
+                predicted = entry.get("predicted_direction")
+                outcome = "WIN" if actual_direction == predicted else "LOSS"
+                entry["outcome"] = outcome
+                entry["exit_price"] = this_bar["close"]
+                entry["bars_to_exit"] = 0  # resolved using the same bar, not a later one
                 entry["outcome_checked_at"] = datetime.now().isoformat()
                 resolved_count += 1
                 continue

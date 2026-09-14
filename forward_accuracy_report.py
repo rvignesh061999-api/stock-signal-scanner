@@ -46,6 +46,12 @@ BASELINES = {
                               "label": "SELL (DOWN) setup — validated, most stable finding across stocks analyzed"},
     ("RPOWER.NS", "UP"): {"test_pct": 64.3, "baseline_pct": 40.0,
                             "label": "BUY (UP) setup — validated, strengthened out-of-sample"},
+    ("INFY.NS", "DOWN"): {"test_pct": 65.4, "baseline_pct": 51.0,
+                            "label": "SELL (DOWN) setup — validated, top-third close at 14:15"},
+    ("INFY.NS", "UP"): {"test_pct": 64.9, "baseline_pct": 49.0,
+                          "label": "BUY (UP) setup — mixed evidence, dipped to baseline in validation"},
+    ("IDEA.NS", "DOWN"): {"test_pct": 59.8, "baseline_pct": 47.0,
+                            "label": "SELL (DOWN) setup — validated, strengthened out-of-sample, cleanest result of all 8 stocks"},
 }
 
 
