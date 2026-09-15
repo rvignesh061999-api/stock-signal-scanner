@@ -1453,8 +1453,8 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
+    "outcome": "NO_HIT",
+    "outcome_checked_at": "2026-09-15T07:01:16.133435",
     "exit_price": null,
     "bars_to_exit": null
   },
@@ -2593,10 +2593,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T07:01:16.414814",
+    "exit_price": 21.22,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-15T06:15:48.227648",
@@ -2612,10 +2612,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T07:01:16.414826",
+    "exit_price": 21.22,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-15T06:15:48.227661",
@@ -2650,10 +2650,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T07:01:16.414828",
+    "exit_price": 21.22,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-15T06:31:01.126911",
@@ -2707,10 +2707,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T07:01:16.414829",
+    "exit_price": 21.22,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-15T06:45:47.475818",
@@ -2721,6 +2721,25 @@
     "sl_price": 7.09,
     "tgt_price": 6.97,
     "candle": "Strong Bearish Candle",
+    "near_level": "support",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-15T07:01:20.634073",
+    "signal_bar_date": "2026-09-15 06:45:00",
+    "symbol": "SEPC.NS",
+    "signal": "BUY",
+    "price": 5.2,
+    "sl_price": 5.15,
+    "tgt_price": 5.3,
+    "candle": "Bullish Candle",
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
