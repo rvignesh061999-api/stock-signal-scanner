@@ -1871,10 +1871,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T04:01:10.182566",
+    "exit_price": 44.78,
+    "bars_to_exit": 6
   },
   {
     "logged_at": "2026-09-11T06:01:19.778029",
@@ -2137,10 +2137,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T04:01:10.075358",
+    "exit_price": 7.25,
+    "bars_to_exit": 4
   },
   {
     "logged_at": "2026-09-11T07:45:44.855394",
@@ -2270,10 +2270,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-15T04:01:10.287270",
+    "exit_price": 23.82,
+    "bars_to_exit": 3
   },
   {
     "logged_at": "2026-09-11T08:31:04.275038",
@@ -2346,10 +2346,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-15T04:01:10.287280",
+    "exit_price": 23.72,
+    "bars_to_exit": 2
   },
   {
     "logged_at": "2026-09-11T09:31:04.813020",
@@ -2365,10 +2365,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-15T04:01:10.287283",
+    "exit_price": 23.74,
+    "bars_to_exit": 2
   },
   {
     "logged_at": "2026-09-11T09:45:45.006911",
@@ -2384,10 +2384,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-15T04:01:10.287286",
+    "exit_price": 23.75,
+    "bars_to_exit": 2
   },
   {
     "logged_at": "2026-09-11T09:45:45.006920",
@@ -2407,5 +2407,24 @@
     "outcome_checked_at": "2026-09-11T10:15:41.558544",
     "exit_price": 44.15,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-09-15T04:01:13.468149",
+    "signal_bar_date": "2026-09-15 03:45:00",
+    "symbol": "INFY.NS",
+    "signal": "BUY",
+    "price": 1092.7,
+    "sl_price": 1086.14,
+    "tgt_price": 1105.81,
+    "candle": "Bullish Candle",
+    "near_level": "none",
+    "volume_confirmed": true,
+    "source": "yahoo",
+    "exit_rule": null,
+    "predicted_direction": null,
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
