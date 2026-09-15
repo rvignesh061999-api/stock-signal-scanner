@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-15T04:15:44.516744",
+  "updated_at": "2026-09-15T04:31:02.563422",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 13.32,
+      "price": 13.28,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -24,24 +24,23 @@
     },
     {
       "symbol": "YESBANK.NS",
-      "signal": "AVOID",
-      "price": 23.32,
-      "price_change_pct": -0.68,
+      "signal": "SHORT",
+      "price": 23.24,
+      "price_change_pct": -1.02,
       "candle": "Strong Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Moderate",
       "near_level": "none",
       "support": 22.25,
       "resistance": 23.94,
-      "volume_confirmed": false,
-      "vol_ratio": 1.94,
-      "sl_price": 23.18,
-      "tgt_price": 23.6,
+      "volume_confirmed": true,
+      "vol_ratio": 2.34,
+      "sl_price": 23.38,
+      "tgt_price": 22.96,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Strong Bearish Candle (Moderate)",
         "Not near a key level (support 22.25, resistance 23.94)",
-        "Volume not confirmed: 1.94x average \u2014 lower conviction"
+        "Volume confirmed: 2.34x average (needs 2.0x for 1h)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -51,7 +50,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 21.4,
+      "price": 21.32,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -70,24 +69,23 @@
     },
     {
       "symbol": "SUZLON.NS",
-      "signal": "AVOID",
-      "price": 44.28,
-      "price_change_pct": 0.36,
+      "signal": "SHORT",
+      "price": 44.13,
+      "price_change_pct": 0.02,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 43.42,
       "resistance": 46.27,
-      "volume_confirmed": false,
-      "vol_ratio": 1.22,
-      "sl_price": 43.95,
-      "tgt_price": 44.94,
+      "volume_confirmed": true,
+      "vol_ratio": 1.53,
+      "sl_price": 44.46,
+      "tgt_price": 43.47,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 43.42, resistance 46.27)",
-        "Volume not confirmed: 1.22x average \u2014 lower conviction"
+        "Volume confirmed: 1.53x average (needs 1.3x for 1h)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -106,13 +104,13 @@
       "support": 5.19,
       "resistance": 5.45,
       "volume_confirmed": true,
-      "vol_ratio": 2.37,
+      "vol_ratio": 2.79,
       "sl_price": 5.27,
       "tgt_price": 5.12,
       "reasons": [
         "Candle: Evening Star (Strong)",
         "Not near a key level (support 5.19, resistance 5.45)",
-        "Volume confirmed: 2.37x average (needs 2.0x for 1h)"
+        "Volume confirmed: 2.79x average (needs 2.0x for 1h)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -122,8 +120,8 @@
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 14.77,
-      "price_change_pct": -1.34,
+      "price": 14.79,
+      "price_change_pct": -1.2,
       "candle": "Bearish Engulfing",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -131,14 +129,14 @@
       "support": 14.44,
       "resistance": 15.79,
       "volume_confirmed": false,
-      "vol_ratio": 1.24,
-      "sl_price": 14.7,
-      "tgt_price": 14.92,
+      "vol_ratio": 1.5,
+      "sl_price": 14.72,
+      "tgt_price": 14.94,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 14.44, resistance 15.79)",
-        "Volume not confirmed: 1.24x average \u2014 lower conviction"
+        "Volume not confirmed: 1.50x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -147,23 +145,23 @@
     },
     {
       "symbol": "RTNPOWER.NS",
-      "signal": "BUY",
-      "price": 7.26,
-      "price_change_pct": 0.83,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
+      "signal": "SHORT",
+      "price": 7.19,
+      "price_change_pct": -0.14,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 7.13,
       "resistance": 7.46,
       "volume_confirmed": true,
-      "vol_ratio": 2.61,
-      "sl_price": 7.22,
-      "tgt_price": 7.35,
+      "vol_ratio": 4.38,
+      "sl_price": 7.23,
+      "tgt_price": 7.1,
       "reasons": [
-        "Candle: Bullish Candle (Weak)",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 7.13, resistance 7.46)",
-        "Volume confirmed: 2.61x average (needs 2.0x for 1h)"
+        "Volume confirmed: 4.38x average (needs 2.0x for 1h)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -172,23 +170,23 @@
     },
     {
       "symbol": "INFY.NS",
-      "signal": "BUY",
-      "price": 1087.5,
-      "price_change_pct": 4.8,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
+      "signal": "SHORT",
+      "price": 1077.2,
+      "price_change_pct": 3.81,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 1026.7,
       "resistance": 1136.1,
       "volume_confirmed": true,
-      "vol_ratio": 4.6,
-      "sl_price": 1080.97,
-      "tgt_price": 1100.55,
+      "vol_ratio": 5.72,
+      "sl_price": 1083.66,
+      "tgt_price": 1064.27,
       "reasons": [
-        "Candle: Bullish Candle (Weak)",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 1026.7, resistance 1136.1)",
-        "Volume confirmed: 4.60x average (needs 1.6x for 1h)"
+        "Volume confirmed: 5.72x average (needs 1.6x for 1h)"
       ],
       "source": "yahoo",
       "exit_rule": null,
