@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-15T19:57:40.330759",
+  "updated_at": "2026-09-15T22:45:54.072130",
   "results": [
     {
       "symbol": "AAPL",
       "signal": "BUY",
-      "price": 331.23,
-      "price_change_pct": -0.56,
+      "price": 331.34,
+      "price_change_pct": -0.52,
       "candle": "Bullish Candle",
       "candle_signal": "BUY",
       "candle_strength": "Weak",
@@ -13,13 +13,13 @@
       "support": 305.74,
       "resistance": 336.22,
       "volume_confirmed": false,
-      "vol_ratio": 0.52,
-      "sl_price": 326.26,
-      "tgt_price": 341.17,
+      "vol_ratio": 0.73,
+      "sl_price": 326.37,
+      "tgt_price": 341.28,
       "reasons": [
         "Candle: Bullish Candle (Weak)",
         "Price near resistance (support 305.74, resistance 336.22)",
-        "Volume not confirmed: 0.52x average \u2014 lower conviction"
+        "Volume not confirmed: 0.73x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -27,8 +27,8 @@
     {
       "symbol": "MSFT",
       "signal": "AVOID",
-      "price": 496.67,
-      "price_change_pct": -1.73,
+      "price": 497.12,
+      "price_change_pct": -1.64,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -36,14 +36,14 @@
       "support": 477.15,
       "resistance": 517.78,
       "volume_confirmed": false,
-      "vol_ratio": 0.54,
-      "sl_price": 489.22,
-      "tgt_price": 511.57,
+      "vol_ratio": 0.84,
+      "sl_price": 489.66,
+      "tgt_price": 512.03,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 477.15, resistance 517.78)",
-        "Volume not confirmed: 0.54x average \u2014 lower conviction"
+        "Volume not confirmed: 0.84x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -51,8 +51,8 @@
     {
       "symbol": "TSLA",
       "signal": "AVOID",
-      "price": 356.34,
-      "price_change_pct": -0.73,
+      "price": 356.58,
+      "price_change_pct": -0.67,
       "candle": "Evening Star",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -60,14 +60,14 @@
       "support": 331.12,
       "resistance": 384.04,
       "volume_confirmed": false,
-      "vol_ratio": 0.7,
-      "sl_price": 350.99,
-      "tgt_price": 367.03,
+      "vol_ratio": 0.78,
+      "sl_price": 351.23,
+      "tgt_price": 367.28,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Evening Star (Strong)",
         "Not near a key level (support 331.12, resistance 384.04)",
-        "Volume not confirmed: 0.70x average \u2014 lower conviction"
+        "Volume not confirmed: 0.78x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -75,8 +75,8 @@
     {
       "symbol": "NVDA",
       "signal": "AVOID",
-      "price": 212.22,
-      "price_change_pct": 0.6,
+      "price": 212.17,
+      "price_change_pct": 0.57,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -84,14 +84,14 @@
       "support": 207.25,
       "resistance": 234.76,
       "volume_confirmed": false,
-      "vol_ratio": 0.5,
-      "sl_price": 209.04,
-      "tgt_price": 218.59,
+      "vol_ratio": 0.65,
+      "sl_price": 208.99,
+      "tgt_price": 218.54,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 207.25, resistance 234.76)",
-        "Volume not confirmed: 0.50x average \u2014 lower conviction"
+        "Volume not confirmed: 0.65x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -99,8 +99,8 @@
     {
       "symbol": "AMZN",
       "signal": "SHORT",
-      "price": 248.38,
-      "price_change_pct": -2.04,
+      "price": 248.42,
+      "price_change_pct": -2.02,
       "candle": "Evening Star",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -108,13 +108,13 @@
       "support": 247.22,
       "resistance": 267.56,
       "volume_confirmed": false,
-      "vol_ratio": 0.84,
-      "sl_price": 252.11,
-      "tgt_price": 240.93,
+      "vol_ratio": 1.11,
+      "sl_price": 252.15,
+      "tgt_price": 240.97,
       "reasons": [
         "Candle: Evening Star (Strong)",
         "Price near support (support 247.22, resistance 267.56)",
-        "Volume not confirmed: 0.84x average \u2014 lower conviction"
+        "Volume not confirmed: 1.11x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
