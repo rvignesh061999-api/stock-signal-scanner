@@ -3604,5 +3604,24 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-16T07:31:04.614663",
+    "signal_bar_date": "2026-09-16 06:45:00",
+    "symbol": "PCJEWELLER.NS",
+    "signal": "SHORT",
+    "price": 12.23,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
