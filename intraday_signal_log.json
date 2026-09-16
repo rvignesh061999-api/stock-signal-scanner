@@ -3543,10 +3543,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-16T08:15:43.082741",
+    "exit_price": 42.07,
+    "bars_to_exit": 3
   },
   {
     "logged_at": "2026-09-16T06:01:12.711911",
