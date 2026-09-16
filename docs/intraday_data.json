@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-16T05:45:41.705057",
+  "updated_at": "2026-09-16T06:01:12.189450",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.04,
+      "price": 12.06,
       "reasons": [
-        "09:15 slot \u2014 only 20-29 historical observations, statistically unusable"
+        "Neither the validated SELL nor BUY setup conditions were met"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -19,40 +19,41 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.54,
-      "price_change_pct": 0.0,
-      "candle": "Doji",
-      "candle_signal": "NEUTRAL",
+      "price": 23.45,
+      "price_change_pct": -0.38,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 22.25,
       "resistance": 24.1,
       "volume_confirmed": false,
-      "vol_ratio": 1.33,
-      "sl_price": 23.4,
-      "tgt_price": 23.82,
+      "vol_ratio": 0.29,
+      "sl_price": 23.31,
+      "tgt_price": 23.73,
       "reasons": [
-        "Candle: Doji (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 22.25, resistance 24.1)",
-        "Volume not confirmed: 1.33x average \u2014 lower conviction"
+        "Volume not confirmed: 0.29x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 20.76,
+      "price": 20.68,
       "reasons": [
-        "09:15 slot \u2014 only 27-35 historical observations, statistically unusable"
+        "10:15 bar but DOWN conditions not fully met (needs bearish body + no gap)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -64,69 +65,73 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
-      "signal": "BUY",
-      "price": 42.39,
-      "price_change_pct": 0.74,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
+      "signal": "AVOID",
+      "price": 42.38,
+      "price_change_pct": -0.02,
+      "candle": "Doji",
+      "candle_signal": "NEUTRAL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 41.77,
       "resistance": 46.24,
-      "volume_confirmed": true,
-      "vol_ratio": 1.55,
-      "sl_price": 42.07,
-      "tgt_price": 43.03,
+      "volume_confirmed": false,
+      "vol_ratio": 0.22,
+      "sl_price": 42.06,
+      "tgt_price": 43.02,
       "reasons": [
-        "Candle: Bullish Candle (Weak)",
+        "Candle: Doji (Weak)",
         "Not near a key level (support 41.77, resistance 46.24)",
-        "Volume confirmed: 1.55x average (needs 1.3x for 1h)"
+        "Volume not confirmed: 0.22x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.17,
-      "price_change_pct": 1.97,
-      "candle": "Bullish Engulfing",
-      "candle_signal": "BUY",
-      "candle_strength": "Strong",
+      "price": 5.15,
+      "price_change_pct": -0.39,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
+      "candle_strength": "Weak",
       "near_level": "none",
       "support": 5.01,
       "resistance": 5.45,
       "volume_confirmed": false,
-      "vol_ratio": 1.16,
-      "sl_price": 5.12,
-      "tgt_price": 5.27,
+      "vol_ratio": 0.28,
+      "sl_price": 5.1,
+      "tgt_price": 5.25,
       "reasons": [
-        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bullish Engulfing (Strong)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 5.01, resistance 5.45)",
-        "Volume not confirmed: 1.16x average \u2014 lower conviction"
+        "Volume not confirmed: 0.28x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
-      "signal": "AVOID",
-      "price": 14.25,
+      "signal": "SHORT",
+      "price": 14.34,
       "reasons": [
-        "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
+        "This bar opened with a gap up of 0.070% vs the prior bar's close",
+        "DOWN SCORE = 1 \u2014 historical hit rate 56-60% (validation/test), vs ~44-50% baseline (strengthened out-of-sample \u2014 the cleanest single finding across all 8 stocks analyzed)",
+        "Predicts THIS SAME bar closes down (fades the gap), not the next bar"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "same_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "medium",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -135,38 +140,39 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
-      "signal": "BUY",
-      "price": 7.16,
-      "price_change_pct": 0.42,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
-      "candle_strength": "Weak",
+      "signal": "AVOID",
+      "price": 7.12,
+      "price_change_pct": -0.56,
+      "candle": "Bearish Engulfing",
+      "candle_signal": "SELL",
+      "candle_strength": "Strong",
       "near_level": "none",
       "support": 6.95,
       "resistance": 7.46,
-      "volume_confirmed": true,
-      "vol_ratio": 2.28,
-      "sl_price": 7.12,
-      "tgt_price": 7.25,
+      "volume_confirmed": false,
+      "vol_ratio": 0.21,
+      "sl_price": 7.08,
+      "tgt_price": 7.21,
       "reasons": [
-        "Candle: Bullish Candle (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 6.95, resistance 7.46)",
-        "Volume confirmed: 2.28x average (needs 2.0x for 1h)"
+        "Volume not confirmed: 0.21x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1073.1,
+      "price": 1065.8,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -180,7 +186,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-16 04:45:00",
+      "bar_date": "2026-09-16 05:45:00",
       "market": "IN"
     }
   ]
