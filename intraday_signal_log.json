@@ -3262,5 +3262,24 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-09-16T03:45:48.913862",
+    "signal_bar_date": "2026-09-15 09:45:00",
+    "symbol": "RPOWER.NS",
+    "signal": "BUY",
+    "price": 21.1,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
