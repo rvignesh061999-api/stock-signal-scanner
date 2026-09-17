@@ -1,16 +1,21 @@
 {
-  "updated_at": "2026-09-17T07:45:44.079704",
+  "updated_at": "2026-09-17T08:01:14.298758",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
-      "signal": "AVOID",
-      "price": 12.52,
+      "signal": "SHORT",
+      "price": 12.43,
       "reasons": [
-        "Neither the validated SELL nor BUY setup conditions were met"
+        "Bearish body confirmed (close 12.52 < open 12.58)",
+        "Closed in middle third of its own range (not climactic)",
+        "No gap into current bar (0.000% < 0.1% threshold)",
+        "DOWN SCORE = 3 \u2014 historical hit rate ~64% (test), ~49% baseline"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "next_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "high",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -19,13 +24,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.09,
+      "price": 23.1,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -39,13 +44,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 21.1,
+      "price": 21.04,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -59,65 +64,65 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 42.77,
-      "price_change_pct": 0.14,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
-      "candle_strength": "Weak",
+      "price": 42.59,
+      "price_change_pct": -0.42,
+      "candle": "Bearish Engulfing",
+      "candle_signal": "SELL",
+      "candle_strength": "Strong",
       "near_level": "none",
       "support": 42.04,
       "resistance": 46.24,
       "volume_confirmed": false,
-      "vol_ratio": 0.81,
-      "sl_price": 42.45,
-      "tgt_price": 43.41,
+      "vol_ratio": 0.22,
+      "sl_price": 42.27,
+      "tgt_price": 43.23,
       "reasons": [
-        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bullish Candle (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 42.04, resistance 46.24)",
-        "Volume not confirmed: 0.81x average \u2014 lower conviction"
+        "Volume not confirmed: 0.22x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.17,
-      "price_change_pct": -0.39,
-      "candle": "Shooting Star",
+      "price": 5.15,
+      "price_change_pct": -0.58,
+      "candle": "Evening Star",
       "candle_signal": "SELL",
-      "candle_strength": "Moderate",
+      "candle_strength": "Strong",
       "near_level": "none",
       "support": 5.06,
       "resistance": 5.42,
       "volume_confirmed": false,
-      "vol_ratio": 0.39,
-      "sl_price": 5.12,
-      "tgt_price": 5.27,
+      "vol_ratio": 0.2,
+      "sl_price": 5.1,
+      "tgt_price": 5.25,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Shooting Star (Moderate)",
+        "Candle: Evening Star (Strong)",
         "Not near a key level (support 5.06, resistance 5.42)",
-        "Volume not confirmed: 0.39x average \u2014 lower conviction"
+        "Volume not confirmed: 0.20x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 14.29,
+      "price": 14.27,
       "reasons": [
         "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
@@ -131,13 +136,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.03,
+      "price": 7.01,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -151,13 +156,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1052.5,
+      "price": 1054.0,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -171,7 +176,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 06:45:00",
+      "bar_date": "2026-09-17 07:45:00",
       "market": "IN"
     }
   ]
