@@ -3657,10 +3657,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-09-17T05:30:56.359901",
+    "exit_price": 23.05,
+    "bars_to_exit": 3
   },
   {
     "logged_at": "2026-09-16T09:45:57.154053",
