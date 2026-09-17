@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-17T05:45:43.116662",
+  "updated_at": "2026-09-17T06:01:13.541808",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.55,
+      "price": 12.57,
       "reasons": [
-        "09:15 slot \u2014 only 20-29 historical observations, statistically unusable"
+        "Neither the validated SELL nor BUY setup conditions were met"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -19,15 +19,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 22.95,
+      "price": 22.93,
       "reasons": [
-        "09:15 slot \u2014 statistically unusable, too few observations"
+        "10:15 bar but DOWN conditions not fully met (needs top-third close + no gap)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -39,18 +39,23 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
-      "signal": "AVOID",
+      "signal": "SHORT",
       "price": 21.0,
       "reasons": [
-        "09:15 slot \u2014 only 27-35 historical observations, statistically unusable"
+        "This is the 10:15 AM IST bar",
+        "Bearish body confirmed (close 21.0 < open 21.14)",
+        "No gap into current bar (0.048% < 0.1% threshold)",
+        "DOWN SCORE = 3 \u2014 historical hit rate 59-61% across train/val/test, vs ~48-54% baseline (the most stable finding across both stocks analyzed)"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "next_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "high",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -59,65 +64,65 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 42.32,
-      "price_change_pct": -0.52,
-      "candle": "Strong Bearish Candle",
-      "candle_signal": "SELL",
-      "candle_strength": "Moderate",
+      "price": 42.34,
+      "price_change_pct": 0.05,
+      "candle": "Bullish Candle",
+      "candle_signal": "BUY",
+      "candle_strength": "Weak",
       "near_level": "none",
       "support": 42.04,
       "resistance": 46.24,
       "volume_confirmed": false,
-      "vol_ratio": 0.72,
-      "sl_price": 42.0,
-      "tgt_price": 42.95,
+      "vol_ratio": 0.12,
+      "sl_price": 42.02,
+      "tgt_price": 42.98,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Strong Bearish Candle (Moderate)",
+        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 42.04, resistance 46.24)",
-        "Volume not confirmed: 0.72x average \u2014 lower conviction"
+        "Volume not confirmed: 0.12x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.13,
-      "price_change_pct": -0.58,
-      "candle": "Strong Bearish Candle",
+      "price": 5.14,
+      "price_change_pct": 0.19,
+      "candle": "Bearish Candle",
       "candle_signal": "SELL",
-      "candle_strength": "Moderate",
+      "candle_strength": "Weak",
       "near_level": "none",
       "support": 5.06,
-      "resistance": 5.44,
+      "resistance": 5.43,
       "volume_confirmed": false,
-      "vol_ratio": 1.0,
-      "sl_price": 5.08,
-      "tgt_price": 5.23,
+      "vol_ratio": 0.05,
+      "sl_price": 5.09,
+      "tgt_price": 5.24,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Strong Bearish Candle (Moderate)",
-        "Not near a key level (support 5.06, resistance 5.44)",
-        "Volume not confirmed: 1.00x average \u2014 lower conviction"
+        "Candle: Bearish Candle (Weak)",
+        "Not near a key level (support 5.06, resistance 5.43)",
+        "Volume not confirmed: 0.05x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 14.33,
+      "price": 14.24,
       "reasons": [
         "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
@@ -131,15 +136,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.02,
+      "price": 7.03,
       "reasons": [
-        "09:15 slot \u2014 only 15-22 historical observations, statistically unusable"
+        "10:15 bar but not bullish-bodied \u2014 DOWN setup requires Close > Open here"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -151,13 +156,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1050.3,
+      "price": 1053.3,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -171,7 +176,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-17 04:45:00",
+      "bar_date": "2026-09-17 05:45:00",
       "market": "IN"
     }
   ]
