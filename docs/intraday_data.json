@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-17T07:15:45.990817",
+  "updated_at": "2026-09-17T07:31:00.047132",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.56,
+      "price": 12.48,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.03,
+      "price": 23.02,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -65,8 +65,8 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 42.66,
-      "price_change_pct": -0.12,
+      "price": 42.68,
+      "price_change_pct": -0.07,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -74,14 +74,14 @@
       "support": 42.04,
       "resistance": 46.24,
       "volume_confirmed": false,
-      "vol_ratio": 0.31,
-      "sl_price": 42.34,
-      "tgt_price": 43.3,
+      "vol_ratio": 0.38,
+      "sl_price": 42.36,
+      "tgt_price": 43.32,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 42.04, resistance 46.24)",
-        "Volume not confirmed: 0.31x average \u2014 lower conviction"
+        "Volume not confirmed: 0.38x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -91,22 +91,23 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.18,
-      "price_change_pct": -0.19,
-      "candle": "Doji",
-      "candle_signal": "NEUTRAL",
-      "candle_strength": "Weak",
+      "price": 5.17,
+      "price_change_pct": -0.39,
+      "candle": "Shooting Star",
+      "candle_signal": "SELL",
+      "candle_strength": "Moderate",
       "near_level": "none",
       "support": 5.06,
       "resistance": 5.42,
       "volume_confirmed": false,
-      "vol_ratio": 0.26,
-      "sl_price": 5.13,
-      "tgt_price": 5.28,
+      "vol_ratio": 0.33,
+      "sl_price": 5.12,
+      "tgt_price": 5.27,
       "reasons": [
-        "Candle: Doji (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Shooting Star (Moderate)",
         "Not near a key level (support 5.06, resistance 5.42)",
-        "Volume not confirmed: 0.26x average \u2014 lower conviction"
+        "Volume not confirmed: 0.33x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -136,7 +137,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.05,
+      "price": 7.03,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -156,7 +157,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1056.6,
+      "price": 1054.5,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
