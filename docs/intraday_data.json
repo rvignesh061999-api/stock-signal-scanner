@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T08:27:43.416220",
+  "updated_at": "2026-09-17T08:30:59.104875",
   "interval": "1h",
   "results": [
     {
@@ -30,7 +30,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.18,
+      "price": 23.17,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -70,8 +70,8 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 42.62,
-      "price_change_pct": -0.35,
+      "price": 42.64,
+      "price_change_pct": -0.3,
       "candle": "Bearish Engulfing",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -79,14 +79,14 @@
       "support": 42.04,
       "resistance": 46.24,
       "volume_confirmed": false,
-      "vol_ratio": 0.44,
-      "sl_price": 42.3,
-      "tgt_price": 43.26,
+      "vol_ratio": 0.45,
+      "sl_price": 42.32,
+      "tgt_price": 43.28,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 42.04, resistance 46.24)",
-        "Volume not confirmed: 0.44x average \u2014 lower conviction"
+        "Volume not confirmed: 0.45x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -96,8 +96,8 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.21,
-      "price_change_pct": 0.58,
+      "price": 5.2,
+      "price_change_pct": 0.39,
       "candle": "Bullish Engulfing",
       "candle_signal": "BUY",
       "candle_strength": "Strong",
@@ -105,14 +105,14 @@
       "support": 5.06,
       "resistance": 5.42,
       "volume_confirmed": false,
-      "vol_ratio": 0.96,
-      "sl_price": 5.16,
-      "tgt_price": 5.31,
+      "vol_ratio": 0.97,
+      "sl_price": 5.15,
+      "tgt_price": 5.3,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Engulfing (Strong)",
         "Not near a key level (support 5.06, resistance 5.42)",
-        "Volume not confirmed: 0.96x average \u2014 lower conviction"
+        "Volume not confirmed: 0.97x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
