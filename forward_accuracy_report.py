@@ -52,6 +52,12 @@ BASELINES = {
                           "label": "BUY (UP) setup — mixed evidence, dipped to baseline in validation"},
     ("IDEA.NS", "DOWN"): {"test_pct": 59.8, "baseline_pct": 47.0,
                             "label": "SELL (DOWN) setup — validated, strengthened out-of-sample, cleanest result of all 8 stocks"},
+    ("RTNPOWER.NS", "DOWN"): {"test_pct": 66.7, "baseline_pct": 48.5,
+                                "label": "SELL (DOWN) setup — 'fade the morning bullish bar' pattern, validated"},
+    ("RTNPOWER.NS", "UP"): {"test_pct": 51.7, "baseline_pct": 43.5,
+                              "label": "BUY (UP) setup — validated, volume-band based"},
+    ("YESBANK.NS", "DOWN"): {"test_pct": 64.0, "baseline_pct": 49.5,
+                               "label": "SELL (DOWN) setup — validated, most consistent single rule in its own analysis"},
 }
 
 
