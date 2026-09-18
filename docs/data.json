@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T20:21:58.641156",
+  "updated_at": "2026-09-18T22:59:59.166711",
   "results": [
     {
       "symbol": "AAPL",
@@ -13,13 +13,13 @@
       "support": 307.01,
       "resistance": 338.49,
       "volume_confirmed": true,
-      "vol_ratio": 2.07,
+      "vol_ratio": 2.09,
       "sl_price": 341.17,
       "tgt_price": 326.05,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Price near resistance (support 307.01, resistance 338.49)",
-        "Volume confirmed: 2.07x average (needs 1.3x for 1d)"
+        "Volume confirmed: 2.09x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -36,13 +36,13 @@
       "support": 478.53,
       "resistance": 517.78,
       "volume_confirmed": true,
-      "vol_ratio": 1.88,
+      "vol_ratio": 1.96,
       "sl_price": 501.19,
       "tgt_price": 478.97,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 478.53, resistance 517.78)",
-        "Volume confirmed: 1.88x average (needs 1.3x for 1d)"
+        "Volume confirmed: 1.96x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -59,13 +59,13 @@
       "support": 342.53,
       "resistance": 384.04,
       "volume_confirmed": true,
-      "vol_ratio": 1.3,
+      "vol_ratio": 1.31,
       "sl_price": 369.73,
       "tgt_price": 353.34,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 342.53, resistance 384.04)",
-        "Volume confirmed: 1.30x average (needs 1.3x for 1d)"
+        "Volume confirmed: 1.31x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -82,13 +82,13 @@
       "support": 207.25,
       "resistance": 234.76,
       "volume_confirmed": true,
-      "vol_ratio": 1.4,
+      "vol_ratio": 1.45,
       "sl_price": 218.94,
       "tgt_price": 228.94,
       "reasons": [
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 207.25, resistance 234.76)",
-        "Volume confirmed: 1.40x average (needs 1.3x for 1d)"
+        "Volume confirmed: 1.45x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
