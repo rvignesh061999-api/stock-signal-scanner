@@ -4132,10 +4132,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-18T10:01:13.813397",
+    "exit_price": 5.24,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-18T09:45:46.479572",
