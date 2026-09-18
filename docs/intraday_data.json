@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-18T04:15:43.711346",
+  "updated_at": "2026-09-18T04:30:58.664871",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.6,
+      "price": 12.61,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.26,
+      "price": 23.28,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 21.03,
+      "price": 21.06,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -65,22 +65,22 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "BUY",
-      "price": 43.3,
-      "price_change_pct": 1.79,
-      "candle": "Bullish Candle",
+      "price": 43.52,
+      "price_change_pct": 2.3,
+      "candle": "Strong Bullish Candle",
       "candle_signal": "BUY",
-      "candle_strength": "Weak",
+      "candle_strength": "Moderate",
       "near_level": "none",
       "support": 42.04,
       "resistance": 46.24,
       "volume_confirmed": true,
-      "vol_ratio": 1.72,
-      "sl_price": 42.98,
-      "tgt_price": 43.95,
+      "vol_ratio": 2.44,
+      "sl_price": 43.19,
+      "tgt_price": 44.17,
       "reasons": [
-        "Candle: Bullish Candle (Weak)",
+        "Candle: Strong Bullish Candle (Moderate)",
         "Not near a key level (support 42.04, resistance 46.24)",
-        "Volume confirmed: 1.72x average (needs 1.3x for 1h)"
+        "Volume confirmed: 2.44x average (needs 1.3x for 1h)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -99,14 +99,14 @@
       "support": 5.06,
       "resistance": 5.42,
       "volume_confirmed": false,
-      "vol_ratio": 1.09,
+      "vol_ratio": 1.45,
       "sl_price": 5.13,
       "tgt_price": 5.28,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Evening Star (Strong)",
         "Not near a key level (support 5.06, resistance 5.42)",
-        "Volume not confirmed: 1.09x average \u2014 lower conviction"
+        "Volume not confirmed: 1.45x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -140,7 +140,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.08,
+      "price": 7.07,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -160,7 +160,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1042.4,
+      "price": 1045.1,
       "reasons": [
         "14:15 bar but neither the top-third-close nor bearish-body condition was met"
       ],
