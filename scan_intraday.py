@@ -31,6 +31,8 @@ from infy_strategy import compute_infy_signal
 from idea_strategy import compute_idea_signal
 from rtnpower_strategy import compute_rtnpower_signal
 from yesbank_strategy import compute_yesbank_signal
+from sepc_strategy import compute_sepc_signal
+from suzlon_strategy import compute_suzlon_signal
 from telegram_alert import send_telegram_message, format_signal_message
 
 DATA_FILE = "docs/intraday_data.json"
@@ -85,6 +87,8 @@ DEDICATED_STRATEGIES = {
     "IDEA.NS": compute_idea_signal,
     "RTNPOWER.NS": compute_rtnpower_signal,
     "YESBANK.NS": compute_yesbank_signal,
+    "SEPC.NS": compute_sepc_signal,
+    "SUZLON.NS": compute_suzlon_signal,
 }
 
 

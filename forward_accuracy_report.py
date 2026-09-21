@@ -58,6 +58,12 @@ BASELINES = {
                               "label": "BUY (UP) setup — validated, volume-band based"},
     ("YESBANK.NS", "DOWN"): {"test_pct": 64.0, "baseline_pct": 49.5,
                                "label": "SELL (DOWN) setup — validated, most consistent single rule in its own analysis"},
+    ("SEPC.NS", "DOWN"): {"test_pct": 62.8, "baseline_pct": 52.0,
+                            "label": "SELL (DOWN) setup — simplest rule of all 8 stocks, strong structural DOWN bias"},
+    ("SUZLON.NS", "DOWN"): {"test_pct": 65.7, "baseline_pct": 51.5,
+                              "label": "SELL (DOWN) setup — tightest, most consistent spread found across stocks analyzed"},
+    ("SUZLON.NS", "UP"): {"test_pct": 57.1, "baseline_pct": 45.5,
+                            "label": "BUY (UP) setup — Bullish Engulfing based, not time-gated, smaller sample"},
 }
 
 
