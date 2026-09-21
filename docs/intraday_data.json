@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T08:01:15.463052",
+  "updated_at": "2026-09-21T08:15:43.637072",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 13.03,
+      "price": 12.93,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -65,8 +65,8 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 43.5,
-      "price_change_pct": 0.39,
+      "price": 43.52,
+      "price_change_pct": 0.44,
       "candle": "Bullish Engulfing",
       "candle_signal": "BUY",
       "candle_strength": "Strong",
@@ -74,14 +74,14 @@
       "support": 42.04,
       "resistance": 45.0,
       "volume_confirmed": false,
-      "vol_ratio": 0.32,
-      "sl_price": 43.17,
-      "tgt_price": 44.15,
+      "vol_ratio": 0.53,
+      "sl_price": 43.19,
+      "tgt_price": 44.17,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Engulfing (Strong)",
         "Not near a key level (support 42.04, resistance 45.0)",
-        "Volume not confirmed: 0.32x average \u2014 lower conviction"
+        "Volume not confirmed: 0.53x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -100,14 +100,14 @@
       "support": 5.06,
       "resistance": 5.33,
       "volume_confirmed": false,
-      "vol_ratio": 1.14,
+      "vol_ratio": 1.49,
       "sl_price": 5.05,
       "tgt_price": 5.2,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 5.06, resistance 5.33)",
-        "Volume not confirmed: 1.14x average \u2014 lower conviction"
+        "Volume not confirmed: 1.49x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -137,7 +137,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.18,
+      "price": 7.16,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -157,7 +157,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1039.7,
+      "price": 1038.7,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
