@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T07:31:05.619391",
+  "updated_at": "2026-09-21T07:45:43.183122",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "BUY",
-      "price": 12.82,
+      "price": 12.81,
       "reasons": [
         "Last 2 completed bars both UP",
         "Most recent bar closed in middle third of its own range",
@@ -29,7 +29,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.18,
+      "price": 23.19,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -69,8 +69,8 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 43.38,
-      "price_change_pct": -0.07,
+      "price": 43.33,
+      "price_change_pct": -0.18,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -78,14 +78,14 @@
       "support": 42.04,
       "resistance": 45.07,
       "volume_confirmed": false,
-      "vol_ratio": 0.3,
-      "sl_price": 43.05,
-      "tgt_price": 44.03,
+      "vol_ratio": 0.41,
+      "sl_price": 43.01,
+      "tgt_price": 43.98,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 42.04, resistance 45.07)",
-        "Volume not confirmed: 0.30x average \u2014 lower conviction"
+        "Volume not confirmed: 0.41x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -104,14 +104,14 @@
       "support": 5.06,
       "resistance": 5.34,
       "volume_confirmed": false,
-      "vol_ratio": 0.3,
+      "vol_ratio": 0.38,
       "sl_price": 5.09,
       "tgt_price": 5.24,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 5.06, resistance 5.34)",
-        "Volume not confirmed: 0.30x average \u2014 lower conviction"
+        "Volume not confirmed: 0.38x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -145,7 +145,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.19,
+      "price": 7.18,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -165,7 +165,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1038.2,
+      "price": 1036.9,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
