@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T07:15:50.869844",
+  "updated_at": "2026-09-21T07:31:05.619391",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "BUY",
-      "price": 12.69,
+      "price": 12.82,
       "reasons": [
         "Last 2 completed bars both UP",
         "Most recent bar closed in middle third of its own range",
@@ -69,8 +69,8 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 43.37,
-      "price_change_pct": -0.09,
+      "price": 43.38,
+      "price_change_pct": -0.07,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -78,14 +78,14 @@
       "support": 42.04,
       "resistance": 45.07,
       "volume_confirmed": false,
-      "vol_ratio": 0.22,
-      "sl_price": 43.04,
-      "tgt_price": 44.02,
+      "vol_ratio": 0.3,
+      "sl_price": 43.05,
+      "tgt_price": 44.03,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 42.04, resistance 45.07)",
-        "Volume not confirmed: 0.22x average \u2014 lower conviction"
+        "Volume not confirmed: 0.30x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -104,14 +104,14 @@
       "support": 5.06,
       "resistance": 5.34,
       "volume_confirmed": false,
-      "vol_ratio": 0.24,
+      "vol_ratio": 0.3,
       "sl_price": 5.09,
       "tgt_price": 5.24,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 5.06, resistance 5.34)",
-        "Volume not confirmed: 0.24x average \u2014 lower conviction"
+        "Volume not confirmed: 0.30x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -165,7 +165,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1036.9,
+      "price": 1038.2,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
