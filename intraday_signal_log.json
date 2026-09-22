@@ -4569,10 +4569,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-22T07:01:14.134411",
+    "exit_price": 20.93,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-22T06:15:52.702528",
@@ -4588,10 +4588,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-22T07:01:14.134422",
+    "exit_price": 20.93,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-22T06:31:04.604247",
@@ -4607,10 +4607,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-22T07:01:14.134424",
+    "exit_price": 20.93,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-22T06:45:46.421093",
@@ -4618,6 +4618,25 @@
     "symbol": "RPOWER.NS",
     "signal": "SHORT",
     "price": 20.94,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-22T07:01:14.134426",
+    "exit_price": 20.93,
+    "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-09-22T07:01:17.565870",
+    "signal_bar_date": "2026-09-22 06:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "SHORT",
+    "price": 43.19,
     "sl_price": null,
     "tgt_price": null,
     "candle": "-",
