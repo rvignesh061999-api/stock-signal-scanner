@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-23T03:45:44.727001",
+  "updated_at": "2026-09-23T04:01:13.240470",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 13.5,
+      "price": 14.07,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -19,13 +19,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 23.2,
+      "price": 23.23,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -39,15 +39,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 20.89,
+      "price": 20.94,
       "reasons": [
-        "14:15 bar but relative volume not in the validated 1.5-2.5x band"
+        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -59,13 +59,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 43.0,
+      "price": 42.61,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -79,13 +79,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.16,
+      "price": 5.21,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -99,13 +99,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 14.27,
+      "price": 14.24,
       "reasons": [
         "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
@@ -119,22 +119,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
-      "signal": "BUY",
-      "price": 7.06,
+      "signal": "AVOID",
+      "price": 7.1,
       "reasons": [
-        "This is the 2:15 PM IST bar",
-        "Relative volume 1.60x its own trailing 20-bar average (within the 1.5-2.5x band)",
-        "UP SCORE = 2 \u2014 historical hit rate 52-67% across train/val/test, vs ~40-47% baseline"
+        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "UP",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -143,22 +139,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
-      "signal": "BUY",
-      "price": 1029.4,
+      "signal": "AVOID",
+      "price": 1023.5,
       "reasons": [
-        "This is the 14:15 IST bar",
-        "Bearish body (close < open)",
-        "UP SCORE = 1 \u2014 LOW CONFIDENCE: strong in train (61.1%) and test (64.9%) but dipped to baseline in validation (48.5%) \u2014 monitor closely"
+        "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "UP",
-      "confidence": "low",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -167,7 +159,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-09-22 09:45:00",
+      "bar_date": "2026-09-23 03:45:00",
       "market": "IN"
     }
   ]
