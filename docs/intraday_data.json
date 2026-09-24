@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-24T09:15:42.687028",
+  "updated_at": "2026-09-24T09:31:01.964871",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "SHORT",
-      "price": 14.1,
+      "price": 14.17,
       "reasons": [
         "Bearish body confirmed (close 14.14 < open 14.19)",
         "Closed in middle third of its own range (not climactic)",
@@ -70,7 +70,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 40.73,
+      "price": 40.69,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -150,7 +150,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1007.3,
+      "price": 1009.7,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
