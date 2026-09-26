@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T23:47:22.252083",
+  "updated_at": "2026-09-26T03:24:00.765079",
   "results": [
     {
       "symbol": "AAPL",
@@ -13,13 +13,13 @@
       "support": 309.9,
       "resistance": 345.34,
       "volume_confirmed": false,
-      "vol_ratio": 0.69,
+      "vol_ratio": 0.7,
       "sl_price": 335.95,
       "tgt_price": 351.3,
       "reasons": [
         "Candle: Morning Star (Strong)",
         "Price near resistance (support 309.9, resistance 345.34)",
-        "Volume not confirmed: 0.69x average \u2014 lower conviction"
+        "Volume not confirmed: 0.70x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -36,13 +36,13 @@
       "support": 486.0,
       "resistance": 519.4,
       "volume_confirmed": true,
-      "vol_ratio": 1.78,
+      "vol_ratio": 1.79,
       "sl_price": 508.43,
       "tgt_price": 531.66,
       "reasons": [
         "Candle: Strong Bullish Candle (Moderate)",
         "Price near resistance (support 486.0, resistance 519.4)",
-        "Volume confirmed: 1.78x average (needs 1.3x for 1d)"
+        "Volume confirmed: 1.79x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -59,14 +59,14 @@
       "support": 345.2,
       "resistance": 386.83,
       "volume_confirmed": false,
-      "vol_ratio": 1.15,
+      "vol_ratio": 1.18,
       "sl_price": 366.53,
       "tgt_price": 383.27,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Evening Star (Strong)",
         "Not near a key level (support 345.2, resistance 386.83)",
-        "Volume not confirmed: 1.15x average \u2014 lower conviction"
+        "Volume not confirmed: 1.18x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -83,13 +83,13 @@
       "support": 208.93,
       "resistance": 234.76,
       "volume_confirmed": false,
-      "vol_ratio": 0.7,
+      "vol_ratio": 0.71,
       "sl_price": 221.69,
       "tgt_price": 231.82,
       "reasons": [
         "Candle: Doji (Weak)",
         "Not near a key level (support 208.93, resistance 234.76)",
-        "Volume not confirmed: 0.70x average \u2014 lower conviction"
+        "Volume not confirmed: 0.71x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -106,14 +106,14 @@
       "support": 244.3,
       "resistance": 267.56,
       "volume_confirmed": false,
-      "vol_ratio": 0.93,
+      "vol_ratio": 0.97,
       "sl_price": 245.92,
       "tgt_price": 257.16,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 244.3, resistance 267.56)",
-        "Volume not confirmed: 0.93x average \u2014 lower conviction"
+        "Volume not confirmed: 0.97x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
