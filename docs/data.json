@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T03:24:00.765079",
+  "updated_at": "2026-09-26T09:04:13.839958",
   "results": [
     {
       "symbol": "AAPL",
@@ -402,23 +402,24 @@
     },
     {
       "symbol": "GTLINFRA.NS",
-      "signal": "SHORT",
-      "price": 1.11,
-      "price_change_pct": -2.63,
-      "candle": "Bearish Engulfing",
-      "candle_signal": "SELL",
-      "candle_strength": "Strong",
-      "near_level": "support",
+      "signal": "AVOID",
+      "price": 1.12,
+      "price_change_pct": 0.9,
+      "candle": "Bullish Candle",
+      "candle_signal": "BUY",
+      "candle_strength": "Weak",
+      "near_level": "none",
       "support": 1.1,
-      "resistance": 1.25,
-      "volume_confirmed": true,
-      "vol_ratio": 1.73,
-      "sl_price": 1.13,
-      "tgt_price": 1.08,
+      "resistance": 1.23,
+      "volume_confirmed": false,
+      "vol_ratio": 0.78,
+      "sl_price": 1.1,
+      "tgt_price": 1.15,
       "reasons": [
-        "Candle: Bearish Engulfing (Strong)",
-        "Price near support (support 1.1, resistance 1.25)",
-        "Volume confirmed: 1.73x average (needs 1.3x for 1d)"
+        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bullish Candle (Weak)",
+        "Not near a key level (support 1.1, resistance 1.23)",
+        "Volume not confirmed: 0.78x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
