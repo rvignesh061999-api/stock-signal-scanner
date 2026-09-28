@@ -5747,10 +5747,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-28T07:01:04.977238",
+    "exit_price": 20.27,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-28T06:15:47.531277",
@@ -5766,10 +5766,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-28T07:01:04.977246",
+    "exit_price": 20.27,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-09-28T06:31:00.141520",
@@ -5777,6 +5777,25 @@
     "symbol": "RPOWER.NS",
     "signal": "SHORT",
     "price": 20.26,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-09-28T07:01:04.977248",
+    "exit_price": 20.27,
+    "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-09-28T07:01:08.727236",
+    "signal_bar_date": "2026-09-28 06:45:00",
+    "symbol": "SEPC.NS",
+    "signal": "SHORT",
+    "price": 5.03,
     "sl_price": null,
     "tgt_price": null,
     "candle": "-",
