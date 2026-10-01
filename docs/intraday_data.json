@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-01T09:45:40.271471",
+  "updated_at": "2026-10-01T09:51:44.879126",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.82,
+      "price": 12.8,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -19,7 +19,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-01 08:45:00",
+      "bar_date": "2026-10-01 09:45:00",
       "market": "IN"
     },
     {
@@ -45,9 +45,9 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 19.42,
+      "price": 19.43,
       "reasons": [
-        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
+        "14:15 bar but relative volume not in the validated 1.5-2.5x band"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -59,7 +59,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-01 08:45:00",
+      "bar_date": "2026-10-01 09:45:00",
       "market": "IN"
     },
     {
@@ -85,7 +85,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.07,
+      "price": 5.06,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -99,7 +99,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-01 08:45:00",
+      "bar_date": "2026-10-01 09:45:00",
       "market": "IN"
     },
     {
@@ -124,13 +124,17 @@
     },
     {
       "symbol": "RTNPOWER.NS",
-      "signal": "AVOID",
-      "price": 6.75,
+      "signal": "BUY",
+      "price": 6.78,
       "reasons": [
-        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
+        "This is the 2:15 PM IST bar",
+        "Relative volume 1.61x its own trailing 20-bar average (within the 1.5-2.5x band)",
+        "UP SCORE = 2 \u2014 historical hit rate 52-67% across train/val/test, vs ~40-47% baseline"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "next_bar_close",
+      "predicted_direction": "UP",
+      "confidence": "high",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -139,7 +143,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-01 08:45:00",
+      "bar_date": "2026-10-01 09:45:00",
       "market": "IN"
     },
     {
