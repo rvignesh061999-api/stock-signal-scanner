@@ -6355,9 +6355,9 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-01T05:01:05.319859",
+    "exit_price": 12.94,
+    "bars_to_exit": 0
   }
 ]
