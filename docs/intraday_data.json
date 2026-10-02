@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-01T09:51:44.879126",
+  "updated_at": "2026-10-02T03:45:39.718275",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.8,
+      "price": 12.92,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 20.7,
+      "price": 20.75,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -39,13 +39,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-01 08:45:00",
+      "bar_date": "2026-10-01 09:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 19.43,
+      "price": 19.38,
       "reasons": [
         "14:15 bar but relative volume not in the validated 1.5-2.5x band"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.96,
+      "price": 38.91,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -85,7 +85,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.06,
+      "price": 5.08,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -105,7 +105,7 @@
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 12.61,
+      "price": 12.6,
       "reasons": [
         "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
@@ -119,7 +119,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-01 08:45:00",
+      "bar_date": "2026-10-01 09:45:00",
       "market": "IN"
     },
     {
@@ -128,7 +128,7 @@
       "price": 6.78,
       "reasons": [
         "This is the 2:15 PM IST bar",
-        "Relative volume 1.61x its own trailing 20-bar average (within the 1.5-2.5x band)",
+        "Relative volume 1.71x its own trailing 20-bar average (within the 1.5-2.5x band)",
         "UP SCORE = 2 \u2014 historical hit rate 52-67% across train/val/test, vs ~40-47% baseline"
       ],
       "source": "yahoo",
@@ -149,7 +149,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1025.3,
+      "price": 1035.0,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
