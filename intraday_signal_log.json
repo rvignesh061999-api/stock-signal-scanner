@@ -6811,9 +6811,9 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-05T09:01:07.431891",
+    "exit_price": 12.81,
+    "bars_to_exit": 0
   }
 ]
