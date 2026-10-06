@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-06T09:45:40.415303",
+  "updated_at": "2026-10-06T09:51:50.026898",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.98,
+      "price": 12.94,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -19,7 +19,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-06 08:45:00",
+      "bar_date": "2026-10-06 09:45:00",
       "market": "IN"
     },
     {
@@ -47,7 +47,7 @@
       "signal": "AVOID",
       "price": 20.51,
       "reasons": [
-        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
+        "14:15 bar but relative volume not in the validated 1.5-2.5x band"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -59,7 +59,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-06 08:45:00",
+      "bar_date": "2026-10-06 09:45:00",
       "market": "IN"
     },
     {
@@ -99,7 +99,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-06 08:45:00",
+      "bar_date": "2026-10-06 09:45:00",
       "market": "IN"
     },
     {
@@ -127,7 +127,7 @@
       "signal": "AVOID",
       "price": 6.76,
       "reasons": [
-        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
+        "14:15 bar but relative volume not in the validated 1.5-2.5x band"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -139,7 +139,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-06 08:45:00",
+      "bar_date": "2026-10-06 09:45:00",
       "market": "IN"
     },
     {
