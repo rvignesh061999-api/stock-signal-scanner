@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-06T05:01:03.542458",
+  "updated_at": "2026-10-06T05:15:43.696689",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 12.93,
+      "price": 12.99,
       "reasons": [
         "09:15 slot \u2014 only 20-29 historical observations, statistically unusable"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 20.96,
+      "price": 20.93,
       "reasons": [
         "09:15 slot \u2014 statistically unusable, too few observations"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 20.65,
+      "price": 20.89,
       "reasons": [
         "09:15 slot \u2014 only 27-35 historical observations, statistically unusable"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 39.19,
+      "price": 39.21,
       "reasons": [
         "09:15 slot \u2014 statistically unusable, too few observations"
       ],
@@ -85,7 +85,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.06,
+      "price": 5.05,
       "reasons": [
         "09:15 slot \u2014 only 19-31 historical observations, statistically unusable"
       ],
@@ -129,7 +129,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.8,
+      "price": 6.82,
       "reasons": [
         "09:15 slot \u2014 only 15-22 historical observations, statistically unusable"
       ],
@@ -149,7 +149,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1008.8,
+      "price": 1010.25,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
