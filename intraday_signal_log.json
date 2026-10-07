@@ -682,10 +682,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-07T03:01:03.176327",
+    "exit_price": 5.23,
+    "bars_to_exit": 7
   },
   {
     "logged_at": "2026-09-10T04:30:59.707225",
@@ -750,10 +750,10 @@
     "near_level": "support",
     "volume_confirmed": false,
     "source": "yahoo",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-07T03:01:03.176338",
+    "exit_price": 5.22,
+    "bars_to_exit": 7
   },
   {
     "logged_at": "2026-09-10T04:45:52.834904",
@@ -1472,10 +1472,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-07T03:01:03.314291",
+    "exit_price": 21.21,
+    "bars_to_exit": 9
   },
   {
     "logged_at": "2026-09-11T04:01:20.426466",
@@ -1529,10 +1529,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-07T03:01:03.314301",
+    "exit_price": 21.19,
+    "bars_to_exit": 9
   },
   {
     "logged_at": "2026-09-11T04:15:46.659343",
@@ -1586,10 +1586,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-07T03:01:03.439356",
+    "exit_price": 7.1,
+    "bars_to_exit": 8
   },
   {
     "logged_at": "2026-09-11T04:30:59.063365",
@@ -3315,10 +3315,10 @@
     "source": "yahoo",
     "exit_rule": null,
     "predicted_direction": null,
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-07T03:01:03.545974",
+    "exit_price": 42.62,
+    "bars_to_exit": 8
   },
   {
     "logged_at": "2026-09-16T04:01:12.797515",
