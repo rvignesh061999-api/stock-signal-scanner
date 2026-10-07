@@ -7157,5 +7157,24 @@
     "outcome_checked_at": "2026-10-07T07:01:03.168369",
     "exit_price": 20.77,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-10-07T09:58:01.159229",
+    "signal_bar_date": "2026-10-07 09:45:00",
+    "symbol": "PCJEWELLER.NS",
+    "signal": "BUY",
+    "price": 13.15,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
