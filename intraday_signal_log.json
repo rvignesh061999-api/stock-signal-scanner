@@ -6986,5 +6986,43 @@
     "outcome_checked_at": "2026-10-06T09:01:04.418984",
     "exit_price": 12.91,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-10-07T03:45:41.027384",
+    "signal_bar_date": "2026-10-06 09:45:00",
+    "symbol": "RPOWER.NS",
+    "signal": "BUY",
+    "price": 20.55,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-10-07T03:45:41.027397",
+    "signal_bar_date": "2026-10-06 09:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 13.21,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "same_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
