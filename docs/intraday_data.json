@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-08T07:46:18.711107",
+  "updated_at": "2026-10-08T08:01:08.513683",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 14.1,
+      "price": 14.13,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 20.44,
+      "price": 20.41,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 19.87,
+      "price": 19.83,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 36.82,
+      "price": 36.67,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -84,17 +84,13 @@
     },
     {
       "symbol": "SEPC.NS",
-      "signal": "SHORT",
-      "price": 4.94,
+      "signal": "AVOID",
+      "price": 4.93,
       "reasons": [
-        "This is the 11:15 AM IST bar",
-        "Bearish body (close 4.93 < open 4.97)",
-        "DOWN SCORE = 2 \u2014 historical hit rate 58-68% across train/val/test, vs ~49-55% baseline (this stock's strongest structural DOWN bias of any analyzed \u2014 55% of all bars are DOWN regardless of setup)"
+        "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "DOWN",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -103,7 +99,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-08 06:45:00",
+      "bar_date": "2026-10-08 07:45:00",
       "market": "IN"
     },
     {
@@ -149,7 +145,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 998.1,
+      "price": 999.85,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],

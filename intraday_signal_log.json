@@ -7476,10 +7476,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-08T08:01:05.570156",
+    "exit_price": 4.93,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-10-08T07:15:42.543559",
@@ -7533,9 +7533,9 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-08T08:01:05.570163",
+    "exit_price": 4.93,
+    "bars_to_exit": 1
   }
 ]
