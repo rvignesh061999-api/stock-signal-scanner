@@ -7172,10 +7172,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-08T04:01:03.311681",
+    "exit_price": 13.77,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-10-08T03:46:18.351703",
@@ -7191,10 +7191,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-08T04:01:03.311689",
+    "exit_price": 13.77,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-10-08T03:46:18.351716",
@@ -7210,6 +7210,25 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-08T04:01:03.447947",
+    "exit_price": 13.18,
+    "bars_to_exit": 0
+  },
+  {
+    "logged_at": "2026-10-08T04:01:07.884263",
+    "signal_bar_date": "2026-10-08 03:45:00",
+    "symbol": "INFY.NS",
+    "signal": "BUY",
+    "price": 1006.05,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
     "outcome": null,
     "outcome_checked_at": null,
     "exit_price": null,
