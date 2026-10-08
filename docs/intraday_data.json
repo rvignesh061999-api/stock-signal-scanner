@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-07T09:58:00.488905",
+  "updated_at": "2026-10-08T03:46:17.856315",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "BUY",
-      "price": 13.15,
+      "price": 13.17,
       "reasons": [
         "Last 2 completed bars both UP",
         "Most recent bar closed in middle third of its own range",
@@ -29,7 +29,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 20.74,
+      "price": 20.79,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -43,7 +43,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-07 08:45:00",
+      "bar_date": "2026-10-07 09:45:00",
       "market": "IN"
     },
     {
@@ -69,7 +69,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.33,
+      "price": 38.34,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -83,13 +83,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-07 08:45:00",
+      "bar_date": "2026-10-07 09:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.04,
+      "price": 5.03,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -108,13 +108,17 @@
     },
     {
       "symbol": "IDEA.NS",
-      "signal": "AVOID",
-      "price": 13.17,
+      "signal": "SHORT",
+      "price": 13.16,
       "reasons": [
-        "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
+        "This bar opened with a gap up of 0.076% vs the prior bar's close",
+        "DOWN SCORE = 1 \u2014 historical hit rate 56-60% (validation/test), vs ~44-50% baseline (strengthened out-of-sample \u2014 the cleanest single finding across all 8 stocks analyzed)",
+        "Predicts THIS SAME bar closes down (fades the gap), not the next bar"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "same_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "medium",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -123,13 +127,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-07 08:45:00",
+      "bar_date": "2026-10-07 09:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.71,
+      "price": 6.7,
       "reasons": [
         "14:15 bar but relative volume not in the validated 1.5-2.5x band"
       ],
