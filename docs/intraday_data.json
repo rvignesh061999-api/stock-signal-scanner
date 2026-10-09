@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-09T08:31:32.469230",
+  "updated_at": "2026-10-09T08:45:40.177010",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 14.78,
+      "price": 14.9,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 37.55,
+      "price": 37.51,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -129,7 +129,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.52,
+      "price": 6.55,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -149,7 +149,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1021.65,
+      "price": 1021.8,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
