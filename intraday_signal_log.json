@@ -7571,9 +7571,9 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-09T05:01:00.656076",
+    "exit_price": 13.03,
+    "bars_to_exit": 0
   }
 ]
