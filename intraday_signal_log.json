@@ -7689,5 +7689,43 @@
     "outcome_checked_at": null,
     "exit_price": null,
     "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-10-09T06:30:57.544644",
+    "signal_bar_date": "2026-10-09 05:45:00",
+    "symbol": "PCJEWELLER.NS",
+    "signal": "BUY",
+    "price": 14.53,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-10-09T06:30:57.544653",
+    "signal_bar_date": "2026-10-09 05:45:00",
+    "symbol": "RPOWER.NS",
+    "signal": "SHORT",
+    "price": 19.82,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
