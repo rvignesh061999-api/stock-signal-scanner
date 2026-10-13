@@ -8084,10 +8084,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-13T08:01:11.050145",
+    "exit_price": 5.44,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-10-13T07:30:56.375203",
@@ -8103,9 +8103,9 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-13T08:01:11.050153",
+    "exit_price": 5.44,
+    "bars_to_exit": 1
   }
 ]
