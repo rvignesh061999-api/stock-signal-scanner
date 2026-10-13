@@ -8027,10 +8027,10 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-13T04:01:07.516020",
+    "exit_price": 12.67,
+    "bars_to_exit": 0
   },
   {
     "logged_at": "2026-10-13T03:45:41.355279",
@@ -8046,9 +8046,9 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-13T04:01:07.686206",
+    "exit_price": 1038.4,
+    "bars_to_exit": 1
   }
 ]
