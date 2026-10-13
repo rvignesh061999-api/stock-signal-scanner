@@ -8012,5 +8012,43 @@
     "outcome_checked_at": "2026-10-12T08:01:05.252448",
     "exit_price": 12.73,
     "bars_to_exit": 0
+  },
+  {
+    "logged_at": "2026-10-13T03:45:41.355266",
+    "signal_bar_date": "2026-10-12 09:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 12.69,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "same_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-10-13T03:45:41.355279",
+    "signal_bar_date": "2026-10-12 09:45:00",
+    "symbol": "INFY.NS",
+    "signal": "SHORT",
+    "price": 1020.0,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
