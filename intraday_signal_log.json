@@ -8388,9 +8388,9 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-14T10:01:12.010909",
+    "exit_price": 12.69,
+    "bars_to_exit": 0
   }
 ]
