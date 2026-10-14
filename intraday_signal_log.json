@@ -8107,5 +8107,24 @@
     "outcome_checked_at": "2026-10-13T08:01:11.050153",
     "exit_price": 5.44,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-10-14T03:45:47.352433",
+    "signal_bar_date": "2026-10-13 09:45:00",
+    "symbol": "RTNPOWER.NS",
+    "signal": "BUY",
+    "price": 6.7,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
