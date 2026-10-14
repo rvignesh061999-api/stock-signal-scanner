@@ -8122,9 +8122,9 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-14T04:01:07.608603",
+    "exit_price": 6.64,
+    "bars_to_exit": 1
   }
 ]
