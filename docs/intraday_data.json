@@ -1,20 +1,16 @@
 {
-  "updated_at": "2026-10-14T08:45:45.670868",
+  "updated_at": "2026-10-14T09:01:12.964355",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
-      "signal": "BUY",
+      "signal": "AVOID",
       "price": 14.39,
       "reasons": [
-        "Last 2 completed bars both UP",
-        "Most recent bar closed in middle third of its own range",
-        "UP SCORE = 2 \u2014 LOW CONFIDENCE: only 13 validation trades in original analysis, included for monitoring only, historical hit rate ranged 46-64% across splits"
+        "Neither the validated SELL nor BUY setup conditions were met"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "UP",
-      "confidence": "low",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -23,13 +19,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 21.16,
+      "price": 21.15,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -43,13 +39,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 19.93,
+      "price": 19.95,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -63,13 +59,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 40.51,
+      "price": 40.66,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -83,13 +79,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.62,
+      "price": 5.61,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -103,18 +99,22 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
-      "signal": "AVOID",
-      "price": 12.74,
+      "signal": "SHORT",
+      "price": 12.76,
       "reasons": [
-        "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
+        "This bar opened with a gap up of 0.078% vs the prior bar's close",
+        "DOWN SCORE = 1 \u2014 historical hit rate 56-60% (validation/test), vs ~44-50% baseline (strengthened out-of-sample \u2014 the cleanest single finding across all 8 stocks analyzed)",
+        "Predicts THIS SAME bar closes down (fades the gap), not the next bar"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "same_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "medium",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -123,7 +123,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
@@ -143,13 +143,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1093.1,
+      "price": 1092.0,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -163,7 +163,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-14 07:45:00",
+      "bar_date": "2026-10-14 08:45:00",
       "market": "IN"
     }
   ]
