@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T23:39:19.277291",
+  "updated_at": "2026-10-15T03:04:59.381135",
   "results": [
     {
       "symbol": "AAPL",
@@ -84,14 +84,14 @@
       "support": 217.15,
       "resistance": 243.37,
       "volume_confirmed": false,
-      "vol_ratio": 1.12,
+      "vol_ratio": 1.11,
       "sl_price": 217.98,
       "tgt_price": 227.94,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 217.15, resistance 243.37)",
-        "Volume not confirmed: 1.12x average \u2014 lower conviction"
+        "Volume not confirmed: 1.11x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -108,14 +108,14 @@
       "support": 244.73,
       "resistance": 263.7,
       "volume_confirmed": false,
-      "vol_ratio": 0.96,
+      "vol_ratio": 0.95,
       "sl_price": 250.27,
       "tgt_price": 261.7,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 244.73, resistance 263.7)",
-        "Volume not confirmed: 0.96x average \u2014 lower conviction"
+        "Volume not confirmed: 0.95x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
