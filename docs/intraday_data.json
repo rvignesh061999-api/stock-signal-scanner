@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-15T04:31:00.715012",
+  "updated_at": "2026-10-15T04:45:42.909927",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 14.18,
+      "price": 14.32,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 21.02,
+      "price": 21.12,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 19.21,
+      "price": 19.35,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 40.64,
+      "price": 41.02,
       "reasons": [
         "Last completed bar is frozen (O=H=L=C) \u2014 no real trading, no signal"
       ],
@@ -85,7 +85,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.54,
+      "price": 5.56,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -128,7 +128,7 @@
       "price": 6.62,
       "reasons": [
         "This is the 2:15 PM IST bar",
-        "Relative volume 1.59x its own trailing 20-bar average (within the 1.5-2.5x band)",
+        "Relative volume 1.63x its own trailing 20-bar average (within the 1.5-2.5x band)",
         "UP SCORE = 2 \u2014 historical hit rate 52-67% across train/val/test, vs ~40-47% baseline"
       ],
       "source": "yahoo",
@@ -149,7 +149,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1124.4,
+      "price": 1119.8,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
