@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-15T08:01:13.714672",
+  "updated_at": "2026-10-15T08:03:48.822831",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 14.49,
+      "price": 14.47,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 21.3,
+      "price": 21.28,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 41.15,
+      "price": 41.12,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -145,7 +145,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1109.85,
+      "price": 1111.25,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
