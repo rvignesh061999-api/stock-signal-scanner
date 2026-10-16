@@ -8787,10 +8787,10 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-10-16T05:01:06.215994",
+    "exit_price": 12.63,
+    "bars_to_exit": 0
   },
   {
     "logged_at": "2026-10-16T04:01:11.870399",
@@ -8806,10 +8806,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-16T05:01:06.562479",
+    "exit_price": 6.51,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-10-16T04:15:44.138997",
@@ -8825,10 +8825,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-16T05:01:06.562487",
+    "exit_price": 6.51,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-10-16T04:45:40.415050",
@@ -8844,6 +8844,25 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "UP",
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-16T05:01:06.562489",
+    "exit_price": 6.51,
+    "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-10-16T05:01:10.052306",
+    "signal_bar_date": "2026-10-16 04:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 12.64,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "same_bar_close",
+    "predicted_direction": "DOWN",
     "outcome": null,
     "outcome_checked_at": null,
     "exit_price": null,
