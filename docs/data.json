@@ -1,26 +1,25 @@
 {
-  "updated_at": "2026-10-16T19:16:30.228970",
+  "updated_at": "2026-10-16T22:29:01.934469",
   "results": [
     {
       "symbol": "AAPL",
-      "signal": "AVOID",
-      "price": 342.57,
-      "price_change_pct": 0.17,
+      "signal": "SHORT",
+      "price": 343.46,
+      "price_change_pct": 0.43,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
-      "near_level": "none",
+      "near_level": "resistance",
       "support": 325.81,
       "resistance": 348.15,
-      "volume_confirmed": false,
-      "vol_ratio": 1.06,
-      "sl_price": 337.43,
-      "tgt_price": 352.85,
+      "volume_confirmed": true,
+      "vol_ratio": 1.56,
+      "sl_price": 348.61,
+      "tgt_price": 333.16,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
-        "Not near a key level (support 325.81, resistance 348.15)",
-        "Volume not confirmed: 1.06x average \u2014 lower conviction"
+        "Price near resistance (support 325.81, resistance 348.15)",
+        "Volume confirmed: 1.56x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -28,8 +27,8 @@
     {
       "symbol": "MSFT",
       "signal": "AVOID",
-      "price": 526.87,
-      "price_change_pct": -2.33,
+      "price": 529.05,
+      "price_change_pct": -1.93,
       "candle": "Bearish Engulfing",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -37,14 +36,14 @@
       "support": 491.22,
       "resistance": 551.15,
       "volume_confirmed": false,
-      "vol_ratio": 0.69,
-      "sl_price": 518.97,
-      "tgt_price": 542.68,
+      "vol_ratio": 1.05,
+      "sl_price": 521.11,
+      "tgt_price": 544.92,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 491.22, resistance 551.15)",
-        "Volume not confirmed: 0.69x average \u2014 lower conviction"
+        "Volume not confirmed: 1.05x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -52,8 +51,8 @@
     {
       "symbol": "TSLA",
       "signal": "SHORT",
-      "price": 352.61,
-      "price_change_pct": -2.71,
+      "price": 354.72,
+      "price_change_pct": -2.13,
       "candle": "Bearish Engulfing",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -61,13 +60,13 @@
       "support": 345.88,
       "resistance": 388.56,
       "volume_confirmed": true,
-      "vol_ratio": 1.51,
-      "sl_price": 357.9,
-      "tgt_price": 342.03,
+      "vol_ratio": 1.82,
+      "sl_price": 360.04,
+      "tgt_price": 344.08,
       "reasons": [
         "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 345.88, resistance 388.56)",
-        "Volume confirmed: 1.51x average (needs 1.3x for 1d)"
+        "Volume confirmed: 1.82x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -75,8 +74,8 @@
     {
       "symbol": "NVDA",
       "signal": "SHORT",
-      "price": 214.48,
-      "price_change_pct": -1.27,
+      "price": 214.13,
+      "price_change_pct": -1.43,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -84,13 +83,13 @@
       "support": 212.85,
       "resistance": 243.37,
       "volume_confirmed": false,
-      "vol_ratio": 0.78,
-      "sl_price": 217.7,
-      "tgt_price": 208.05,
+      "vol_ratio": 1.11,
+      "sl_price": 217.34,
+      "tgt_price": 207.71,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Price near support (support 212.85, resistance 243.37)",
-        "Volume not confirmed: 0.78x average \u2014 lower conviction"
+        "Volume not confirmed: 1.11x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -98,8 +97,8 @@
     {
       "symbol": "AMZN",
       "signal": "AVOID",
-      "price": 249.92,
-      "price_change_pct": -1.9,
+      "price": 250.0,
+      "price_change_pct": -1.87,
       "candle": "Bearish Engulfing",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
@@ -107,14 +106,14 @@
       "support": 244.73,
       "resistance": 263.7,
       "volume_confirmed": false,
-      "vol_ratio": 0.73,
-      "sl_price": 246.17,
-      "tgt_price": 257.42,
+      "vol_ratio": 1.07,
+      "sl_price": 246.25,
+      "tgt_price": 257.5,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 244.73, resistance 263.7)",
-        "Volume not confirmed: 0.73x average \u2014 lower conviction"
+        "Volume not confirmed: 1.07x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
