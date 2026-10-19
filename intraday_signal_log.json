@@ -9133,5 +9133,43 @@
     "outcome_checked_at": "2026-10-19T07:01:08.423688",
     "exit_price": 18.05,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-10-19T09:01:14.380662",
+    "signal_bar_date": "2026-10-19 08:45:00",
+    "symbol": "PCJEWELLER.NS",
+    "signal": "SHORT",
+    "price": 18.25,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
+  },
+  {
+    "logged_at": "2026-10-19T09:01:14.380675",
+    "signal_bar_date": "2026-10-19 08:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 12.34,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "same_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
