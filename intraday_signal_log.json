@@ -9167,10 +9167,10 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-19T10:30:57.025192",
+    "exit_price": 12.24,
+    "bars_to_exit": 0
   },
   {
     "logged_at": "2026-10-19T09:15:42.452220",
