@@ -9262,9 +9262,9 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-10-21T05:01:08.914435",
+    "exit_price": 12.05,
+    "bars_to_exit": 0
   }
 ]
