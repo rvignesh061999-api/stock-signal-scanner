@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-10-22T05:45:41.924657",
+  "updated_at": "2026-10-22T06:01:15.823198",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 18.77,
+      "price": 18.28,
       "reasons": [
-        "09:15 slot \u2014 only 20-29 historical observations, statistically unusable"
+        "Neither the validated SELL nor BUY setup conditions were met"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -19,7 +19,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
@@ -27,7 +27,7 @@
       "signal": "AVOID",
       "price": 16.39,
       "reasons": [
-        "09:15 slot \u2014 statistically unusable, too few observations"
+        "10:15 bar but DOWN conditions not fully met (needs top-third close + no gap)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -39,15 +39,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 17.17,
+      "price": 17.15,
       "reasons": [
-        "09:15 slot \u2014 only 27-35 historical observations, statistically unusable"
+        "10:15 bar but DOWN conditions not fully met (needs bearish body + no gap)"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -59,15 +59,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 39.04,
+      "price": 38.9,
       "reasons": [
-        "09:15 slot \u2014 statistically unusable, too few observations"
+        "Neither the validated DOWN nor UP setup conditions were met"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -79,15 +79,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.03,
+      "price": 5.02,
       "reasons": [
-        "09:15 slot \u2014 only 19-31 historical observations, statistically unusable"
+        "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -99,15 +99,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
       "signal": "SHORT",
-      "price": 11.59,
+      "price": 11.75,
       "reasons": [
-        "This bar opened with a gap up of 0.086% vs the prior bar's close",
+        "This bar opened with a gap up of 0.085% vs the prior bar's close",
         "DOWN SCORE = 1 \u2014 historical hit rate 56-60% (validation/test), vs ~44-50% baseline (strengthened out-of-sample \u2014 the cleanest single finding across all 8 stocks analyzed)",
         "Predicts THIS SAME bar closes down (fades the gap), not the next bar"
       ],
@@ -123,18 +123,22 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
-      "signal": "AVOID",
-      "price": 6.15,
+      "signal": "SHORT",
+      "price": 6.13,
       "reasons": [
-        "09:15 slot \u2014 only 15-22 historical observations, statistically unusable"
+        "This is the 10:15 AM IST bar",
+        "Bullish body (close 6.15 > open 6.05)",
+        "DOWN SCORE = 2 \u2014 'morning bullish bar fades' pattern: historical hit rate 54-72% across train/val/test, vs ~47-50% baseline"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "next_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "high",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -143,13 +147,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1160.75,
+      "price": 1159.6,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -163,7 +167,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-22 04:45:00",
+      "bar_date": "2026-10-22 05:45:00",
       "market": "IN"
     }
   ]
