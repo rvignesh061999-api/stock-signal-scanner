@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-22T03:45:41.755480",
+  "updated_at": "2026-10-22T04:01:11.546810",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 18.65,
+      "price": 19.04,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -19,15 +19,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 16.41,
+      "price": 16.37,
       "reasons": [
-        "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
+        "Last completed bar is frozen (O=H=L=C) \u2014 no real trading, no signal"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -39,22 +39,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
-      "signal": "BUY",
-      "price": 17.24,
+      "signal": "AVOID",
+      "price": 17.1,
       "reasons": [
-        "This is the 2:15 PM IST bar",
-        "Relative volume 1.83x its own trailing 20-bar average (within the 1.5-2.5x band)",
-        "UP SCORE = 2 \u2014 historical hit rate 52-68% across train/val/test, vs ~38-43% baseline (strengthened out of sample \u2014 the strongest single finding across both stocks analyzed)"
+        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "UP",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -63,23 +59,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
-      "signal": "BUY",
-      "price": 39.4,
+      "signal": "AVOID",
+      "price": 38.43,
       "reasons": [
-        "Last completed bar is a Bullish Engulfing pattern",
-        "Closed in the top third of its own range",
-        "No gap into current bar (0.000% < 0.1% threshold)",
-        "UP SCORE = 2 \u2014 historical hit rate 53-73% across train/val/test, vs ~42-49% baseline"
+        "Last completed bar is frozen (O=H=L=C) \u2014 no real trading, no signal"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "UP",
-      "confidence": "medium",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -88,13 +79,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.0,
+      "price": 4.96,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -108,22 +99,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
-      "signal": "SHORT",
-      "price": 11.68,
+      "signal": "AVOID",
+      "price": 11.55,
       "reasons": [
-        "This bar opened with a gap up of 0.344% vs the prior bar's close",
-        "DOWN SCORE = 1 \u2014 historical hit rate 56-60% (validation/test), vs ~44-50% baseline (strengthened out-of-sample \u2014 the cleanest single finding across all 8 stocks analyzed)",
-        "Predicts THIS SAME bar closes down (fades the gap), not the next bar"
+        "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
       "source": "yahoo",
-      "exit_rule": "same_bar_close",
-      "predicted_direction": "DOWN",
-      "confidence": "medium",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -132,22 +119,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
-      "signal": "BUY",
-      "price": 6.06,
+      "signal": "AVOID",
+      "price": 6.01,
       "reasons": [
-        "This is the 2:15 PM IST bar",
-        "Relative volume 1.82x its own trailing 20-bar average (within the 1.5-2.5x band)",
-        "UP SCORE = 2 \u2014 historical hit rate 52-67% across train/val/test, vs ~40-47% baseline"
+        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "UP",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -156,22 +139,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
-      "signal": "SHORT",
+      "signal": "AVOID",
       "price": 1168.0,
       "reasons": [
-        "This is the 14:15 IST bar",
-        "Closed in the top third of its own range",
-        "DOWN SCORE = 1 \u2014 historical hit rate 61-66% across train/val/test, vs ~49-54% baseline (the most consistent finding for this stock)"
+        "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "DOWN",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -180,7 +159,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-21 09:45:00",
+      "bar_date": "2026-10-22 03:45:00",
       "market": "IN"
     }
   ]
