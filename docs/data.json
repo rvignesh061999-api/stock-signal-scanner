@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T23:45:51.778537",
+  "updated_at": "2026-10-24T03:10:44.812570",
   "results": [
     {
       "symbol": "AAPL",
@@ -84,13 +84,13 @@
       "support": 210.18,
       "resistance": 243.37,
       "volume_confirmed": false,
-      "vol_ratio": 0.75,
+      "vol_ratio": 0.76,
       "sl_price": 207.8,
       "tgt_price": 217.29,
       "reasons": [
         "Candle: Doji (Weak)",
         "Price near support (support 210.18, resistance 243.37)",
-        "Volume not confirmed: 0.75x average \u2014 lower conviction"
+        "Volume not confirmed: 0.76x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
