@@ -1,21 +1,16 @@
 {
-  "updated_at": "2026-10-26T08:45:52.248657",
+  "updated_at": "2026-10-26T09:01:25.708882",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
-      "signal": "SHORT",
-      "price": 16.94,
+      "signal": "AVOID",
+      "price": 16.5,
       "reasons": [
-        "Bearish body confirmed (close 17.65 < open 17.68)",
-        "Closed in middle third of its own range (not climactic)",
-        "No gap into current bar (0.000% < 0.1% threshold)",
-        "DOWN SCORE = 3 \u2014 historical hit rate ~64% (test), ~49% baseline"
+        "Neither the validated SELL nor BUY setup conditions were met"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "DOWN",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -24,13 +19,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 15.88,
+      "price": 15.86,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -44,13 +39,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 16.67,
+      "price": 16.63,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -64,13 +59,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 36.97,
+      "price": 36.91,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -84,13 +79,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 4.78,
+      "price": 4.81,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -104,13 +99,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 11.91,
+      "price": 11.86,
       "reasons": [
         "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
@@ -124,13 +119,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.09,
+      "price": 6.08,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -144,13 +139,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1150.65,
+      "price": 1150.5,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -164,7 +159,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-10-26 07:45:00",
+      "bar_date": "2026-10-26 08:45:00",
       "market": "IN"
     }
   ]
