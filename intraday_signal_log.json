@@ -10615,5 +10615,24 @@
     "outcome_checked_at": "2026-10-27T08:01:14.242029",
     "exit_price": 37.03,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-10-28T03:45:48.858601",
+    "signal_bar_date": "2026-10-27 09:45:00",
+    "symbol": "INFY.NS",
+    "signal": "BUY",
+    "price": 1163.0,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
