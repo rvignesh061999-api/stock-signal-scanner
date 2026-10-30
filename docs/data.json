@@ -1,26 +1,25 @@
 {
-  "updated_at": "2026-10-30T18:58:00.297550",
+  "updated_at": "2026-10-30T22:51:11.861218",
   "results": [
     {
       "symbol": "AAPL",
-      "signal": "AVOID",
-      "price": 343.31,
-      "price_change_pct": -1.6,
+      "signal": "SHORT",
+      "price": 344.63,
+      "price_change_pct": -1.23,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 330.62,
       "resistance": 351.73,
-      "volume_confirmed": false,
-      "vol_ratio": 0.94,
-      "sl_price": 338.16,
-      "tgt_price": 353.61,
+      "volume_confirmed": true,
+      "vol_ratio": 1.75,
+      "sl_price": 349.8,
+      "tgt_price": 334.29,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 330.62, resistance 351.73)",
-        "Volume not confirmed: 0.94x average \u2014 lower conviction"
+        "Volume confirmed: 1.75x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -28,22 +27,22 @@
     {
       "symbol": "MSFT",
       "signal": "SHORT",
-      "price": 519.53,
-      "price_change_pct": -2.0,
+      "price": 521.91,
+      "price_change_pct": -1.55,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "support",
       "support": 514.35,
       "resistance": 551.15,
-      "volume_confirmed": false,
-      "vol_ratio": 0.83,
-      "sl_price": 527.32,
-      "tgt_price": 503.94,
+      "volume_confirmed": true,
+      "vol_ratio": 1.68,
+      "sl_price": 529.74,
+      "tgt_price": 506.25,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Price near support (support 514.35, resistance 551.15)",
-        "Volume not confirmed: 0.83x average \u2014 lower conviction"
+        "Volume confirmed: 1.68x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -51,8 +50,8 @@
     {
       "symbol": "TSLA",
       "signal": "AVOID",
-      "price": 396.28,
-      "price_change_pct": -1.74,
+      "price": 399.81,
+      "price_change_pct": -0.87,
       "candle": "Bullish Candle",
       "candle_signal": "BUY",
       "candle_strength": "Weak",
@@ -60,14 +59,14 @@
       "support": 349.33,
       "resistance": 410.85,
       "volume_confirmed": false,
-      "vol_ratio": 0.8,
-      "sl_price": 390.34,
-      "tgt_price": 408.17,
+      "vol_ratio": 1.12,
+      "sl_price": 393.81,
+      "tgt_price": 411.8,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 349.33, resistance 410.85)",
-        "Volume not confirmed: 0.80x average \u2014 lower conviction"
+        "Volume not confirmed: 1.12x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -75,22 +74,22 @@
     {
       "symbol": "NVDA",
       "signal": "SHORT",
-      "price": 202.01,
-      "price_change_pct": -5.45,
-      "candle": "Strong Bearish Candle",
+      "price": 204.64,
+      "price_change_pct": -4.22,
+      "candle": "Bearish Candle",
       "candle_signal": "SELL",
-      "candle_strength": "Moderate",
-      "near_level": "support",
+      "candle_strength": "Weak",
+      "near_level": "none",
       "support": 200.92,
       "resistance": 243.37,
-      "volume_confirmed": false,
-      "vol_ratio": 0.95,
-      "sl_price": 205.04,
-      "tgt_price": 195.95,
+      "volume_confirmed": true,
+      "vol_ratio": 1.67,
+      "sl_price": 207.71,
+      "tgt_price": 198.5,
       "reasons": [
-        "Candle: Strong Bearish Candle (Moderate)",
-        "Price near support (support 200.92, resistance 243.37)",
-        "Volume not confirmed: 0.95x average \u2014 lower conviction"
+        "Candle: Bearish Candle (Weak)",
+        "Not near a key level (support 200.92, resistance 243.37)",
+        "Volume confirmed: 1.67x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
@@ -98,8 +97,8 @@
     {
       "symbol": "AMZN",
       "signal": "BUY",
-      "price": 238.06,
-      "price_change_pct": -2.35,
+      "price": 240.35,
+      "price_change_pct": -1.41,
       "candle": "Bullish Candle",
       "candle_signal": "BUY",
       "candle_strength": "Weak",
@@ -107,13 +106,13 @@
       "support": 229.36,
       "resistance": 265.34,
       "volume_confirmed": true,
-      "vol_ratio": 2.03,
-      "sl_price": 234.49,
-      "tgt_price": 245.2,
+      "vol_ratio": 2.75,
+      "sl_price": 236.74,
+      "tgt_price": 247.56,
       "reasons": [
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 229.36, resistance 265.34)",
-        "Volume confirmed: 2.03x average (needs 1.3x for 1d)"
+        "Volume confirmed: 2.75x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
