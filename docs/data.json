@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T08:15:59.510273",
+  "updated_at": "2026-10-31T14:59:28.892246",
   "results": [
     {
       "symbol": "AAPL",
@@ -377,23 +377,23 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 4.95,
-      "price_change_pct": 2.48,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
-      "candle_strength": "Weak",
+      "price": 4.8,
+      "price_change_pct": -3.03,
+      "candle": "Bearish Engulfing",
+      "candle_signal": "SELL",
+      "candle_strength": "Strong",
       "near_level": "none",
       "support": 4.69,
       "resistance": 5.81,
       "volume_confirmed": false,
-      "vol_ratio": 0.51,
-      "sl_price": 4.88,
-      "tgt_price": 5.1,
+      "vol_ratio": 0.49,
+      "sl_price": 4.73,
+      "tgt_price": 4.94,
       "reasons": [
-        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bullish Candle (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Engulfing (Strong)",
         "Not near a key level (support 4.69, resistance 5.81)",
-        "Volume not confirmed: 0.51x average \u2014 lower conviction"
+        "Volume not confirmed: 0.49x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
