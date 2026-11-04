@@ -1,16 +1,21 @@
 {
-  "updated_at": "2026-11-04T03:45:49.666490",
+  "updated_at": "2026-11-04T04:01:15.310482",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
-      "signal": "AVOID",
-      "price": 14.72,
+      "signal": "SHORT",
+      "price": 14.71,
       "reasons": [
-        "Neither the validated SELL nor BUY setup conditions were met"
+        "Bearish body confirmed (close 14.72 < open 14.77)",
+        "Closed in middle third of its own range (not climactic)",
+        "No gap into current bar (0.068% < 0.1% threshold)",
+        "DOWN SCORE = 3 \u2014 historical hit rate ~64% (test), ~49% baseline"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "next_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "high",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -19,13 +24,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 15.38,
+      "price": 15.27,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -39,15 +44,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 18.28,
+      "price": 18.21,
       "reasons": [
-        "14:15 bar but relative volume not in the validated 1.5-2.5x band"
+        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -59,13 +64,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 35.75,
+      "price": 36.5,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -79,13 +84,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 4.78,
+      "price": 4.79,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -99,13 +104,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 12.25,
+      "price": 12.18,
       "reasons": [
         "No gap-up at open \u2014 the only validated setup for this stock requires a gap up"
       ],
@@ -119,15 +124,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.26,
+      "price": 6.32,
       "reasons": [
-        "14:15 bar but relative volume not in the validated 1.5-2.5x band"
+        "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -139,15 +144,15 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1148.1,
+      "price": 1139.5,
       "reasons": [
-        "14:15 bar but neither the top-third-close nor bearish-body condition was met"
+        "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
       "source": "yahoo",
       "exit_rule": null,
@@ -159,7 +164,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-03 09:45:00",
+      "bar_date": "2026-11-04 03:45:00",
       "market": "IN"
     }
   ]
