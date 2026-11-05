@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-05T04:31:09.473001",
+  "updated_at": "2026-11-05T04:45:48.664992",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 16.05,
+      "price": 16.08,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 15.96,
+      "price": 15.92,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 18.82,
+      "price": 18.75,
       "reasons": [
         "14:15 bar but relative volume not in the validated 1.5-2.5x band"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.34,
+      "price": 38.32,
       "reasons": [
         "Last completed bar is frozen (O=H=L=C) \u2014 no real trading, no signal"
       ],
@@ -85,7 +85,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.14,
+      "price": 5.12,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -107,7 +107,7 @@
       "signal": "SHORT",
       "price": 12.69,
       "reasons": [
-        "This bar opened with a gap up of 1.116% vs the prior bar's close",
+        "This bar opened with a gap up of 1.764% vs the prior bar's close",
         "DOWN SCORE = 1 \u2014 historical hit rate 56-60% (validation/test), vs ~44-50% baseline (strengthened out-of-sample \u2014 the cleanest single finding across all 8 stocks analyzed)",
         "Predicts THIS SAME bar closes down (fades the gap), not the next bar"
       ],
@@ -148,13 +148,17 @@
     },
     {
       "symbol": "INFY.NS",
-      "signal": "AVOID",
-      "price": 1167.1,
+      "signal": "SHORT",
+      "price": 1164.2,
       "reasons": [
-        "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
+        "This is the 14:15 IST bar",
+        "Closed in the top third of its own range",
+        "DOWN SCORE = 1 \u2014 historical hit rate 61-66% across train/val/test, vs ~49-54% baseline (the most consistent finding for this stock)"
       ],
       "source": "yahoo",
-      "exit_rule": null,
+      "exit_rule": "next_bar_close",
+      "predicted_direction": "DOWN",
+      "confidence": "high",
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
