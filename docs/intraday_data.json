@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-05T05:31:13.220906",
+  "updated_at": "2026-11-05T05:45:50.194621",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 15.83,
+      "price": 15.94,
       "reasons": [
         "09:15 slot \u2014 only 20-29 historical observations, statistically unusable"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 15.98,
+      "price": 15.99,
       "reasons": [
         "09:15 slot \u2014 statistically unusable, too few observations"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.54,
+      "price": 38.52,
       "reasons": [
         "09:15 slot \u2014 statistically unusable, too few observations"
       ],
@@ -145,7 +145,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1162.9,
+      "price": 1160.7,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
