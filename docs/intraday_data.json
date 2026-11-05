@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-05T07:15:53.569183",
+  "updated_at": "2026-11-05T07:31:10.282766",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 15.74,
+      "price": 15.62,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 16.02,
+      "price": 16.01,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 18.77,
+      "price": 18.78,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -85,7 +85,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.09,
+      "price": 5.08,
       "reasons": [
         "11:15 bar but not bearish-bodied \u2014 DOWN setup requires Close < Open here. No UP setup exists for this stock \u2014 none survived out-of-sample validation."
       ],
@@ -149,7 +149,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1157.4,
+      "price": 1160.9,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
