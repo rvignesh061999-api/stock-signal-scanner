@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T23:38:12.973220",
+  "updated_at": "2026-11-07T04:32:13.768972",
   "results": [
     {
       "symbol": "AAPL",
@@ -13,14 +13,14 @@
       "support": 325.33,
       "resistance": 355.38,
       "volume_confirmed": false,
-      "vol_ratio": 0.9,
+      "vol_ratio": 0.92,
       "sl_price": 337.23,
       "tgt_price": 352.64,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 325.33, resistance 355.38)",
-        "Volume not confirmed: 0.90x average \u2014 lower conviction"
+        "Volume not confirmed: 0.92x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -37,14 +37,14 @@
       "support": 504.96,
       "resistance": 559.15,
       "volume_confirmed": false,
-      "vol_ratio": 1.05,
+      "vol_ratio": 1.07,
       "sl_price": 522.65,
       "tgt_price": 546.53,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 504.96, resistance 559.15)",
-        "Volume not confirmed: 1.05x average \u2014 lower conviction"
+        "Volume not confirmed: 1.07x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -61,14 +61,14 @@
       "support": 338.15,
       "resistance": 414.23,
       "volume_confirmed": false,
-      "vol_ratio": 0.91,
+      "vol_ratio": 0.92,
       "sl_price": 352.85,
       "tgt_price": 368.97,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 338.15, resistance 414.23)",
-        "Volume not confirmed: 0.91x average \u2014 lower conviction"
+        "Volume not confirmed: 0.92x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -108,13 +108,13 @@
       "support": 229.36,
       "resistance": 273.23,
       "volume_confirmed": false,
-      "vol_ratio": 0.86,
+      "vol_ratio": 0.88,
       "sl_price": 255.41,
       "tgt_price": 267.08,
       "reasons": [
         "Candle: Doji (Weak)",
         "Not near a key level (support 229.36, resistance 273.23)",
-        "Volume not confirmed: 0.86x average \u2014 lower conviction"
+        "Volume not confirmed: 0.88x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
