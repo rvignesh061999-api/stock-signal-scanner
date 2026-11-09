@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T06:15:55.128649",
+  "updated_at": "2026-11-09T06:31:13.879442",
   "interval": "1h",
   "results": [
     {
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.05,
+      "price": 17.03,
       "reasons": [
         "10:15 bar but DOWN conditions not fully met (needs top-third close + no gap)"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "SHORT",
-      "price": 18.55,
+      "price": 18.67,
       "reasons": [
         "This is the 10:15 AM IST bar",
         "Bearish body confirmed (close 18.39 < open 18.45)",
@@ -70,7 +70,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.6,
+      "price": 38.74,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -154,7 +154,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1152.5,
+      "price": 1151.6,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
