@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T22:47:52.280833",
+  "updated_at": "2026-11-11T02:30:10.697517",
   "results": [
     {
       "symbol": "AAPL",
@@ -13,14 +13,14 @@
       "support": 325.33,
       "resistance": 355.38,
       "volume_confirmed": false,
-      "vol_ratio": 0.57,
+      "vol_ratio": 0.6,
       "sl_price": 343.28,
       "tgt_price": 358.97,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 325.33, resistance 355.38)",
-        "Volume not confirmed: 0.57x average \u2014 lower conviction"
+        "Volume not confirmed: 0.60x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -37,14 +37,14 @@
       "support": 504.96,
       "resistance": 559.15,
       "volume_confirmed": false,
-      "vol_ratio": 1.03,
+      "vol_ratio": 1.04,
       "sl_price": 525.16,
       "tgt_price": 549.15,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 504.96, resistance 559.15)",
-        "Volume not confirmed: 1.03x average \u2014 lower conviction"
+        "Volume not confirmed: 1.04x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "US"
@@ -85,13 +85,13 @@
       "support": 165.89,
       "resistance": 226.0,
       "volume_confirmed": true,
-      "vol_ratio": 3.1,
+      "vol_ratio": 3.11,
       "sl_price": 171.42,
       "tgt_price": 163.82,
       "reasons": [
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 165.89, resistance 226.0)",
-        "Volume confirmed: 3.10x average (needs 1.3x for 1d)"
+        "Volume confirmed: 3.11x average (needs 1.3x for 1d)"
       ],
       "source": "yahoo",
       "market": "US"
