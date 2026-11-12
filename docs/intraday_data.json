@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T07:45:47.301008",
+  "updated_at": "2026-11-12T08:01:29.549554",
   "interval": "1h",
   "results": [
     {
@@ -19,13 +19,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.53,
+      "price": 17.5,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -39,13 +39,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 19.37,
+      "price": 19.39,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -59,23 +59,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "SUZLON.NS",
-      "signal": "SHORT",
+      "signal": "AVOID",
       "price": 38.77,
       "reasons": [
-        "This is the 11:15 AM IST bar",
-        "Bearish body (close 38.54 < open 38.62)",
-        "Closed in the bottom third of its own range",
-        "DOWN SCORE = 3 \u2014 historical hit rate 66-68% across train/val/test, vs ~50-53% baseline (the tightest, most consistent spread found across the stocks analyzed)"
+        "Neither the validated DOWN nor UP setup conditions were met"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "DOWN",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -84,22 +79,18 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "SEPC.NS",
-      "signal": "SHORT",
+      "signal": "AVOID",
       "price": 5.09,
       "reasons": [
-        "This is the 11:15 AM IST bar",
-        "Bearish body (close 5.05 < open 5.09)",
-        "DOWN SCORE = 2 \u2014 historical hit rate 58-68% across train/val/test, vs ~49-55% baseline (this stock's strongest structural DOWN bias of any analyzed \u2014 55% of all bars are DOWN regardless of setup)"
+        "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
       "source": "yahoo",
-      "exit_rule": "next_bar_close",
-      "predicted_direction": "DOWN",
-      "confidence": "high",
+      "exit_rule": null,
       "price_change_pct": 0,
       "candle": "-",
       "candle_strength": "-",
@@ -108,7 +99,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
@@ -128,13 +119,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.06,
+      "price": 7.05,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -148,13 +139,13 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     },
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1144.6,
+      "price": 1145.9,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -168,7 +159,7 @@
       "vol_ratio": 0,
       "sl_price": null,
       "tgt_price": null,
-      "bar_date": "2026-11-12 06:45:00",
+      "bar_date": "2026-11-12 07:45:00",
       "market": "IN"
     }
   ]
