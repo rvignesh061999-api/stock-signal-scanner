@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-12T06:01:23.192070",
+  "updated_at": "2026-11-12T06:15:50.506022",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "BUY",
-      "price": 16.18,
+      "price": 16.12,
       "reasons": [
         "Last 2 completed bars both UP",
         "Most recent bar closed in middle third of its own range",
@@ -29,7 +29,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.46,
+      "price": 17.51,
       "reasons": [
         "10:15 bar but DOWN conditions not fully met (needs top-third close + no gap)"
       ],
@@ -74,7 +74,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.68,
+      "price": 38.65,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -158,7 +158,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1143.0,
+      "price": 1144.0,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
