@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T04:56:58.382016",
+  "updated_at": "2026-11-13T12:53:40.934721",
   "results": [
     {
       "symbol": "AAPL",
@@ -121,8 +121,8 @@
     {
       "symbol": "RELIANCE.NS",
       "signal": "BUY",
-      "price": 1344.1,
-      "price_change_pct": 0.33,
+      "price": 1339.7,
+      "price_change_pct": 0.0,
       "candle": "Bullish Candle",
       "candle_signal": "BUY",
       "candle_strength": "Weak",
@@ -130,13 +130,13 @@
       "support": 1152.5,
       "resistance": 1350.7,
       "volume_confirmed": false,
-      "vol_ratio": 0.18,
-      "sl_price": 1323.94,
-      "tgt_price": 1384.42,
+      "vol_ratio": 0.63,
+      "sl_price": 1319.6,
+      "tgt_price": 1379.89,
       "reasons": [
         "Candle: Bullish Candle (Weak)",
         "Price near resistance (support 1152.5, resistance 1350.7)",
-        "Volume not confirmed: 0.18x average \u2014 lower conviction"
+        "Volume not confirmed: 0.63x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -144,8 +144,8 @@
     {
       "symbol": "TCS.NS",
       "signal": "AVOID",
-      "price": 2433.3,
-      "price_change_pct": -0.37,
+      "price": 2407.5,
+      "price_change_pct": -1.43,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -153,14 +153,14 @@
       "support": 2335.0,
       "resistance": 2625.0,
       "volume_confirmed": false,
-      "vol_ratio": 0.15,
-      "sl_price": 2396.8,
-      "tgt_price": 2506.3,
+      "vol_ratio": 0.63,
+      "sl_price": 2371.39,
+      "tgt_price": 2479.72,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 2335.0, resistance 2625.0)",
-        "Volume not confirmed: 0.15x average \u2014 lower conviction"
+        "Volume not confirmed: 0.63x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -168,22 +168,23 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1148.4,
-      "price_change_pct": -0.24,
-      "candle": "Doji",
-      "candle_signal": "NEUTRAL",
+      "price": 1141.5,
+      "price_change_pct": -0.84,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 1038.05,
       "resistance": 1198.8,
       "volume_confirmed": false,
-      "vol_ratio": 0.07,
-      "sl_price": 1131.17,
-      "tgt_price": 1182.85,
+      "vol_ratio": 0.37,
+      "sl_price": 1124.38,
+      "tgt_price": 1175.75,
       "reasons": [
-        "Candle: Doji (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 1038.05, resistance 1198.8)",
-        "Volume not confirmed: 0.07x average \u2014 lower conviction"
+        "Volume not confirmed: 0.37x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -191,23 +192,23 @@
     {
       "symbol": "HDFCBANK.NS",
       "signal": "AVOID",
-      "price": 800.0,
-      "price_change_pct": -1.51,
-      "candle": "Strong Bearish Candle",
+      "price": 804.0,
+      "price_change_pct": -1.02,
+      "candle": "Bearish Candle",
       "candle_signal": "SELL",
-      "candle_strength": "Moderate",
+      "candle_strength": "Weak",
       "near_level": "none",
       "support": 669.2,
       "resistance": 817.85,
       "volume_confirmed": false,
-      "vol_ratio": 0.21,
-      "sl_price": 788.0,
-      "tgt_price": 824.0,
+      "vol_ratio": 0.59,
+      "sl_price": 791.94,
+      "tgt_price": 828.12,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Strong Bearish Candle (Moderate)",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 669.2, resistance 817.85)",
-        "Volume not confirmed: 0.21x average \u2014 lower conviction"
+        "Volume not confirmed: 0.59x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -215,8 +216,8 @@
     {
       "symbol": "ICICIBANK.NS",
       "signal": "AVOID",
-      "price": 1580.2,
-      "price_change_pct": -0.62,
+      "price": 1583.6,
+      "price_change_pct": -0.4,
       "candle": "Bullish Candle",
       "candle_signal": "BUY",
       "candle_strength": "Weak",
@@ -224,14 +225,14 @@
       "support": 1342.1,
       "resistance": 1616.0,
       "volume_confirmed": false,
-      "vol_ratio": 0.13,
-      "sl_price": 1556.5,
-      "tgt_price": 1627.61,
+      "vol_ratio": 0.64,
+      "sl_price": 1559.85,
+      "tgt_price": 1631.11,
       "reasons": [
         "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 1342.1, resistance 1616.0)",
-        "Volume not confirmed: 0.13x average \u2014 lower conviction"
+        "Volume not confirmed: 0.64x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -239,23 +240,23 @@
     {
       "symbol": "IDEA.NS",
       "signal": "AVOID",
-      "price": 12.75,
-      "price_change_pct": -1.7,
-      "candle": "Bullish Candle",
-      "candle_signal": "BUY",
-      "candle_strength": "Weak",
+      "price": 12.57,
+      "price_change_pct": -3.08,
+      "candle": "Evening Star",
+      "candle_signal": "SELL",
+      "candle_strength": "Strong",
       "near_level": "none",
       "support": 11.03,
       "resistance": 13.15,
       "volume_confirmed": false,
-      "vol_ratio": 0.62,
-      "sl_price": 12.56,
-      "tgt_price": 13.13,
+      "vol_ratio": 1.28,
+      "sl_price": 12.38,
+      "tgt_price": 12.95,
       "reasons": [
-        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bullish Candle (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Evening Star (Strong)",
         "Not near a key level (support 11.03, resistance 13.15)",
-        "Volume not confirmed: 0.62x average \u2014 lower conviction"
+        "Volume not confirmed: 1.28x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -263,22 +264,23 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 18.8,
-      "price_change_pct": -2.49,
-      "candle": "Doji",
-      "candle_signal": "NEUTRAL",
+      "price": 18.55,
+      "price_change_pct": -3.79,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 15.98,
       "resistance": 20.0,
       "volume_confirmed": false,
-      "vol_ratio": 0.33,
-      "sl_price": 18.52,
-      "tgt_price": 19.36,
+      "vol_ratio": 0.65,
+      "sl_price": 18.27,
+      "tgt_price": 19.11,
       "reasons": [
-        "Candle: Doji (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 15.98, resistance 20.0)",
-        "Volume not confirmed: 0.33x average \u2014 lower conviction"
+        "Volume not confirmed: 0.65x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -286,23 +288,23 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.63,
-      "price_change_pct": -0.34,
-      "candle": "Bearish Candle",
+      "price": 17.42,
+      "price_change_pct": -1.53,
+      "candle": "Strong Bearish Candle",
       "candle_signal": "SELL",
-      "candle_strength": "Weak",
+      "candle_strength": "Moderate",
       "near_level": "none",
       "support": 15.1,
       "resistance": 21.38,
       "volume_confirmed": false,
-      "vol_ratio": 0.27,
-      "sl_price": 17.37,
-      "tgt_price": 18.16,
+      "vol_ratio": 0.59,
+      "sl_price": 17.16,
+      "tgt_price": 17.94,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bearish Candle (Weak)",
+        "Candle: Strong Bearish Candle (Moderate)",
         "Not near a key level (support 15.1, resistance 21.38)",
-        "Volume not confirmed: 0.27x average \u2014 lower conviction"
+        "Volume not confirmed: 0.59x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -310,22 +312,23 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 38.56,
-      "price_change_pct": -0.77,
-      "candle": "Doji",
-      "candle_signal": "NEUTRAL",
+      "price": 38.25,
+      "price_change_pct": -1.57,
+      "candle": "Bearish Candle",
+      "candle_signal": "SELL",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 33.15,
       "resistance": 42.0,
       "volume_confirmed": false,
-      "vol_ratio": 0.16,
-      "sl_price": 37.98,
-      "tgt_price": 39.72,
+      "vol_ratio": 0.55,
+      "sl_price": 37.68,
+      "tgt_price": 39.4,
       "reasons": [
-        "Candle: Doji (Weak)",
+        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 33.15, resistance 42.0)",
-        "Volume not confirmed: 0.16x average \u2014 lower conviction"
+        "Volume not confirmed: 0.55x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -333,23 +336,23 @@
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 15.68,
-      "price_change_pct": -1.57,
-      "candle": "Bearish Engulfing",
+      "price": 15.5,
+      "price_change_pct": -2.7,
+      "candle": "Evening Star",
       "candle_signal": "SELL",
       "candle_strength": "Strong",
       "near_level": "none",
       "support": 14.13,
       "resistance": 20.1,
       "volume_confirmed": false,
-      "vol_ratio": 0.17,
-      "sl_price": 15.44,
-      "tgt_price": 16.15,
+      "vol_ratio": 0.47,
+      "sl_price": 15.27,
+      "tgt_price": 15.96,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bearish Engulfing (Strong)",
+        "Candle: Evening Star (Strong)",
         "Not near a key level (support 14.13, resistance 20.1)",
-        "Volume not confirmed: 0.17x average \u2014 lower conviction"
+        "Volume not confirmed: 0.47x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -357,8 +360,8 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 7.03,
-      "price_change_pct": -0.14,
+      "price": 6.99,
+      "price_change_pct": -0.71,
       "candle": "Bearish Candle",
       "candle_signal": "SELL",
       "candle_strength": "Weak",
@@ -366,14 +369,14 @@
       "support": 5.88,
       "resistance": 7.39,
       "volume_confirmed": false,
-      "vol_ratio": 0.31,
-      "sl_price": 6.92,
-      "tgt_price": 7.24,
+      "vol_ratio": 0.75,
+      "sl_price": 6.89,
+      "tgt_price": 7.2,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
         "Candle: Bearish Candle (Weak)",
         "Not near a key level (support 5.88, resistance 7.39)",
-        "Volume not confirmed: 0.31x average \u2014 lower conviction"
+        "Volume not confirmed: 0.75x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -381,23 +384,23 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 5.04,
-      "price_change_pct": -6.67,
-      "candle": "Evening Star",
+      "price": 4.99,
+      "price_change_pct": -1.58,
+      "candle": "Strong Bearish Candle",
       "candle_signal": "SELL",
-      "candle_strength": "Strong",
+      "candle_strength": "Moderate",
       "near_level": "none",
       "support": 4.69,
-      "resistance": 5.77,
+      "resistance": 5.62,
       "volume_confirmed": false,
-      "vol_ratio": 0.24,
-      "sl_price": 4.96,
-      "tgt_price": 5.19,
+      "vol_ratio": 0.67,
+      "sl_price": 4.92,
+      "tgt_price": 5.14,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Evening Star (Strong)",
-        "Not near a key level (support 4.69, resistance 5.77)",
-        "Volume not confirmed: 0.24x average \u2014 lower conviction"
+        "Candle: Strong Bearish Candle (Moderate)",
+        "Not near a key level (support 4.69, resistance 5.62)",
+        "Volume not confirmed: 0.67x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -405,23 +408,23 @@
     {
       "symbol": "GTLINFRA.NS",
       "signal": "AVOID",
-      "price": 1.09,
-      "price_change_pct": 0.0,
-      "candle": "Bearish Candle",
+      "price": 1.07,
+      "price_change_pct": -1.83,
+      "candle": "Strong Bearish Candle",
       "candle_signal": "SELL",
-      "candle_strength": "Weak",
+      "candle_strength": "Moderate",
       "near_level": "none",
       "support": 0.96,
       "resistance": 1.15,
       "volume_confirmed": false,
-      "vol_ratio": 0.14,
-      "sl_price": 1.07,
-      "tgt_price": 1.12,
+      "vol_ratio": 0.5,
+      "sl_price": 1.05,
+      "tgt_price": 1.1,
       "reasons": [
         "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bearish Candle (Weak)",
+        "Candle: Strong Bearish Candle (Moderate)",
         "Not near a key level (support 0.96, resistance 1.15)",
-        "Volume not confirmed: 0.14x average \u2014 lower conviction"
+        "Volume not confirmed: 0.50x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
