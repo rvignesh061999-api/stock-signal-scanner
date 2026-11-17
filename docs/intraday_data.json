@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-17T06:31:09.380061",
+  "updated_at": "2026-11-17T06:45:54.449081",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 15.05,
+      "price": 15.0,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.91,
+      "price": 17.87,
       "reasons": [
         "10:15 bar but DOWN conditions not fully met (needs top-third close + no gap)"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "SHORT",
-      "price": 18.02,
+      "price": 17.98,
       "reasons": [
         "This is the 10:15 AM IST bar",
         "Bearish body confirmed (close 18.02 < open 18.06)",
@@ -70,7 +70,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 37.43,
+      "price": 37.31,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -130,7 +130,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.79,
+      "price": 6.77,
       "reasons": [
         "10:15 bar but not bullish-bodied \u2014 DOWN setup requires Close > Open here"
       ],
@@ -150,7 +150,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1140.1,
+      "price": 1136.6,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
