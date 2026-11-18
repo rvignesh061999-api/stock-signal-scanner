@@ -13499,10 +13499,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T09:01:19.493948",
+    "exit_price": 14.73,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T08:15:51.663718",
@@ -13518,10 +13518,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T09:01:19.493958",
+    "exit_price": 14.73,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T08:31:06.767879",
@@ -13537,10 +13537,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T09:01:19.493960",
+    "exit_price": 14.73,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T08:45:50.060226",
@@ -13556,6 +13556,25 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T09:01:19.493961",
+    "exit_price": 14.73,
+    "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-11-18T09:01:23.463495",
+    "signal_bar_date": "2026-11-18 08:45:00",
+    "symbol": "SUZLON.NS",
+    "signal": "BUY",
+    "price": 36.33,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "UP",
     "outcome": null,
     "outcome_checked_at": null,
     "exit_price": null,
