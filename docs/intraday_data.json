@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T05:15:46.291490",
+  "updated_at": "2026-11-18T05:31:10.892511",
   "interval": "1h",
   "results": [
     {
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.65,
+      "price": 17.66,
       "reasons": [
         "09:15 slot \u2014 statistically unusable, too few observations"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 17.82,
+      "price": 17.72,
       "reasons": [
         "09:15 slot \u2014 only 27-35 historical observations, statistically unusable"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 36.45,
+      "price": 36.38,
       "reasons": [
         "09:15 slot \u2014 statistically unusable, too few observations"
       ],
@@ -125,7 +125,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.6,
+      "price": 6.61,
       "reasons": [
         "09:15 slot \u2014 only 15-22 historical observations, statistically unusable"
       ],
@@ -145,7 +145,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1116.8,
+      "price": 1116.4,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
