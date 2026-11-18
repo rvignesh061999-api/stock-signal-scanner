@@ -13385,10 +13385,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T08:01:20.068481",
+    "exit_price": 14.73,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T07:01:27.683590",
@@ -13404,10 +13404,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T08:01:20.725729",
+    "exit_price": 36.32,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T07:01:27.683592",
@@ -13423,10 +13423,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T08:01:20.851121",
+    "exit_price": 4.86,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T07:15:51.916202",
@@ -13442,10 +13442,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T08:01:20.068492",
+    "exit_price": 14.73,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T07:15:51.916216",
@@ -13461,10 +13461,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T08:01:20.725738",
+    "exit_price": 36.32,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-18T07:45:49.206523",
@@ -13472,6 +13472,25 @@
     "symbol": "SUZLON.NS",
     "signal": "SHORT",
     "price": 36.28,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "next_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-18T08:01:20.725740",
+    "exit_price": 36.32,
+    "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-11-18T08:01:24.561424",
+    "signal_bar_date": "2026-11-18 07:45:00",
+    "symbol": "PCJEWELLER.NS",
+    "signal": "SHORT",
+    "price": 14.73,
     "sl_price": null,
     "tgt_price": null,
     "candle": "-",
