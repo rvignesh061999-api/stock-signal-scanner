@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-18T09:01:22.630637",
+  "updated_at": "2026-11-18T09:15:56.592122",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "AVOID",
-      "price": 14.73,
+      "price": 14.7,
       "reasons": [
         "Neither the validated SELL nor BUY setup conditions were met"
       ],
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.68,
+      "price": 17.63,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 17.8,
+      "price": 17.79,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "BUY",
-      "price": 36.33,
+      "price": 36.29,
       "reasons": [
         "Last completed bar is a Bullish Engulfing pattern",
         "Closed in the top third of its own range",
@@ -90,7 +90,7 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 4.86,
+      "price": 4.87,
       "reasons": [
         "Not the 11:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -150,7 +150,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1114.2,
+      "price": 1111.4,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
