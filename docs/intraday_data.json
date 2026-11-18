@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T07:15:51.172028",
+  "updated_at": "2026-11-18T07:31:26.155145",
   "interval": "1h",
   "results": [
     {
@@ -30,7 +30,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.63,
+      "price": 17.61,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -70,7 +70,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "SHORT",
-      "price": 36.42,
+      "price": 36.37,
       "reasons": [
         "This is the 11:15 AM IST bar",
         "Bearish body (close 36.35 < open 36.4)",
@@ -139,7 +139,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.58,
+      "price": 6.59,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -159,7 +159,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1113.8,
+      "price": 1110.5,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
