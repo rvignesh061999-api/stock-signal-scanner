@@ -13921,5 +13921,24 @@
     "outcome_checked_at": "2026-11-19T07:01:19.365081",
     "exit_price": 17.64,
     "bars_to_exit": 1
+  },
+  {
+    "logged_at": "2026-11-19T09:01:23.458690",
+    "signal_bar_date": "2026-11-19 08:45:00",
+    "symbol": "IDEA.NS",
+    "signal": "SHORT",
+    "price": 12.09,
+    "sl_price": null,
+    "tgt_price": null,
+    "candle": "-",
+    "near_level": "-",
+    "volume_confirmed": false,
+    "source": "yahoo",
+    "exit_rule": "same_bar_close",
+    "predicted_direction": "DOWN",
+    "outcome": null,
+    "outcome_checked_at": null,
+    "exit_price": null,
+    "bars_to_exit": null
   }
 ]
