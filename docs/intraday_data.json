@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-20T08:15:55.243096",
+  "updated_at": "2026-11-20T08:31:05.224556",
   "interval": "1h",
   "results": [
     {
       "symbol": "PCJEWELLER.NS",
       "signal": "BUY",
-      "price": 14.07,
+      "price": 14.13,
       "reasons": [
         "Last 2 completed bars both UP",
         "Most recent bar closed in middle third of its own range",
@@ -49,7 +49,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 17.7,
+      "price": 17.66,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -129,7 +129,7 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.46,
+      "price": 6.48,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RTNPOWER's validated setups"
       ],
@@ -149,7 +149,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1100.4,
+      "price": 1097.1,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
