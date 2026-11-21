@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T07:57:22.706619",
+  "updated_at": "2026-11-21T15:57:22.991953",
   "results": [
     {
       "symbol": "AAPL",
@@ -355,23 +355,22 @@
     {
       "symbol": "RTNPOWER.NS",
       "signal": "AVOID",
-      "price": 6.49,
-      "price_change_pct": -0.61,
-      "candle": "Bearish Candle",
-      "candle_signal": "SELL",
+      "price": 6.42,
+      "price_change_pct": -1.08,
+      "candle": "Doji",
+      "candle_signal": "NEUTRAL",
       "candle_strength": "Weak",
       "near_level": "none",
-      "support": 5.88,
+      "support": 5.95,
       "resistance": 7.39,
       "volume_confirmed": false,
-      "vol_ratio": 0.94,
-      "sl_price": 6.39,
-      "tgt_price": 6.68,
+      "vol_ratio": 0.92,
+      "sl_price": 6.32,
+      "tgt_price": 6.61,
       "reasons": [
-        "Candle reading (SELL) not confirmed by level or volume \u2014 treated as noise",
-        "Candle: Bearish Candle (Weak)",
-        "Not near a key level (support 5.88, resistance 7.39)",
-        "Volume not confirmed: 0.94x average \u2014 lower conviction"
+        "Candle: Doji (Weak)",
+        "Not near a key level (support 5.95, resistance 7.39)",
+        "Volume not confirmed: 0.92x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
@@ -379,22 +378,23 @@
     {
       "symbol": "SEPC.NS",
       "signal": "AVOID",
-      "price": 4.87,
-      "price_change_pct": 0.21,
-      "candle": "Doji",
-      "candle_signal": "NEUTRAL",
+      "price": 4.85,
+      "price_change_pct": -0.41,
+      "candle": "Bullish Candle",
+      "candle_signal": "BUY",
       "candle_strength": "Weak",
       "near_level": "none",
       "support": 4.69,
       "resistance": 5.49,
       "volume_confirmed": false,
-      "vol_ratio": 0.54,
-      "sl_price": 4.8,
-      "tgt_price": 5.02,
+      "vol_ratio": 0.62,
+      "sl_price": 4.78,
+      "tgt_price": 5.0,
       "reasons": [
-        "Candle: Doji (Weak)",
+        "Candle reading (BUY) not confirmed by level or volume \u2014 treated as noise",
+        "Candle: Bullish Candle (Weak)",
         "Not near a key level (support 4.69, resistance 5.49)",
-        "Volume not confirmed: 0.54x average \u2014 lower conviction"
+        "Volume not confirmed: 0.62x average \u2014 lower conviction"
       ],
       "source": "yahoo",
       "market": "IN"
