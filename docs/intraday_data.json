@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T09:31:08.589874",
+  "updated_at": "2026-11-23T09:45:49.677088",
   "interval": "1h",
   "results": [
     {
@@ -25,7 +25,7 @@
     {
       "symbol": "YESBANK.NS",
       "signal": "AVOID",
-      "price": 17.72,
+      "price": 17.77,
       "reasons": [
         "Not the 10:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
@@ -45,7 +45,7 @@
     {
       "symbol": "RPOWER.NS",
       "signal": "AVOID",
-      "price": 17.32,
+      "price": 17.28,
       "reasons": [
         "Not the 10:15 (DOWN) or 14:15 (UP) decision hour for RPOWER's validated setups"
       ],
@@ -65,7 +65,7 @@
     {
       "symbol": "SUZLON.NS",
       "signal": "AVOID",
-      "price": 35.98,
+      "price": 35.94,
       "reasons": [
         "Neither the validated DOWN nor UP setup conditions were met"
       ],
@@ -145,7 +145,7 @@
     {
       "symbol": "INFY.NS",
       "signal": "AVOID",
-      "price": 1104.7,
+      "price": 1107.4,
       "reasons": [
         "Not the 14:15 hour \u2014 no validated setup exists for any other hour in this stock"
       ],
