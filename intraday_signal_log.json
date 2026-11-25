@@ -14316,9 +14316,9 @@
     "source": "yahoo",
     "exit_rule": "same_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-11-25T08:01:14.888765",
+    "exit_price": 11.68,
+    "bars_to_exit": 0
   }
 ]
