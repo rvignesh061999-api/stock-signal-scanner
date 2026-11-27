@@ -14772,10 +14772,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-27T08:01:18.701275",
+    "exit_price": 14.15,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-27T07:01:24.759951",
@@ -14791,10 +14791,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-11-27T08:01:19.545230",
+    "exit_price": 36.5,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-27T07:15:49.420384",
@@ -14810,10 +14810,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-27T08:01:18.701283",
+    "exit_price": 14.15,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-27T07:15:49.420394",
@@ -14829,10 +14829,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-11-27T08:01:19.545237",
+    "exit_price": 36.5,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-27T07:31:09.240775",
@@ -14848,10 +14848,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-11-27T08:01:19.545239",
+    "exit_price": 36.5,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-27T07:45:49.245949",
@@ -14867,10 +14867,10 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "LOSS",
+    "outcome_checked_at": "2026-11-27T08:01:18.701286",
+    "exit_price": 14.15,
+    "bars_to_exit": 1
   },
   {
     "logged_at": "2026-11-27T07:45:49.245962",
@@ -14886,9 +14886,9 @@
     "source": "yahoo",
     "exit_rule": "next_bar_close",
     "predicted_direction": "DOWN",
-    "outcome": null,
-    "outcome_checked_at": null,
-    "exit_price": null,
-    "bars_to_exit": null
+    "outcome": "WIN",
+    "outcome_checked_at": "2026-11-27T08:01:19.545241",
+    "exit_price": 36.5,
+    "bars_to_exit": 1
   }
 ]
